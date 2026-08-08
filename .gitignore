@@ -3,12 +3,16 @@ nimcache/
 nimblecache/
 htmldocs/
 testresults/
+.gh-pages/
 /tests/*
 !/tests/*.nim
 !/tests/*.nims
 /bin/
 build
 
-/afterscripts
-!/afterscripts/*.nim
-!/afterscripts/*.nim
+/postscripts
+!/postscripts/*.nim
+!/postscripts/build.sh
+/prescripts
+!/prescripts/*.nim
+!/prescripts/build.sh

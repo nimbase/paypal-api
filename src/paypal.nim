@@ -7,11 +7,19 @@
 #   import paypal/payments
 
 import ./paypal/[
-subscriptions, catalog, orders, disputes, partner_referrals,
-  invoices, webhooks, payment_experience, payments, payouts, reporting,
-  tracking, payment_tokens
+  catalog,
+  disputes,
+  invoices,
+  orders,
+  partner_referrals,
+  payment_experience,
+  payment_tokens,
+  payments,
+  payouts,
+  reporting,
+  subscriptions,
+  tracking,
+  webhooks
 ]
 
-export subscriptions, catalog, orders, disputes, partner_referrals,
-  invoices, webhooks, payment_experience, payments, payouts, reporting,
-  tracking, payment_tokens
+export catalog, disputes, invoices, orders, partner_referrals, payment_experience, payment_tokens, payments, payouts, reporting, subscriptions, tracking, webhooks

@@ -62,18 +62,37 @@ exported from each module for switching environments.
 The clients are generated from the OpenAPI specs in `specs/`:
 
 ```sh
-scripts/gen.sh                 # regenerates src/paypal/ from specs/*.json
+scripts/gen.sh                 # regenerates deps/paypal_*/ + src/paypal/ shims
 scripts/gen.sh --specs:<dir>   # use a different specs dir
 ```
 
-After each `nimbase openapi.gen` pass, `gen.sh` runs the **afterscript engine**
-(`nimbase afterscripts.run <lib> --dir:afterscripts`) which applies
-Nim-specific post-generation fixes contributed by the kapsis plugin in
-`afterscripts/`:
+Each PayPal API is a real nested nimble package under `deps/paypal_<api>/`
+(e.g. `deps/paypal_orders`, `deps/paypal_catalog`). The main `paypal` package
+re-exports them via thin shim modules in `src/paypal/` (`import paypal/orders`),
+and `config.nims` (root) auto-adds every inner package's `src` to the path.
 
-- `fix_enum_collisions` — dedupes colliding enum field identifiers
-- `rename_client` — aligns the generated client type with the lib name
-- `fix_type_idents` — renames digit-leading type declarations (e.g. `400`)
+For each spec, `scripts/gen.sh` invokes `nimbase openapi.gen`, which
+automatically runs the package's **prescripts** (before) and **postscripts**
+(after) — kapsis plugins in `prescripts/` and `postscripts/`:
+
+- **prescripts** — `validate_spec`: pre-generation hook
+- **postscripts** — `rename_package` (renames identity to `paypal_<api>`),
+  `fix_enum_collisions`, `rename_client`, `fix_type_idents`,
+  `fix_query_defaults`, plus the wiring: `write_shims`, `write_paypal_nim`,
+  `write_config`, `write_test_task`
+
+Scripts can also be run manually:
+
+```sh
+nimbase prescripts.list / postscripts.list
+nimbase postscripts.run <pkg-dir>          # --spec:<path> --dir:<plugins>
+```
+
+Docs are generated from the main module:
+
+```sh
+nim doc --index:on --project --path:. --out:.gh-pages src/paypal.nim
+```
 
 ### 🎩 License
 MIT license | [Made by Humans from OpenPeeps](https://github.com/openpeeps).<br>
