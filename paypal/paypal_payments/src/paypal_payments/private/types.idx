@@ -1,0 +1,109 @@
+nimTitle	types	paypal/paypal_payments/src/paypal_payments/private/types.html	module paypal/paypal_payments/src/paypal_payments/private/types		0
+nim	StandardHeaderSchema	paypal/paypal_payments/src/paypal_payments/private/types.html#StandardHeaderSchema	type StandardHeaderSchema		4
+nim	EmailAddress	paypal/paypal_payments/src/paypal_payments/private/types.html#EmailAddress	type EmailAddress		6
+nim	VISA	paypal/paypal_payments/src/paypal_payments/private/types.html#VISA	CardBrand.VISA		8
+nim	MASTERCARD	paypal/paypal_payments/src/paypal_payments/private/types.html#MASTERCARD	CardBrand.MASTERCARD		8
+nim	DISCOVER	paypal/paypal_payments/src/paypal_payments/private/types.html#DISCOVER	CardBrand.DISCOVER		8
+nim	AMEX	paypal/paypal_payments/src/paypal_payments/private/types.html#AMEX	CardBrand.AMEX		8
+nim	SOLO	paypal/paypal_payments/src/paypal_payments/private/types.html#SOLO	CardBrand.SOLO		8
+nim	JCB	paypal/paypal_payments/src/paypal_payments/private/types.html#JCB	CardBrand.JCB		8
+nim	STAR	paypal/paypal_payments/src/paypal_payments/private/types.html#STAR	CardBrand.STAR		8
+nim	DELTA	paypal/paypal_payments/src/paypal_payments/private/types.html#DELTA	CardBrand.DELTA		8
+nim	SWITCH	paypal/paypal_payments/src/paypal_payments/private/types.html#SWITCH	CardBrand.SWITCH		8
+nim	MAESTRO	paypal/paypal_payments/src/paypal_payments/private/types.html#MAESTRO	CardBrand.MAESTRO		8
+nim	CBNATIONALE	paypal/paypal_payments/src/paypal_payments/private/types.html#CBNATIONALE	CardBrand.CBNATIONALE		8
+nim	CONFIGOGA	paypal/paypal_payments/src/paypal_payments/private/types.html#CONFIGOGA	CardBrand.CONFIGOGA		8
+nim	CONFIDIS	paypal/paypal_payments/src/paypal_payments/private/types.html#CONFIDIS	CardBrand.CONFIDIS		8
+nim	ELECTRON	paypal/paypal_payments/src/paypal_payments/private/types.html#ELECTRON	CardBrand.ELECTRON		8
+nim	CETELEM	paypal/paypal_payments/src/paypal_payments/private/types.html#CETELEM	CardBrand.CETELEM		8
+nim	CHINAUNIONPAY	paypal/paypal_payments/src/paypal_payments/private/types.html#CHINAUNIONPAY	CardBrand.CHINAUNIONPAY		8
+nim	DINERS	paypal/paypal_payments/src/paypal_payments/private/types.html#DINERS	CardBrand.DINERS		8
+nim	ELO	paypal/paypal_payments/src/paypal_payments/private/types.html#ELO	CardBrand.ELO		8
+nim	HIPER	paypal/paypal_payments/src/paypal_payments/private/types.html#HIPER	CardBrand.HIPER		8
+nim	HIPERCARD	paypal/paypal_payments/src/paypal_payments/private/types.html#HIPERCARD	CardBrand.HIPERCARD		8
+nim	RUPAY	paypal/paypal_payments/src/paypal_payments/private/types.html#RUPAY	CardBrand.RUPAY		8
+nim	GE	paypal/paypal_payments/src/paypal_payments/private/types.html#GE	CardBrand.GE		8
+nim	SYNCHRONY	paypal/paypal_payments/src/paypal_payments/private/types.html#SYNCHRONY	CardBrand.SYNCHRONY		8
+nim	EFTPOS	paypal/paypal_payments/src/paypal_payments/private/types.html#EFTPOS	CardBrand.EFTPOS		8
+nim	CARTEBANCAIRE	paypal/paypal_payments/src/paypal_payments/private/types.html#CARTEBANCAIRE	CardBrand.CARTEBANCAIRE		8
+nim	STARACCESS	paypal/paypal_payments/src/paypal_payments/private/types.html#STARACCESS	CardBrand.STARACCESS		8
+nim	PULSE	paypal/paypal_payments/src/paypal_payments/private/types.html#PULSE	CardBrand.PULSE		8
+nim	NYCE	paypal/paypal_payments/src/paypal_payments/private/types.html#NYCE	CardBrand.NYCE		8
+nim	ACCEL	paypal/paypal_payments/src/paypal_payments/private/types.html#ACCEL	CardBrand.ACCEL		8
+nim	UNKNOWN	paypal/paypal_payments/src/paypal_payments/private/types.html#UNKNOWN	CardBrand.UNKNOWN		8
+nim	CardBrand	paypal/paypal_payments/src/paypal_payments/private/types.html#CardBrand	enum CardBrand		8
+nim	Email	paypal/paypal_payments/src/paypal_payments/private/types.html#Email	type Email		41
+nim	NetworkTransaction	paypal/paypal_payments/src/paypal_payments/private/types.html#NetworkTransaction	type NetworkTransaction		43
+nim	CurrencyCode	paypal/paypal_payments/src/paypal_payments/private/types.html#CurrencyCode	type CurrencyCode		63
+nim	Money	paypal/paypal_payments/src/paypal_payments/private/types.html#Money	type Money		65
+nim	DateTime	paypal/paypal_payments/src/paypal_payments/private/types.html#DateTime	type DateTime		76
+nim	CountryCode2	paypal/paypal_payments/src/paypal_payments/private/types.html#CountryCode2	type CountryCode2		78
+nim	Phone2	paypal/paypal_payments/src/paypal_payments/private/types.html#Phone2	type Phone2		80
+nim	DiscountWithBreakdown	paypal/paypal_payments/src/paypal_payments/private/types.html#DiscountWithBreakdown	type DiscountWithBreakdown		97
+nim	AmountBreakdown	paypal/paypal_payments/src/paypal_payments/private/types.html#AmountBreakdown	type AmountBreakdown		109
+nim	AmountWithBreakdown	paypal/paypal_payments/src/paypal_payments/private/types.html#AmountWithBreakdown	type AmountWithBreakdown		120
+nim	AccountId2	paypal/paypal_payments/src/paypal_payments/private/types.html#AccountId2	type AccountId2		138
+nim	PayeeBase	paypal/paypal_payments/src/paypal_payments/private/types.html#PayeeBase	type PayeeBase		140
+nim	Payee	paypal/paypal_payments/src/paypal_payments/private/types.html#Payee	type Payee		146
+nim	LinkSchema	paypal/paypal_payments/src/paypal_payments/private/types.html#LinkSchema	type LinkSchema		152
+nim	LinkDescription	paypal/paypal_payments/src/paypal_payments/private/types.html#LinkDescription	type LinkDescription		183
+nim	ErrorDetails	paypal/paypal_payments/src/paypal_payments/private/types.html#ErrorDetails	type ErrorDetails		208
+nim	Error	paypal/paypal_payments/src/paypal_payments/private/types.html#Error	type Error		228
+nim	AuthorizationStatusDetails	paypal/paypal_payments/src/paypal_payments/private/types.html#AuthorizationStatusDetails	type AuthorizationStatusDetails		241
+nim	AuthorizationStatus	paypal/paypal_payments/src/paypal_payments/private/types.html#AuthorizationStatus	type AuthorizationStatus		246
+nim	SellerProtection	paypal/paypal_payments/src/paypal_payments/private/types.html#SellerProtection	type SellerProtection		252
+nim	LinkSchema2	paypal/paypal_payments/src/paypal_payments/private/types.html#LinkSchema2	type LinkSchema2		262
+nim	LinkDescription2	paypal/paypal_payments/src/paypal_payments/private/types.html#LinkDescription2	type LinkDescription2		293
+nim	ActivityTimestamps	paypal/paypal_payments/src/paypal_payments/private/types.html#ActivityTimestamps	type ActivityTimestamps		318
+nim	Authorization	paypal/paypal_payments/src/paypal_payments/private/types.html#Authorization	type Authorization		324
+nim	RelatedIds	paypal/paypal_payments/src/paypal_payments/private/types.html#RelatedIds	type RelatedIds		348
+nim	SupplementaryData	paypal/paypal_payments/src/paypal_payments/private/types.html#SupplementaryData	type SupplementaryData		357
+nim	Authorization2	paypal/paypal_payments/src/paypal_payments/private/types.html#Authorization2	type Authorization2		361
+nim	SupplementaryPurchaseData	paypal/paypal_payments/src/paypal_payments/private/types.html#SupplementaryPurchaseData	type SupplementaryPurchaseData		387
+nim	PlatformFee	paypal/paypal_payments/src/paypal_payments/private/types.html#PlatformFee	type PlatformFee		397
+nim	INSTANT	paypal/paypal_payments/src/paypal_payments/private/types.html#INSTANT	DisbursementMode.INSTANT		405
+nim	DELAYED	paypal/paypal_payments/src/paypal_payments/private/types.html#DELAYED	DisbursementMode.DELAYED		405
+nim	DisbursementMode	paypal/paypal_payments/src/paypal_payments/private/types.html#DisbursementMode	enum DisbursementMode		405
+nim	PaymentInstruction	paypal/paypal_payments/src/paypal_payments/private/types.html#PaymentInstruction	type PaymentInstruction		410
+nim	CaptureRequest	paypal/paypal_payments/src/paypal_payments/private/types.html#CaptureRequest	type CaptureRequest		430
+nim	CaptureStatusDetails	paypal/paypal_payments/src/paypal_payments/private/types.html#CaptureStatusDetails	type CaptureStatusDetails		449
+nim	CaptureStatus	paypal/paypal_payments/src/paypal_payments/private/types.html#CaptureStatus	type CaptureStatus		454
+nim	ExchangeRate	paypal/paypal_payments/src/paypal_payments/private/types.html#ExchangeRate	type ExchangeRate		460
+nim	SellerReceivableBreakdown	paypal/paypal_payments/src/paypal_payments/private/types.html#SellerReceivableBreakdown	type SellerReceivableBreakdown		470
+nim	ProcessorResponse	paypal/paypal_payments/src/paypal_payments/private/types.html#ProcessorResponse	type ProcessorResponse		483
+nim	Capture	paypal/paypal_payments/src/paypal_payments/private/types.html#Capture	type Capture		498
+nim	Capture2	paypal/paypal_payments/src/paypal_payments/private/types.html#Capture2	type Capture2		529
+nim	ReauthorizeRequest	paypal/paypal_payments/src/paypal_payments/private/types.html#ReauthorizeRequest	type ReauthorizeRequest		562
+nim	PaymentInstruction2	paypal/paypal_payments/src/paypal_payments/private/types.html#PaymentInstruction2	type PaymentInstruction2		575
+nim	RefundRequest	paypal/paypal_payments/src/paypal_payments/private/types.html#RefundRequest	type RefundRequest		588
+nim	RefundStatusDetails	paypal/paypal_payments/src/paypal_payments/private/types.html#RefundStatusDetails	type RefundStatusDetails		606
+nim	RefundStatus	paypal/paypal_payments/src/paypal_payments/private/types.html#RefundStatus	type RefundStatus		611
+nim	NetAmountBreakdownItem	paypal/paypal_payments/src/paypal_payments/private/types.html#NetAmountBreakdownItem	type NetAmountBreakdownItem		617
+nim	Refund	paypal/paypal_payments/src/paypal_payments/private/types.html#Refund	type Refund		624
+nim	Guid	paypal/paypal_payments/src/paypal_payments/private/types.html#Guid	type Guid		654
+nim	FindEligibleMethodsRequestCustomerChannel	paypal/paypal_payments/src/paypal_payments/private/types.html#FindEligibleMethodsRequestCustomerChannel	type FindEligibleMethodsRequestCustomerChannel		656
+nim	FindEligibleMethodsRequestCustomer	paypal/paypal_payments/src/paypal_payments/private/types.html#FindEligibleMethodsRequestCustomer	type FindEligibleMethodsRequestCustomer		666
+nim	EligibilityPurchaseUnitRequest	paypal/paypal_payments/src/paypal_payments/private/types.html#EligibilityPurchaseUnitRequest	type EligibilityPurchaseUnitRequest		675
+nim	PAYPAL2	paypal/paypal_payments/src/paypal_payments/private/types.html#PAYPAL2	PaymentMethod.PAYPAL2		680
+nim	VENMO2	paypal/paypal_payments/src/paypal_payments/private/types.html#VENMO2	PaymentMethod.VENMO2		680
+nim	PAYPALCREDIT	paypal/paypal_payments/src/paypal_payments/private/types.html#PAYPALCREDIT	PaymentMethod.PAYPALCREDIT		680
+nim	PAYPALPAYLATER	paypal/paypal_payments/src/paypal_payments/private/types.html#PAYPALPAYLATER	PaymentMethod.PAYPALPAYLATER		680
+nim	PaymentMethod	paypal/paypal_payments/src/paypal_payments/private/types.html#PaymentMethod	enum PaymentMethod		680
+nim	FindEligibleMethodsRequestPreferences	paypal/paypal_payments/src/paypal_payments/private/types.html#FindEligibleMethodsRequestPreferences	type FindEligibleMethodsRequestPreferences		687
+nim	FindEligibleMethodsRequest	paypal/paypal_payments/src/paypal_payments/private/types.html#FindEligibleMethodsRequest	type FindEligibleMethodsRequest		705
+nim	CREDIT	paypal/paypal_payments/src/paypal_payments/private/types.html#CREDIT	CreditProductButtonCode.CREDIT		712
+nim	PAYLATER	paypal/paypal_payments/src/paypal_payments/private/types.html#PAYLATER	CreditProductButtonCode.PAYLATER		712
+nim	PAYIN3	paypal/paypal_payments/src/paypal_payments/private/types.html#PAYIN3	CreditProductButtonCode.PAYIN3		712
+nim	PAYIN4	paypal/paypal_payments/src/paypal_payments/private/types.html#PAYIN4	CreditProductButtonCode.PAYIN4		712
+nim	CreditProductButtonCode	paypal/paypal_payments/src/paypal_payments/private/types.html#CreditProductButtonCode	enum CreditProductButtonCode		712
+nim	PaymentMethodCommon	paypal/paypal_payments/src/paypal_payments/private/types.html#PaymentMethodCommon	type PaymentMethodCommon		720
+nim	false	paypal/paypal_payments/src/paypal_payments/private/types.html#false	PaymentMethodEligibleInPaypalNetwork.false		729
+nim	true	paypal/paypal_payments/src/paypal_payments/private/types.html#true	PaymentMethodEligibleInPaypalNetwork.true		729
+nim	PaymentMethodEligibleInPaypalNetwork	paypal/paypal_payments/src/paypal_payments/private/types.html#PaymentMethodEligibleInPaypalNetwork	type PaymentMethodEligibleInPaypalNetwork		729
+nim	Paypal	paypal/paypal_payments/src/paypal_payments/private/types.html#Paypal	type Paypal		731
+nim	Venmo	paypal/paypal_payments/src/paypal_payments/private/types.html#Venmo	type Venmo		748
+nim	PaymentMethods	paypal/paypal_payments/src/paypal_payments/private/types.html#PaymentMethods	type PaymentMethods		765
+nim	PayerBase	paypal/paypal_payments/src/paypal_payments/private/types.html#PayerBase	type PayerBase		772
+nim	VenmoPaymentTokenInfo	paypal/paypal_payments/src/paypal_payments/private/types.html#VenmoPaymentTokenInfo	type VenmoPaymentTokenInfo		778
+nim	PaymentToken	paypal/paypal_payments/src/paypal_payments/private/types.html#PaymentToken	type PaymentToken		783
+nim	FindEligibleMethodsResponse	paypal/paypal_payments/src/paypal_payments/private/types.html#FindEligibleMethodsResponse	type FindEligibleMethodsResponse		792

@@ -1,0 +1,193 @@
+nimTitle	types	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html	module paypal/paypal_subscriptions/src/paypal_subscriptions/private/types		0
+nim	Status400	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#Status400	type Status400		4
+nim	Status401	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#Status401	type Status401		7
+nim	Status403	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#Status403	type Status403		10
+nim	Status404	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#Status404	type Status404		13
+nim	Status422	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#Status422	type Status422		16
+nim	AccountId	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#AccountId	type AccountId		19
+nim	AmountWithBreakdown	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#AmountWithBreakdown	type AmountWithBreakdown		21
+nim	ApplicationContext	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#ApplicationContext	type ApplicationContext		31
+nim	AuthenticationResponse	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#AuthenticationResponse	type AuthenticationResponse		51
+nim	BillingCycle	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#BillingCycle	type BillingCycle		56
+nim	BillingCycleList	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#BillingCycleList	type BillingCycleList		75
+nim	BillingCycleOverride	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#BillingCycleOverride	type BillingCycleOverride		77
+nim	BillingCycleOverrideList	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#BillingCycleOverrideList	type BillingCycleOverrideList		93
+nim	BinDetails	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#BinDetails	type BinDetails		95
+nim	CardAttributes	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#CardAttributes	type CardAttributes		105
+nim	CardAttributesResponse	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#CardAttributesResponse	type CardAttributesResponse		111
+nim	VISA	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#VISA	CardBrand.VISA		115
+nim	MASTERCARD	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#MASTERCARD	CardBrand.MASTERCARD		115
+nim	DISCOVER	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#DISCOVER	CardBrand.DISCOVER		115
+nim	AMEX	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#AMEX	CardBrand.AMEX		115
+nim	SOLO	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#SOLO	CardBrand.SOLO		115
+nim	JCB	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#JCB	CardBrand.JCB		115
+nim	STAR	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#STAR	CardBrand.STAR		115
+nim	DELTA	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#DELTA	CardBrand.DELTA		115
+nim	SWITCH	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#SWITCH	CardBrand.SWITCH		115
+nim	MAESTRO	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#MAESTRO	CardBrand.MAESTRO		115
+nim	CBNATIONALE	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#CBNATIONALE	CardBrand.CBNATIONALE		115
+nim	CONFIGOGA	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#CONFIGOGA	CardBrand.CONFIGOGA		115
+nim	CONFIDIS	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#CONFIDIS	CardBrand.CONFIDIS		115
+nim	ELECTRON	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#ELECTRON	CardBrand.ELECTRON		115
+nim	CETELEM	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#CETELEM	CardBrand.CETELEM		115
+nim	CHINAUNIONPAY	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#CHINAUNIONPAY	CardBrand.CHINAUNIONPAY		115
+nim	DINERS	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#DINERS	CardBrand.DINERS		115
+nim	ELO	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#ELO	CardBrand.ELO		115
+nim	HIPER	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#HIPER	CardBrand.HIPER		115
+nim	HIPERCARD	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#HIPERCARD	CardBrand.HIPERCARD		115
+nim	RUPAY	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#RUPAY	CardBrand.RUPAY		115
+nim	GE	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#GE	CardBrand.GE		115
+nim	SYNCHRONY	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#SYNCHRONY	CardBrand.SYNCHRONY		115
+nim	UNKNOWN	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#UNKNOWN	CardBrand.UNKNOWN		115
+nim	CardBrand	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#CardBrand	enum CardBrand		115
+nim	CardBrandList	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#CardBrandList	type CardBrandList		142
+nim	CardFromRequest	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#CardFromRequest	type CardFromRequest		144
+nim	CardResponse	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#CardResponse	type CardResponse		150
+nim	CardResponseWithBillingAddress	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#CardResponseWithBillingAddress	type CardResponseWithBillingAddress		165
+nim	CREDIT	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#CREDIT	CardType.CREDIT		186
+nim	DEBIT	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#DEBIT	CardType.DEBIT		186
+nim	PREPAID	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#PREPAID	CardType.PREPAID		186
+nim	STORE	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#STORE	CardType.STORE		186
+nim	UNKNOWN2	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#UNKNOWN2	CardType.UNKNOWN2		186
+nim	CardType	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#CardType	enum CardType		186
+nim	CardVerification	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#CardVerification	type CardVerification		194
+nim	CountryCode	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#CountryCode	type CountryCode		200
+nim	CountryCode2	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#CountryCode2	type CountryCode2		202
+nim	CurrencyCode	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#CurrencyCode	type CurrencyCode		204
+nim	Customer	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#Customer	type Customer		206
+nim	CycleExecution	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#CycleExecution	type CycleExecution		212
+nim	CycleExecutionList	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#CycleExecutionList	type CycleExecutionList		233
+nim	DateTime	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#DateTime	type DateTime		235
+nim	DateYearMonth	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#DateYearMonth	type DateYearMonth		237
+nim	DefinitionsLinkDescriptionList	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#DefinitionsLinkDescriptionList	type DefinitionsLinkDescriptionList		239
+nim	Email	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#Email	type Email		241
+nim	EmailAddress	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#EmailAddress	type EmailAddress		243
+nim	Y	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#Y	Enrolled.Y		245
+nim	N	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#N	Enrolled.N		245
+nim	U	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#U	Enrolled.U		245
+nim	B	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#B	Enrolled.B		245
+nim	Enrolled	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#Enrolled	enum Enrolled		245
+nim	Error400	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#Error400	type Error400		252
+nim	Error401	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#Error401	type Error401		263
+nim	Error403	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#Error403	type Error403		275
+nim	Error404	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#Error404	type Error404		287
+nim	Error409	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#Error409	type Error409		299
+nim	Error415	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#Error415	type Error415		310
+nim	Error422	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#Error422	type Error422		321
+nim	Error500	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#Error500	type Error500		335
+nim	Error503	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#Error503	type Error503		347
+nim	ErrorDefault	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#ErrorDefault	type ErrorDefault		358
+nim	ErrorDetails	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#ErrorDetails	type ErrorDetails		361
+nim	ErrorLinkDescription	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#ErrorLinkDescription	type ErrorLinkDescription		375
+nim	body	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#body	ErrorLocation.body		391
+nim	path	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#path	ErrorLocation.path		391
+nim	query	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#query	ErrorLocation.query		391
+nim	ErrorLocation	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#ErrorLocation	enum ErrorLocation		391
+nim	FailedPaymentDetails	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#FailedPaymentDetails	type FailedPaymentDetails		398
+nim	Frequency	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#Frequency	type Frequency		406
+nim	Language	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#Language	type Language		422
+nim	LastPaymentDetails	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#LastPaymentDetails	type LastPaymentDetails		424
+nim	NO	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#NO	LiabilityShift.NO		429
+nim	POSSIBLE	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#POSSIBLE	LiabilityShift.POSSIBLE		429
+nim	UNKNOWN3	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#UNKNOWN3	LiabilityShift.UNKNOWN3		429
+nim	LiabilityShift	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#LiabilityShift	enum LiabilityShift		429
+nim	LinkDescription	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#LinkDescription	type LinkDescription		435
+nim	LinkDescriptionList	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#LinkDescriptionList	type LinkDescriptionList		451
+nim	MerchantInventory	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#MerchantInventory	type MerchantInventory		453
+nim	MerchantPartnerCustomerId	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#MerchantPartnerCustomerId	type MerchantPartnerCustomerId		455
+nim	Money	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#Money	type Money		457
+nim	Name	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#Name	type Name		468
+nim	Y2	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#Y2	ParesStatus.Y2		486
+nim	N2	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#N2	ParesStatus.N2		486
+nim	U2	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#U2	ParesStatus.U2		486
+nim	A	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#A	ParesStatus.A		486
+nim	C	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#C	ParesStatus.C		486
+nim	R	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#R	ParesStatus.R		486
+nim	D	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#D	ParesStatus.D		486
+nim	I	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#I	ParesStatus.I		486
+nim	ParesStatus	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#ParesStatus	enum ParesStatus		486
+nim	Patch	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#Patch	type Patch		498
+nim	PatchRequest	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#PatchRequest	type PatchRequest		515
+nim	UNRESTRICTED	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#UNRESTRICTED	PayeePaymentMethodPreference.UNRESTRICTED		517
+nim	IMMEDIATEPAYMENTREQUIRED	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#IMMEDIATEPAYMENTREQUIRED	PayeePaymentMethodPreference.IMMEDIATEPAYMENTREQUIRED		517
+nim	PayeePaymentMethodPreference	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#PayeePaymentMethodPreference	enum PayeePaymentMethodPreference		517
+nim	PayerBase	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#PayerBase	type PayerBase		522
+nim	PaymentPreferences	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#PaymentPreferences	type PaymentPreferences		528
+nim	PaymentPreferencesOverride	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#PaymentPreferencesOverride	type PaymentPreferencesOverride		542
+nim	PaymentSource	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#PaymentSource	type PaymentSource		556
+nim	PaymentSourceResponse	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#PaymentSourceResponse	type PaymentSourceResponse		564
+nim	Percentage	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#Percentage	type Percentage		568
+nim	FAX	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#FAX	PhoneType.FAX		570
+nim	HOME	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#HOME	PhoneType.HOME		570
+nim	MOBILE	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#MOBILE	PhoneType.MOBILE		570
+nim	OTHER	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#OTHER	PhoneType.OTHER		570
+nim	PAGER	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#PAGER	PhoneType.PAGER		570
+nim	PhoneType	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#PhoneType	enum PhoneType		570
+nim	PhoneWithType	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#PhoneWithType	type PhoneWithType		578
+nim	Plan	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#Plan	type Plan		585
+nim	PlanCollection	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#PlanCollection	type PlanCollection		607
+nim	PlanList	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#PlanList	type PlanList		616
+nim	PlanOverride	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#PlanOverride	type PlanOverride		618
+nim	PlanRequestPOST	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#PlanRequestPOST	type PlanRequestPOST		626
+nim	PlansActivate422	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#PlansActivate422	type PlansActivate422		643
+nim	PlansCreate400	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#PlansCreate400	type PlansCreate400		646
+nim	PlansDeactivate422	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#PlansDeactivate422	type PlansDeactivate422		649
+nim	PlansPatch400	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#PlansPatch400	type PlansPatch400		652
+nim	PlansPatch422	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#PlansPatch422	type PlansPatch422		655
+nim	PlansUpdatePricingSchemes400	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#PlansUpdatePricingSchemes400	type PlansUpdatePricingSchemes400		658
+nim	PlansUpdatePricingSchemes422	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#PlansUpdatePricingSchemes422	type PlansUpdatePricingSchemes422		661
+nim	PricingScheme	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#PricingScheme	type PricingScheme		664
+nim	PricingTier	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#PricingTier	type PricingTier		675
+nim	PricingTierList	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#PricingTierList	type PricingTierList		683
+nim	Products	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#Products	type Products		685
+nim	ProductsList	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#ProductsList	type ProductsList		687
+nim	ShippingDetail	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#ShippingDetail	type ShippingDetail		689
+nim	ShippingOption	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#ShippingOption	type ShippingOption		704
+nim	ShippingOptionList	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#ShippingOptionList	type ShippingOptionList		724
+nim	SHIPPING	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#SHIPPING	ShippingType.SHIPPING		726
+nim	PICKUP	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#PICKUP	ShippingType.PICKUP		726
+nim	PICKUPINSTORE	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#PICKUPINSTORE	ShippingType.PICKUPINSTORE		726
+nim	PICKUPFROMPERSON	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#PICKUPFROMPERSON	ShippingType.PICKUPFROMPERSON		726
+nim	ShippingType	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#ShippingType	enum ShippingType		726
+nim	ONSUCCESS	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#ONSUCCESS	StoreInVaultInstruction.ONSUCCESS		733
+nim	StoreInVaultInstruction	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#StoreInVaultInstruction	enum StoreInVaultInstruction		733
+nim	Subscriber	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#Subscriber	type Subscriber		737
+nim	SubscriberRequest	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#SubscriberRequest	type SubscriberRequest		746
+nim	Subscription	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#Subscription	type Subscription		755
+nim	SubscriptionActivateRequest	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#SubscriptionActivateRequest	type SubscriptionActivateRequest		781
+nim	SubscriptionBillingInfo	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#SubscriptionBillingInfo	type SubscriptionBillingInfo		787
+nim	SubscriptionCancelRequest	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#SubscriptionCancelRequest	type SubscriptionCancelRequest		801
+nim	SubscriptionCaptureRequest	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#SubscriptionCaptureRequest	type SubscriptionCaptureRequest		806
+nim	SubscriptionRequestPost	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#SubscriptionRequestPost	type SubscriptionRequestPost		814
+nim	SubscriptionReviseRequest	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#SubscriptionReviseRequest	type SubscriptionReviseRequest		832
+nim	SubscriptionReviseResponse	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#SubscriptionReviseResponse	type SubscriptionReviseResponse		848
+nim	SubscriptionReviseResponseDefinitionsLinkDescriptionList	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#SubscriptionReviseResponseDefinitionsLinkDescriptionList	type SubscriptionReviseResponseDefinitionsLinkDescriptionList		864
+nim	SubscriptionStatus	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#SubscriptionStatus	type SubscriptionStatus		866
+nim	SubscriptionSuspendRequest	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#SubscriptionSuspendRequest	type SubscriptionSuspendRequest		874
+nim	SubscriptionsActivate400	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#SubscriptionsActivate400	type SubscriptionsActivate400		879
+nim	SubscriptionsActivate422	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#SubscriptionsActivate422	type SubscriptionsActivate422		882
+nim	SubscriptionsCancel400	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#SubscriptionsCancel400	type SubscriptionsCancel400		885
+nim	SubscriptionsCancel422	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#SubscriptionsCancel422	type SubscriptionsCancel422		888
+nim	SubscriptionsCapture400	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#SubscriptionsCapture400	type SubscriptionsCapture400		891
+nim	SubscriptionsCapture422	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#SubscriptionsCapture422	type SubscriptionsCapture422		894
+nim	SubscriptionsCreate400	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#SubscriptionsCreate400	type SubscriptionsCreate400		897
+nim	SubscriptionsCreate422	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#SubscriptionsCreate422	type SubscriptionsCreate422		900
+nim	SubscriptionsPatch400	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#SubscriptionsPatch400	type SubscriptionsPatch400		903
+nim	SubscriptionsPatch422	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#SubscriptionsPatch422	type SubscriptionsPatch422		906
+nim	SubscriptionsRevise400	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#SubscriptionsRevise400	type SubscriptionsRevise400		909
+nim	SubscriptionsRevise404	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#SubscriptionsRevise404	type SubscriptionsRevise404		912
+nim	SubscriptionsRevise422	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#SubscriptionsRevise422	type SubscriptionsRevise422		915
+nim	SubscriptionsSuspend400	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#SubscriptionsSuspend400	type SubscriptionsSuspend400		918
+nim	SubscriptionsSuspend422	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#SubscriptionsSuspend422	type SubscriptionsSuspend422		921
+nim	SubscriptionsTransactions400	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#SubscriptionsTransactions400	type SubscriptionsTransactions400		924
+nim	Taxes	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#Taxes	type Taxes		927
+nim	TaxesOverride	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#TaxesOverride	type TaxesOverride		933
+nim	ThreeDSecureAuthenticationResponse	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#ThreeDSecureAuthenticationResponse	type ThreeDSecureAuthenticationResponse		939
+nim	Transaction	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#Transaction	type Transaction		944
+nim	TransactionList	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#TransactionList	type TransactionList		955
+nim	TransactionsList	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#TransactionsList	type TransactionsList		957
+nim	UpdatePricingSchemeRequest	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#UpdatePricingSchemeRequest	type UpdatePricingSchemeRequest		966
+nim	UpdatePricingSchemeRequestList	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#UpdatePricingSchemeRequestList	type UpdatePricingSchemeRequestList		972
+nim	UpdatePricingSchemesListRequest	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#UpdatePricingSchemesListRequest	type UpdatePricingSchemesListRequest		974
+nim	VaultInstructionBase	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#VaultInstructionBase	type VaultInstructionBase		978
+nim	VaultResponse	paypal/paypal_subscriptions/src/paypal_subscriptions/private/types.html#VaultResponse	type VaultResponse		983

@@ -1,0 +1,340 @@
+nimTitle	types	paypal/paypal_disputes/src/paypal_disputes/private/types.html	module paypal/paypal_disputes/src/paypal_disputes/private/types		0
+nim	AcceptClaimResponseOptions	paypal/paypal_disputes/src/paypal_disputes/private/types.html#AcceptClaimResponseOptions	type AcceptClaimResponseOptions		4
+nim	REFUND	paypal/paypal_disputes/src/paypal_disputes/private/types.html#REFUND	AcceptClaimType.REFUND		8
+nim	REFUNDWITHRETURN	paypal/paypal_disputes/src/paypal_disputes/private/types.html#REFUNDWITHRETURN	AcceptClaimType.REFUNDWITHRETURN		8
+nim	PARTIALREFUND	paypal/paypal_disputes/src/paypal_disputes/private/types.html#PARTIALREFUND	AcceptClaimType.PARTIALREFUND		8
+nim	REFUNDWITHRETURNSHIPMENTLABEL	paypal/paypal_disputes/src/paypal_disputes/private/types.html#REFUNDWITHRETURNSHIPMENTLABEL	AcceptClaimType.REFUNDWITHRETURNSHIPMENTLABEL		8
+nim	AcceptClaimType	paypal/paypal_disputes/src/paypal_disputes/private/types.html#AcceptClaimType	enum AcceptClaimType		8
+nim	AcceptClaimTypeList	paypal/paypal_disputes/src/paypal_disputes/private/types.html#AcceptClaimTypeList	type AcceptClaimTypeList		15
+nim	AcceptOffer	paypal/paypal_disputes/src/paypal_disputes/private/types.html#AcceptOffer	type AcceptOffer		17
+nim	AcknowledgeReturnItemResponseOptions	paypal/paypal_disputes/src/paypal_disputes/private/types.html#AcknowledgeReturnItemResponseOptions	type AcknowledgeReturnItemResponseOptions		23
+nim	ITEMRECEIVED	paypal/paypal_disputes/src/paypal_disputes/private/types.html#ITEMRECEIVED	AcknowledgementType.ITEMRECEIVED		28
+nim	ITEMNOTRECEIVED	paypal/paypal_disputes/src/paypal_disputes/private/types.html#ITEMNOTRECEIVED	AcknowledgementType.ITEMNOTRECEIVED		28
+nim	DAMAGED	paypal/paypal_disputes/src/paypal_disputes/private/types.html#DAMAGED	AcknowledgementType.DAMAGED		28
+nim	EMPTYPACKAGEORDIFFERENT	paypal/paypal_disputes/src/paypal_disputes/private/types.html#EMPTYPACKAGEORDIFFERENT	AcknowledgementType.EMPTYPACKAGEORDIFFERENT		28
+nim	MISSINGITEMS	paypal/paypal_disputes/src/paypal_disputes/private/types.html#MISSINGITEMS	AcknowledgementType.MISSINGITEMS		28
+nim	AcknowledgementType	paypal/paypal_disputes/src/paypal_disputes/private/types.html#AcknowledgementType	enum AcknowledgementType		28
+nim	AcknowledgementTypeList	paypal/paypal_disputes/src/paypal_disputes/private/types.html#AcknowledgementTypeList	type AcknowledgementTypeList		38
+nim	ActionInfo	paypal/paypal_disputes/src/paypal_disputes/private/types.html#ActionInfo	type ActionInfo		40
+nim	AddressDetails	paypal/paypal_disputes/src/paypal_disputes/private/types.html#AddressDetails	type AddressDetails		55
+nim	AddressPortable	paypal/paypal_disputes/src/paypal_disputes/private/types.html#AddressPortable	type AddressPortable		79
+nim	Adjudicate	paypal/paypal_disputes/src/paypal_disputes/private/types.html#Adjudicate	type Adjudicate		121
+nim	Adjudication	paypal/paypal_disputes/src/paypal_disputes/private/types.html#Adjudication	type Adjudication		126
+nim	AdjudicationList	paypal/paypal_disputes/src/paypal_disputes/private/types.html#AdjudicationList	type AdjudicationList		133
+nim	AMOUNTDIFFERENCEEXPECTEDDUETOFEES	paypal/paypal_disputes/src/paypal_disputes/private/types.html#AMOUNTDIFFERENCEEXPECTEDDUETOFEES	AdjudicationReason.AMOUNTDIFFERENCEEXPECTEDDUETOFEES		135
+nim	BILLINGAGREEMENTCHANGEDISCLOSED	paypal/paypal_disputes/src/paypal_disputes/private/types.html#BILLINGAGREEMENTCHANGEDISCLOSED	AdjudicationReason.BILLINGAGREEMENTCHANGEDISCLOSED		135
+nim	BILLINGAGREEMENTCHANGENOTDISCLOSED	paypal/paypal_disputes/src/paypal_disputes/private/types.html#BILLINGAGREEMENTCHANGENOTDISCLOSED	AdjudicationReason.BILLINGAGREEMENTCHANGENOTDISCLOSED		135
+nim	BILLINGAGREEMENTDATECHANGEDISCLOSED	paypal/paypal_disputes/src/paypal_disputes/private/types.html#BILLINGAGREEMENTDATECHANGEDISCLOSED	AdjudicationReason.BILLINGAGREEMENTDATECHANGEDISCLOSED		135
+nim	BILLINGAGREEMENTDATECHANGENOTDISCLOSED	paypal/paypal_disputes/src/paypal_disputes/private/types.html#BILLINGAGREEMENTDATECHANGENOTDISCLOSED	AdjudicationReason.BILLINGAGREEMENTDATECHANGENOTDISCLOSED		135
+nim	BUYERATTEMPTEDRETURN	paypal/paypal_disputes/src/paypal_disputes/private/types.html#BUYERATTEMPTEDRETURN	AdjudicationReason.BUYERATTEMPTEDRETURN		135
+nim	BUYERBILLEDONLYONCE	paypal/paypal_disputes/src/paypal_disputes/private/types.html#BUYERBILLEDONLYONCE	AdjudicationReason.BUYERBILLEDONLYONCE		135
+nim	BUYERCANCELLEDCASE	paypal/paypal_disputes/src/paypal_disputes/private/types.html#BUYERCANCELLEDCASE	AdjudicationReason.BUYERCANCELLEDCASE		135
+nim	BUYERCANCELLEDSERVICE	paypal/paypal_disputes/src/paypal_disputes/private/types.html#BUYERCANCELLEDSERVICE	AdjudicationReason.BUYERCANCELLEDSERVICE		135
+nim	BUYERFAILEDTODESCRIBEISSUE	paypal/paypal_disputes/src/paypal_disputes/private/types.html#BUYERFAILEDTODESCRIBEISSUE	AdjudicationReason.BUYERFAILEDTODESCRIBEISSUE		135
+nim	BUYERHASPOSSESSIONOFTHEMERCHANDISEORSERVICE	paypal/paypal_disputes/src/paypal_disputes/private/types.html#BUYERHASPOSSESSIONOFTHEMERCHANDISEORSERVICE	AdjudicationReason.BUYERHASPOSSESSIONOFTHEMERCHANDISEORSERVICE		135
+nim	BUYERMADENOATTEMPTTORESOLVEWITHSELLER	paypal/paypal_disputes/src/paypal_disputes/private/types.html#BUYERMADENOATTEMPTTORESOLVEWITHSELLER	AdjudicationReason.BUYERMADENOATTEMPTTORESOLVEWITHSELLER		135
+nim	BUYERNOTINPOSSESSIONOFITEMTORETURN	paypal/paypal_disputes/src/paypal_disputes/private/types.html#BUYERNOTINPOSSESSIONOFITEMTORETURN	AdjudicationReason.BUYERNOTINPOSSESSIONOFITEMTORETURN		135
+nim	BUYERPROVIDEDCREDITRECEIPT	paypal/paypal_disputes/src/paypal_disputes/private/types.html#BUYERPROVIDEDCREDITRECEIPT	AdjudicationReason.BUYERPROVIDEDCREDITRECEIPT		135
+nim	BUYERRECEIVEDDUPLICATEREFUND	paypal/paypal_disputes/src/paypal_disputes/private/types.html#BUYERRECEIVEDDUPLICATEREFUND	AdjudicationReason.BUYERRECEIVEDDUPLICATEREFUND		135
+nim	CANCELLEDPERTERMSOFBILLINGAGREEMENT	paypal/paypal_disputes/src/paypal_disputes/private/types.html#CANCELLEDPERTERMSOFBILLINGAGREEMENT	AdjudicationReason.CANCELLEDPERTERMSOFBILLINGAGREEMENT		135
+nim	CARDNOTSTOLEN	paypal/paypal_disputes/src/paypal_disputes/private/types.html#CARDNOTSTOLEN	AdjudicationReason.CARDNOTSTOLEN		135
+nim	CARDNOTSTOLENBEFOREAUTH	paypal/paypal_disputes/src/paypal_disputes/private/types.html#CARDNOTSTOLENBEFOREAUTH	AdjudicationReason.CARDNOTSTOLENBEFOREAUTH		135
+nim	CUSTOMERRECOGNIZESTRANSACTION	paypal/paypal_disputes/src/paypal_disputes/private/types.html#CUSTOMERRECOGNIZESTRANSACTION	AdjudicationReason.CUSTOMERRECOGNIZESTRANSACTION		135
+nim	DECISIONBASEDONAVAILABLEINFORMATION	paypal/paypal_disputes/src/paypal_disputes/private/types.html#DECISIONBASEDONAVAILABLEINFORMATION	AdjudicationReason.DECISIONBASEDONAVAILABLEINFORMATION		135
+nim	DELIVERYAFTEREXPECTEDDELIVERYDATE	paypal/paypal_disputes/src/paypal_disputes/private/types.html#DELIVERYAFTEREXPECTEDDELIVERYDATE	AdjudicationReason.DELIVERYAFTEREXPECTEDDELIVERYDATE		135
+nim	DELIVERYDUEWITHINEXPECTEDDELIVERYDATE	paypal/paypal_disputes/src/paypal_disputes/private/types.html#DELIVERYDUEWITHINEXPECTEDDELIVERYDATE	AdjudicationReason.DELIVERYDUEWITHINEXPECTEDDELIVERYDATE		135
+nim	DELIVERYORSERVICEREFUSED	paypal/paypal_disputes/src/paypal_disputes/private/types.html#DELIVERYORSERVICEREFUSED	AdjudicationReason.DELIVERYORSERVICEREFUSED		135
+nim	DOCUMENTATIONMATCHESAMOUNTCHARGED	paypal/paypal_disputes/src/paypal_disputes/private/types.html#DOCUMENTATIONMATCHESAMOUNTCHARGED	AdjudicationReason.DOCUMENTATIONMATCHESAMOUNTCHARGED		135
+nim	DOCUMENTATIONMATCHESAMOUNTINPAYPALACCOUNT	paypal/paypal_disputes/src/paypal_disputes/private/types.html#DOCUMENTATIONMATCHESAMOUNTINPAYPALACCOUNT	AdjudicationReason.DOCUMENTATIONMATCHESAMOUNTINPAYPALACCOUNT		135
+nim	DUPLICATEADDFUNDS	paypal/paypal_disputes/src/paypal_disputes/private/types.html#DUPLICATEADDFUNDS	AdjudicationReason.DUPLICATEADDFUNDS		135
+nim	EFFORTLESSSELLERPROTECTION	paypal/paypal_disputes/src/paypal_disputes/private/types.html#EFFORTLESSSELLERPROTECTION	AdjudicationReason.EFFORTLESSSELLERPROTECTION		135
+nim	INPERSONDELIVERY	paypal/paypal_disputes/src/paypal_disputes/private/types.html#INPERSONDELIVERY	AdjudicationReason.INPERSONDELIVERY		135
+nim	INELIGIBLEBUYERPROTECTIONPOLICY	paypal/paypal_disputes/src/paypal_disputes/private/types.html#INELIGIBLEBUYERPROTECTIONPOLICY	AdjudicationReason.INELIGIBLEBUYERPROTECTIONPOLICY		135
+nim	INELIGIBLESELLERPROTECTIONPOLICY	paypal/paypal_disputes/src/paypal_disputes/private/types.html#INELIGIBLESELLERPROTECTIONPOLICY	AdjudicationReason.INELIGIBLESELLERPROTECTIONPOLICY		135
+nim	INQUIRYOFFERITEMREPLACED	paypal/paypal_disputes/src/paypal_disputes/private/types.html#INQUIRYOFFERITEMREPLACED	AdjudicationReason.INQUIRYOFFERITEMREPLACED		135
+nim	INQUIRYOFFERPARTIALREFUND	paypal/paypal_disputes/src/paypal_disputes/private/types.html#INQUIRYOFFERPARTIALREFUND	AdjudicationReason.INQUIRYOFFERPARTIALREFUND		135
+nim	INQUIRYOFFERREFUNDWITHITEMRETURN	paypal/paypal_disputes/src/paypal_disputes/private/types.html#INQUIRYOFFERREFUNDWITHITEMRETURN	AdjudicationReason.INQUIRYOFFERREFUNDWITHITEMRETURN		135
+nim	INQUIRYOFFERREFUNDWITHREPLACEMENT	paypal/paypal_disputes/src/paypal_disputes/private/types.html#INQUIRYOFFERREFUNDWITHREPLACEMENT	AdjudicationReason.INQUIRYOFFERREFUNDWITHREPLACEMENT		135
+nim	INVALIDAPPEALREASON	paypal/paypal_disputes/src/paypal_disputes/private/types.html#INVALIDAPPEALREASON	AdjudicationReason.INVALIDAPPEALREASON		135
+nim	INVALIDCHARGEBACKSELLERFAVOUR	paypal/paypal_disputes/src/paypal_disputes/private/types.html#INVALIDCHARGEBACKSELLERFAVOUR	AdjudicationReason.INVALIDCHARGEBACKSELLERFAVOUR		135
+nim	INVALIDDELIVERYPROOF	paypal/paypal_disputes/src/paypal_disputes/private/types.html#INVALIDDELIVERYPROOF	AdjudicationReason.INVALIDDELIVERYPROOF		135
+nim	INVALIDDELIVERYPROOFSIGNATURE	paypal/paypal_disputes/src/paypal_disputes/private/types.html#INVALIDDELIVERYPROOFSIGNATURE	AdjudicationReason.INVALIDDELIVERYPROOFSIGNATURE		135
+nim	INVALIDDOCUMENTATION	paypal/paypal_disputes/src/paypal_disputes/private/types.html#INVALIDDOCUMENTATION	AdjudicationReason.INVALIDDOCUMENTATION		135
+nim	INVALIDPROOFOFSHIPMENT	paypal/paypal_disputes/src/paypal_disputes/private/types.html#INVALIDPROOFOFSHIPMENT	AdjudicationReason.INVALIDPROOFOFSHIPMENT		135
+nim	INVALIDREFUNDPROOF	paypal/paypal_disputes/src/paypal_disputes/private/types.html#INVALIDREFUNDPROOF	AdjudicationReason.INVALIDREFUNDPROOF		135
+nim	INVALIDRETURNDELIVERYNOSIGNATUREPROOF	paypal/paypal_disputes/src/paypal_disputes/private/types.html#INVALIDRETURNDELIVERYNOSIGNATUREPROOF	AdjudicationReason.INVALIDRETURNDELIVERYNOSIGNATUREPROOF		135
+nim	INVALIDRETURNDELIVERYPROOF	paypal/paypal_disputes/src/paypal_disputes/private/types.html#INVALIDRETURNDELIVERYPROOF	AdjudicationReason.INVALIDRETURNDELIVERYPROOF		135
+nim	INVALIDTRACKING	paypal/paypal_disputes/src/paypal_disputes/private/types.html#INVALIDTRACKING	AdjudicationReason.INVALIDTRACKING		135
+nim	ITEMALTEREDREPAIRED	paypal/paypal_disputes/src/paypal_disputes/private/types.html#ITEMALTEREDREPAIRED	AdjudicationReason.ITEMALTEREDREPAIRED		135
+nim	ITEMNOTASADVERTISED	paypal/paypal_disputes/src/paypal_disputes/private/types.html#ITEMNOTASADVERTISED	AdjudicationReason.ITEMNOTASADVERTISED		135
+nim	ITEMNOTASDESCRIBED	paypal/paypal_disputes/src/paypal_disputes/private/types.html#ITEMNOTASDESCRIBED	AdjudicationReason.ITEMNOTASDESCRIBED		135
+nim	ITEMNOTDAMAGED	paypal/paypal_disputes/src/paypal_disputes/private/types.html#ITEMNOTDAMAGED	AdjudicationReason.ITEMNOTDAMAGED		135
+nim	ITEMNOTDELIVERED	paypal/paypal_disputes/src/paypal_disputes/private/types.html#ITEMNOTDELIVERED	AdjudicationReason.ITEMNOTDELIVERED		135
+nim	ITEMNOTRETURNEDTOSELLER	paypal/paypal_disputes/src/paypal_disputes/private/types.html#ITEMNOTRETURNEDTOSELLER	AdjudicationReason.ITEMNOTRETURNEDTOSELLER		135
+nim	ITEMNOTSHIPPED	paypal/paypal_disputes/src/paypal_disputes/private/types.html#ITEMNOTSHIPPED	AdjudicationReason.ITEMNOTSHIPPED		135
+nim	ITEMOFDIFFERENTQUALITYORQUANTITY	paypal/paypal_disputes/src/paypal_disputes/private/types.html#ITEMOFDIFFERENTQUALITYORQUANTITY	AdjudicationReason.ITEMOFDIFFERENTQUALITYORQUANTITY		135
+nim	ITEMOUTOFSTOCKANDNOTDELIVERED	paypal/paypal_disputes/src/paypal_disputes/private/types.html#ITEMOUTOFSTOCKANDNOTDELIVERED	AdjudicationReason.ITEMOUTOFSTOCKANDNOTDELIVERED		135
+nim	ITEMRETURNEDTOSELLER	paypal/paypal_disputes/src/paypal_disputes/private/types.html#ITEMRETURNEDTOSELLER	AdjudicationReason.ITEMRETURNEDTOSELLER		135
+nim	ITEMSERVICEMISREPRESENTED	paypal/paypal_disputes/src/paypal_disputes/private/types.html#ITEMSERVICEMISREPRESENTED	AdjudicationReason.ITEMSERVICEMISREPRESENTED		135
+nim	ITEMSERVICENOTMISREPRESENTED	paypal/paypal_disputes/src/paypal_disputes/private/types.html#ITEMSERVICENOTMISREPRESENTED	AdjudicationReason.ITEMSERVICENOTMISREPRESENTED		135
+nim	ITEMSERVICERECEIVEDBYBUYER	paypal/paypal_disputes/src/paypal_disputes/private/types.html#ITEMSERVICERECEIVEDBYBUYER	AdjudicationReason.ITEMSERVICERECEIVEDBYBUYER		135
+nim	ITEMSOLDASDESCRIBED	paypal/paypal_disputes/src/paypal_disputes/private/types.html#ITEMSOLDASDESCRIBED	AdjudicationReason.ITEMSOLDASDESCRIBED		135
+nim	ITEMVALUEUNAFFECTED	paypal/paypal_disputes/src/paypal_disputes/private/types.html#ITEMVALUEUNAFFECTED	AdjudicationReason.ITEMVALUEUNAFFECTED		135
+nim	MULTIPLEAPPEALSWITHSAMEREASON	paypal/paypal_disputes/src/paypal_disputes/private/types.html#MULTIPLEAPPEALSWITHSAMEREASON	AdjudicationReason.MULTIPLEAPPEALSWITHSAMEREASON		135
+nim	NODOCUMENTATIONFROMBUYER	paypal/paypal_disputes/src/paypal_disputes/private/types.html#NODOCUMENTATIONFROMBUYER	AdjudicationReason.NODOCUMENTATIONFROMBUYER		135
+nim	NODOCUMENTATIONSUPPORTINGDUEOFCREDIT	paypal/paypal_disputes/src/paypal_disputes/private/types.html#NODOCUMENTATIONSUPPORTINGDUEOFCREDIT	AdjudicationReason.NODOCUMENTATIONSUPPORTINGDUEOFCREDIT		135
+nim	NOPROOFOFDELIVERY	paypal/paypal_disputes/src/paypal_disputes/private/types.html#NOPROOFOFDELIVERY	AdjudicationReason.NOPROOFOFDELIVERY		135
+nim	NOPROOFOFDELIVERYINTANGIBLE	paypal/paypal_disputes/src/paypal_disputes/private/types.html#NOPROOFOFDELIVERYINTANGIBLE	AdjudicationReason.NOPROOFOFDELIVERYINTANGIBLE		135
+nim	NOPROTECTIONFORDIGITALGOODSSERVICE	paypal/paypal_disputes/src/paypal_disputes/private/types.html#NOPROTECTIONFORDIGITALGOODSSERVICE	AdjudicationReason.NOPROTECTIONFORDIGITALGOODSSERVICE		135
+nim	NORESPONSEFROMBUYER	paypal/paypal_disputes/src/paypal_disputes/private/types.html#NORESPONSEFROMBUYER	AdjudicationReason.NORESPONSEFROMBUYER		135
+nim	NORESPONSEFROMBUYERFORADDITIONALINFOREQUEST	paypal/paypal_disputes/src/paypal_disputes/private/types.html#NORESPONSEFROMBUYERFORADDITIONALINFOREQUEST	AdjudicationReason.NORESPONSEFROMBUYERFORADDITIONALINFOREQUEST		135
+nim	NOSELLERRESPONSE	paypal/paypal_disputes/src/paypal_disputes/private/types.html#NOSELLERRESPONSE	AdjudicationReason.NOSELLERRESPONSE		135
+nim	NOSELLERRESPONSEFORADDITIONALINFOREQUEST	paypal/paypal_disputes/src/paypal_disputes/private/types.html#NOSELLERRESPONSEFORADDITIONALINFOREQUEST	AdjudicationReason.NOSELLERRESPONSEFORADDITIONALINFOREQUEST		135
+nim	NOVALIDSHIPMENTPROOF	paypal/paypal_disputes/src/paypal_disputes/private/types.html#NOVALIDSHIPMENTPROOF	AdjudicationReason.NOVALIDSHIPMENTPROOF		135
+nim	NOTABILLINGERROR	paypal/paypal_disputes/src/paypal_disputes/private/types.html#NOTABILLINGERROR	AdjudicationReason.NOTABILLINGERROR		135
+nim	NOTANUNAUTHORIZEDTRANSACTION	paypal/paypal_disputes/src/paypal_disputes/private/types.html#NOTANUNAUTHORIZEDTRANSACTION	AdjudicationReason.NOTANUNAUTHORIZEDTRANSACTION		135
+nim	NOTDUPLICATEFUNDSADDEDONCE	paypal/paypal_disputes/src/paypal_disputes/private/types.html#NOTDUPLICATEFUNDSADDEDONCE	AdjudicationReason.NOTDUPLICATEFUNDSADDEDONCE		135
+nim	NOTDUPLICATEFUNDSWITHDRAWNONCE	paypal/paypal_disputes/src/paypal_disputes/private/types.html#NOTDUPLICATEFUNDSWITHDRAWNONCE	AdjudicationReason.NOTDUPLICATEFUNDSWITHDRAWNONCE		135
+nim	NOTSHIPPEDTOCORRECTADDRESS	paypal/paypal_disputes/src/paypal_disputes/private/types.html#NOTSHIPPEDTOCORRECTADDRESS	AdjudicationReason.NOTSHIPPEDTOCORRECTADDRESS		135
+nim	PARTIALREFUNDISSUEDFORMISSINGITEMS	paypal/paypal_disputes/src/paypal_disputes/private/types.html#PARTIALREFUNDISSUEDFORMISSINGITEMS	AdjudicationReason.PARTIALREFUNDISSUEDFORMISSINGITEMS		135
+nim	PARTIALREFUNDOFFERACCEPTED	paypal/paypal_disputes/src/paypal_disputes/private/types.html#PARTIALREFUNDOFFERACCEPTED	AdjudicationReason.PARTIALREFUNDOFFERACCEPTED		135
+nim	PAYMENTREVERSEDALREADY	paypal/paypal_disputes/src/paypal_disputes/private/types.html#PAYMENTREVERSEDALREADY	AdjudicationReason.PAYMENTREVERSEDALREADY		135
+nim	POSSUBMITTEDINSTEADOFPOD	paypal/paypal_disputes/src/paypal_disputes/private/types.html#POSSUBMITTEDINSTEADOFPOD	AdjudicationReason.POSSUBMITTEDINSTEADOFPOD		135
+nim	PREAUTHINSTALLMENTDUE	paypal/paypal_disputes/src/paypal_disputes/private/types.html#PREAUTHINSTALLMENTDUE	AdjudicationReason.PREAUTHINSTALLMENTDUE		135
+nim	PROOFOFBILLINGAFTERCANCELLATIONACCEPTED	paypal/paypal_disputes/src/paypal_disputes/private/types.html#PROOFOFBILLINGAFTERCANCELLATIONACCEPTED	AdjudicationReason.PROOFOFBILLINGAFTERCANCELLATIONACCEPTED		135
+nim	PROOFOFDUPLICATEDENIEDORINSUFFICIENT	paypal/paypal_disputes/src/paypal_disputes/private/types.html#PROOFOFDUPLICATEDENIEDORINSUFFICIENT	AdjudicationReason.PROOFOFDUPLICATEDENIEDORINSUFFICIENT		135
+nim	PROOFOFINCORRECTTRANSACTIONAMOUNTACCEPTED	paypal/paypal_disputes/src/paypal_disputes/private/types.html#PROOFOFINCORRECTTRANSACTIONAMOUNTACCEPTED	AdjudicationReason.PROOFOFINCORRECTTRANSACTIONAMOUNTACCEPTED		135
+nim	PROOFOFPAIDBYOTHERMEANSNOTSUBMITTED	paypal/paypal_disputes/src/paypal_disputes/private/types.html#PROOFOFPAIDBYOTHERMEANSNOTSUBMITTED	AdjudicationReason.PROOFOFPAIDBYOTHERMEANSNOTSUBMITTED		135
+nim	PROOFOFTRACKINGNOTSUBMITTED	paypal/paypal_disputes/src/paypal_disputes/private/types.html#PROOFOFTRACKINGNOTSUBMITTED	AdjudicationReason.PROOFOFTRACKINGNOTSUBMITTED		135
+nim	PROTECTEDBYPAYPAL	paypal/paypal_disputes/src/paypal_disputes/private/types.html#PROTECTEDBYPAYPAL	AdjudicationReason.PROTECTEDBYPAYPAL		135
+nim	REPRESENTEDBYPAYPAL	paypal/paypal_disputes/src/paypal_disputes/private/types.html#REPRESENTEDBYPAYPAL	AdjudicationReason.REPRESENTEDBYPAYPAL		135
+nim	SELLERACCEPTEDMULTIPLEPAYMENTS	paypal/paypal_disputes/src/paypal_disputes/private/types.html#SELLERACCEPTEDMULTIPLEPAYMENTS	AdjudicationReason.SELLERACCEPTEDMULTIPLEPAYMENTS		135
+nim	SELLERAGREEDREFUNDWITHOUTRETURN	paypal/paypal_disputes/src/paypal_disputes/private/types.html#SELLERAGREEDREFUNDWITHOUTRETURN	AdjudicationReason.SELLERAGREEDREFUNDWITHOUTRETURN		135
+nim	SELLERAGREEDTOISSUECREDIT	paypal/paypal_disputes/src/paypal_disputes/private/types.html#SELLERAGREEDTOISSUECREDIT	AdjudicationReason.SELLERAGREEDTOISSUECREDIT		135
+nim	SELLERISSUEDCREDITTOBUYER	paypal/paypal_disputes/src/paypal_disputes/private/types.html#SELLERISSUEDCREDITTOBUYER	AdjudicationReason.SELLERISSUEDCREDITTOBUYER		135
+nim	SELLERISSUEDREFUND	paypal/paypal_disputes/src/paypal_disputes/private/types.html#SELLERISSUEDREFUND	AdjudicationReason.SELLERISSUEDREFUND		135
+nim	SELLERNOTREACHABLE	paypal/paypal_disputes/src/paypal_disputes/private/types.html#SELLERNOTREACHABLE	AdjudicationReason.SELLERNOTREACHABLE		135
+nim	SELLERRECEIVEDPAYMENTTWICEORFORREPLACEMENT	paypal/paypal_disputes/src/paypal_disputes/private/types.html#SELLERRECEIVEDPAYMENTTWICEORFORREPLACEMENT	AdjudicationReason.SELLERRECEIVEDPAYMENTTWICEORFORREPLACEMENT		135
+nim	SELLERREFUSEDREFUND	paypal/paypal_disputes/src/paypal_disputes/private/types.html#SELLERREFUSEDREFUND	AdjudicationReason.SELLERREFUSEDREFUND		135
+nim	SELLERREFUSEDRETURN	paypal/paypal_disputes/src/paypal_disputes/private/types.html#SELLERREFUSEDRETURN	AdjudicationReason.SELLERREFUSEDRETURN		135
+nim	SELLERSURCHARGEDBUYER	paypal/paypal_disputes/src/paypal_disputes/private/types.html#SELLERSURCHARGEDBUYER	AdjudicationReason.SELLERSURCHARGEDBUYER		135
+nim	SERVICENOTCOMPLETEDASAGREED	paypal/paypal_disputes/src/paypal_disputes/private/types.html#SERVICENOTCOMPLETEDASAGREED	AdjudicationReason.SERVICENOTCOMPLETEDASAGREED		135
+nim	SHIPPINGCOMPANYWONTSHIP	paypal/paypal_disputes/src/paypal_disputes/private/types.html#SHIPPINGCOMPANYWONTSHIP	AdjudicationReason.SHIPPINGCOMPANYWONTSHIP		135
+nim	TRACKINGPROOFNOTENOUGH	paypal/paypal_disputes/src/paypal_disputes/private/types.html#TRACKINGPROOFNOTENOUGH	AdjudicationReason.TRACKINGPROOFNOTENOUGH		135
+nim	TRANSACTIONAUTHORIZEDBYCARDHOLDER	paypal/paypal_disputes/src/paypal_disputes/private/types.html#TRANSACTIONAUTHORIZEDBYCARDHOLDER	AdjudicationReason.TRANSACTIONAUTHORIZEDBYCARDHOLDER		135
+nim	TRANSACTIONCANCELLEDAFTERAUTHORIZATIONDATE	paypal/paypal_disputes/src/paypal_disputes/private/types.html#TRANSACTIONCANCELLEDAFTERAUTHORIZATIONDATE	AdjudicationReason.TRANSACTIONCANCELLEDAFTERAUTHORIZATIONDATE		135
+nim	TRANSACTIONCANCELLEDBEFORESHIPMENTSERVICEDATE	paypal/paypal_disputes/src/paypal_disputes/private/types.html#TRANSACTIONCANCELLEDBEFORESHIPMENTSERVICEDATE	AdjudicationReason.TRANSACTIONCANCELLEDBEFORESHIPMENTSERVICEDATE		135
+nim	TRANSACTIONMATCHESBUYERSPENDINGPATTERN	paypal/paypal_disputes/src/paypal_disputes/private/types.html#TRANSACTIONMATCHESBUYERSPENDINGPATTERN	AdjudicationReason.TRANSACTIONMATCHESBUYERSPENDINGPATTERN		135
+nim	TRANSACTIONPROCESSEDCORRECTLY	paypal/paypal_disputes/src/paypal_disputes/private/types.html#TRANSACTIONPROCESSEDCORRECTLY	AdjudicationReason.TRANSACTIONPROCESSEDCORRECTLY		135
+nim	TRUSTEDBUYERPAYOUT	paypal/paypal_disputes/src/paypal_disputes/private/types.html#TRUSTEDBUYERPAYOUT	AdjudicationReason.TRUSTEDBUYERPAYOUT		135
+nim	UNUSEDSHIPPINGLABEL	paypal/paypal_disputes/src/paypal_disputes/private/types.html#UNUSEDSHIPPINGLABEL	AdjudicationReason.UNUSEDSHIPPINGLABEL		135
+nim	VALIDPROOFOFDELIVERY	paypal/paypal_disputes/src/paypal_disputes/private/types.html#VALIDPROOFOFDELIVERY	AdjudicationReason.VALIDPROOFOFDELIVERY		135
+nim	VALIDPROOFOFDELIVERYWITHSIGNATURE	paypal/paypal_disputes/src/paypal_disputes/private/types.html#VALIDPROOFOFDELIVERYWITHSIGNATURE	AdjudicationReason.VALIDPROOFOFDELIVERYWITHSIGNATURE		135
+nim	VALIDPROOFOFREFUND	paypal/paypal_disputes/src/paypal_disputes/private/types.html#VALIDPROOFOFREFUND	AdjudicationReason.VALIDPROOFOFREFUND		135
+nim	VALIDPROOFSUPPORTINGCLAIM	paypal/paypal_disputes/src/paypal_disputes/private/types.html#VALIDPROOFSUPPORTINGCLAIM	AdjudicationReason.VALIDPROOFSUPPORTINGCLAIM		135
+nim	VALIDRETURNDELIVERYPROOF	paypal/paypal_disputes/src/paypal_disputes/private/types.html#VALIDRETURNDELIVERYPROOF	AdjudicationReason.VALIDRETURNDELIVERYPROOF		135
+nim	VALIDRETURNDELIVERYPROOFWITHSIGNATURE	paypal/paypal_disputes/src/paypal_disputes/private/types.html#VALIDRETURNDELIVERYPROOFWITHSIGNATURE	AdjudicationReason.VALIDRETURNDELIVERYPROOFWITHSIGNATURE		135
+nim	VALIDSHIPMENTPROOF	paypal/paypal_disputes/src/paypal_disputes/private/types.html#VALIDSHIPMENTPROOF	AdjudicationReason.VALIDSHIPMENTPROOF		135
+nim	VALUEAFFECTEDSIGNIFICANTLY	paypal/paypal_disputes/src/paypal_disputes/private/types.html#VALUEAFFECTEDSIGNIFICANTLY	AdjudicationReason.VALUEAFFECTEDSIGNIFICANTLY		135
+nim	PROTECTIONPOLICYAPPLIES	paypal/paypal_disputes/src/paypal_disputes/private/types.html#PROTECTIONPOLICYAPPLIES	AdjudicationReason.PROTECTIONPOLICYAPPLIES		135
+nim	SNADDELAYEDFILING	paypal/paypal_disputes/src/paypal_disputes/private/types.html#SNADDELAYEDFILING	AdjudicationReason.SNADDELAYEDFILING		135
+nim	FUNDSTRANSFERREDTOINCORRECTRECIPIENT	paypal/paypal_disputes/src/paypal_disputes/private/types.html#FUNDSTRANSFERREDTOINCORRECTRECIPIENT	AdjudicationReason.FUNDSTRANSFERREDTOINCORRECTRECIPIENT		135
+nim	AdjudicationReason	paypal/paypal_disputes/src/paypal_disputes/private/types.html#AdjudicationReason	enum AdjudicationReason		135
+nim	DENYBUYER	paypal/paypal_disputes/src/paypal_disputes/private/types.html#DENYBUYER	AdjudicationType.DENYBUYER		256
+nim	PAYOUTTOBUYER	paypal/paypal_disputes/src/paypal_disputes/private/types.html#PAYOUTTOBUYER	AdjudicationType.PAYOUTTOBUYER		256
+nim	PAYOUTTOSELLER	paypal/paypal_disputes/src/paypal_disputes/private/types.html#PAYOUTTOSELLER	AdjudicationType.PAYOUTTOSELLER		256
+nim	RECOVERFROMSELLER	paypal/paypal_disputes/src/paypal_disputes/private/types.html#RECOVERFROMSELLER	AdjudicationType.RECOVERFROMSELLER		256
+nim	AdjudicationType	paypal/paypal_disputes/src/paypal_disputes/private/types.html#AdjudicationType	enum AdjudicationType		256
+nim	AgreedRefundDetails	paypal/paypal_disputes/src/paypal_disputes/private/types.html#AgreedRefundDetails	type AgreedRefundDetails		263
+nim	AllowedResponseOptions	paypal/paypal_disputes/src/paypal_disputes/private/types.html#AllowedResponseOptions	type AllowedResponseOptions		269
+nim	BillingDisputesProperties	paypal/paypal_disputes/src/paypal_disputes/private/types.html#BillingDisputesProperties	type BillingDisputesProperties		275
+nim	Buyer	paypal/paypal_disputes/src/paypal_disputes/private/types.html#Buyer	type Buyer		283
+nim	BuyerEscalationReason	paypal/paypal_disputes/src/paypal_disputes/private/types.html#BuyerEscalationReason	type BuyerEscalationReason		289
+nim	CanceledRecurringBilling	paypal/paypal_disputes/src/paypal_disputes/private/types.html#CanceledRecurringBilling	type CanceledRecurringBilling		291
+nim	CancellationDetails	paypal/paypal_disputes/src/paypal_disputes/private/types.html#CancellationDetails	type CancellationDetails		296
+nim	CommunicationDetails	paypal/paypal_disputes/src/paypal_disputes/private/types.html#CommunicationDetails	type CommunicationDetails		306
+nim	CountryCode	paypal/paypal_disputes/src/paypal_disputes/private/types.html#CountryCode	type CountryCode		314
+nim	CreditNotProcessed	paypal/paypal_disputes/src/paypal_disputes/private/types.html#CreditNotProcessed	type CreditNotProcessed		316
+nim	Cryptocurrency	paypal/paypal_disputes/src/paypal_disputes/private/types.html#Cryptocurrency	type Cryptocurrency		326
+nim	CryptocurrencyDecimals	paypal/paypal_disputes/src/paypal_disputes/private/types.html#CryptocurrencyDecimals	type CryptocurrencyDecimals		334
+nim	CryptocurrencyQuantity	paypal/paypal_disputes/src/paypal_disputes/private/types.html#CryptocurrencyQuantity	type CryptocurrencyQuantity		336
+nim	CryptocurrencySubunitsQuantity	paypal/paypal_disputes/src/paypal_disputes/private/types.html#CryptocurrencySubunitsQuantity	type CryptocurrencySubunitsQuantity		338
+nim	BTC	paypal/paypal_disputes/src/paypal_disputes/private/types.html#BTC	CryptocurrencySymbol.BTC		340
+nim	ETH	paypal/paypal_disputes/src/paypal_disputes/private/types.html#ETH	CryptocurrencySymbol.ETH		340
+nim	BCH	paypal/paypal_disputes/src/paypal_disputes/private/types.html#BCH	CryptocurrencySymbol.BCH		340
+nim	LTC	paypal/paypal_disputes/src/paypal_disputes/private/types.html#LTC	CryptocurrencySymbol.LTC		340
+nim	PYUSD	paypal/paypal_disputes/src/paypal_disputes/private/types.html#PYUSD	CryptocurrencySymbol.PYUSD		340
+nim	LINK	paypal/paypal_disputes/src/paypal_disputes/private/types.html#LINK	CryptocurrencySymbol.LINK		340
+nim	SOL	paypal/paypal_disputes/src/paypal_disputes/private/types.html#SOL	CryptocurrencySymbol.SOL		340
+nim	MATIC	paypal/paypal_disputes/src/paypal_disputes/private/types.html#MATIC	CryptocurrencySymbol.MATIC		340
+nim	CryptocurrencySymbol	paypal/paypal_disputes/src/paypal_disputes/private/types.html#CryptocurrencySymbol	enum CryptocurrencySymbol		340
+nim	CurrencyCode	paypal/paypal_disputes/src/paypal_disputes/private/types.html#CurrencyCode	type CurrencyCode		352
+nim	DateTime	paypal/paypal_disputes/src/paypal_disputes/private/types.html#DateTime	type DateTime		354
+nim	DefinitionsDocumentList	paypal/paypal_disputes/src/paypal_disputes/private/types.html#DefinitionsDocumentList	type DefinitionsDocumentList		356
+nim	DefinitionsLinkDescriptionList	paypal/paypal_disputes/src/paypal_disputes/private/types.html#DefinitionsLinkDescriptionList	type DefinitionsLinkDescriptionList		358
+nim	DAMAGED2	paypal/paypal_disputes/src/paypal_disputes/private/types.html#DAMAGED2	DefinitionsSubReasons.DAMAGED2		360
+nim	DIFFERENT	paypal/paypal_disputes/src/paypal_disputes/private/types.html#DIFFERENT	DefinitionsSubReasons.DIFFERENT		360
+nim	INCOMPLETE	paypal/paypal_disputes/src/paypal_disputes/private/types.html#INCOMPLETE	DefinitionsSubReasons.INCOMPLETE		360
+nim	OTHER	paypal/paypal_disputes/src/paypal_disputes/private/types.html#OTHER	DefinitionsSubReasons.OTHER		360
+nim	DefinitionsSubReasons	paypal/paypal_disputes/src/paypal_disputes/private/types.html#DefinitionsSubReasons	enum DefinitionsSubReasons		360
+nim	DefinitionsSubReasonsList	paypal/paypal_disputes/src/paypal_disputes/private/types.html#DefinitionsSubReasonsList	type DefinitionsSubReasonsList		367
+nim	DenyOffer	paypal/paypal_disputes/src/paypal_disputes/private/types.html#DenyOffer	type DenyOffer		369
+nim	Dispute	paypal/paypal_disputes/src/paypal_disputes/private/types.html#Dispute	type Dispute		375
+nim	INTERNAL	paypal/paypal_disputes/src/paypal_disputes/private/types.html#INTERNAL	DisputeChannel.INTERNAL		410
+nim	EXTERNAL	paypal/paypal_disputes/src/paypal_disputes/private/types.html#EXTERNAL	DisputeChannel.EXTERNAL		410
+nim	ALERT	paypal/paypal_disputes/src/paypal_disputes/private/types.html#ALERT	DisputeChannel.ALERT		410
+nim	DisputeChannel	paypal/paypal_disputes/src/paypal_disputes/private/types.html#DisputeChannel	enum DisputeChannel		410
+nim	DisputeInfo	paypal/paypal_disputes/src/paypal_disputes/private/types.html#DisputeInfo	type DisputeInfo		416
+nim	DisputeInfoList	paypal/paypal_disputes/src/paypal_disputes/private/types.html#DisputeInfoList	type DisputeInfoList		433
+nim	INQUIRY	paypal/paypal_disputes/src/paypal_disputes/private/types.html#INQUIRY	DisputeLifecycleStage.INQUIRY		435
+nim	CHARGEBACK	paypal/paypal_disputes/src/paypal_disputes/private/types.html#CHARGEBACK	DisputeLifecycleStage.CHARGEBACK		435
+nim	PREARBITRATION	paypal/paypal_disputes/src/paypal_disputes/private/types.html#PREARBITRATION	DisputeLifecycleStage.PREARBITRATION		435
+nim	ARBITRATION	paypal/paypal_disputes/src/paypal_disputes/private/types.html#ARBITRATION	DisputeLifecycleStage.ARBITRATION		435
+nim	DisputeLifecycleStage	paypal/paypal_disputes/src/paypal_disputes/private/types.html#DisputeLifecycleStage	enum DisputeLifecycleStage		435
+nim	DisputeOutcome	paypal/paypal_disputes/src/paypal_disputes/private/types.html#DisputeOutcome	type DisputeOutcome		442
+nim	MERCHANDISEORSERVICENOTRECEIVED	paypal/paypal_disputes/src/paypal_disputes/private/types.html#MERCHANDISEORSERVICENOTRECEIVED	DisputeReason.MERCHANDISEORSERVICENOTRECEIVED		450
+nim	MERCHANDISEORSERVICENOTASDESCRIBED	paypal/paypal_disputes/src/paypal_disputes/private/types.html#MERCHANDISEORSERVICENOTASDESCRIBED	DisputeReason.MERCHANDISEORSERVICENOTASDESCRIBED		450
+nim	UNAUTHORISED	paypal/paypal_disputes/src/paypal_disputes/private/types.html#UNAUTHORISED	DisputeReason.UNAUTHORISED		450
+nim	CREDITNOTPROCESSED2	paypal/paypal_disputes/src/paypal_disputes/private/types.html#CREDITNOTPROCESSED2	DisputeReason.CREDITNOTPROCESSED2		450
+nim	DUPLICATETRANSACTION2	paypal/paypal_disputes/src/paypal_disputes/private/types.html#DUPLICATETRANSACTION2	DisputeReason.DUPLICATETRANSACTION2		450
+nim	INCORRECTAMOUNT	paypal/paypal_disputes/src/paypal_disputes/private/types.html#INCORRECTAMOUNT	DisputeReason.INCORRECTAMOUNT		450
+nim	PAYMENTBYOTHERMEANS2	paypal/paypal_disputes/src/paypal_disputes/private/types.html#PAYMENTBYOTHERMEANS2	DisputeReason.PAYMENTBYOTHERMEANS2		450
+nim	CANCELEDRECURRINGBILLING2	paypal/paypal_disputes/src/paypal_disputes/private/types.html#CANCELEDRECURRINGBILLING2	DisputeReason.CANCELEDRECURRINGBILLING2		450
+nim	PROBLEMWITHREMITTANCE	paypal/paypal_disputes/src/paypal_disputes/private/types.html#PROBLEMWITHREMITTANCE	DisputeReason.PROBLEMWITHREMITTANCE		450
+nim	OTHER2	paypal/paypal_disputes/src/paypal_disputes/private/types.html#OTHER2	DisputeReason.OTHER2		450
+nim	DisputeReason	paypal/paypal_disputes/src/paypal_disputes/private/types.html#DisputeReason	enum DisputeReason		450
+nim	DisputeSearch	paypal/paypal_disputes/src/paypal_disputes/private/types.html#DisputeSearch	type DisputeSearch		466
+nim	EMAIL	paypal/paypal_disputes/src/paypal_disputes/private/types.html#EMAIL	DisputeSource.EMAIL		472
+nim	WEB	paypal/paypal_disputes/src/paypal_disputes/private/types.html#WEB	DisputeSource.WEB		472
+nim	CHAT	paypal/paypal_disputes/src/paypal_disputes/private/types.html#CHAT	DisputeSource.CHAT		472
+nim	IVR	paypal/paypal_disputes/src/paypal_disputes/private/types.html#IVR	DisputeSource.IVR		472
+nim	PHONE	paypal/paypal_disputes/src/paypal_disputes/private/types.html#PHONE	DisputeSource.PHONE		472
+nim	MOBILEAPP	paypal/paypal_disputes/src/paypal_disputes/private/types.html#MOBILEAPP	DisputeSource.MOBILEAPP		472
+nim	MOBILEWEB	paypal/paypal_disputes/src/paypal_disputes/private/types.html#MOBILEWEB	DisputeSource.MOBILEWEB		472
+nim	API	paypal/paypal_disputes/src/paypal_disputes/private/types.html#API	DisputeSource.API		472
+nim	DisputeSource	paypal/paypal_disputes/src/paypal_disputes/private/types.html#DisputeSource	enum DisputeSource		472
+nim	OPENINQUIRIES	paypal/paypal_disputes/src/paypal_disputes/private/types.html#OPENINQUIRIES	DisputeState.OPENINQUIRIES		483
+nim	REQUIREDACTION	paypal/paypal_disputes/src/paypal_disputes/private/types.html#REQUIREDACTION	DisputeState.REQUIREDACTION		483
+nim	REQUIREDOTHERPARTYACTION	paypal/paypal_disputes/src/paypal_disputes/private/types.html#REQUIREDOTHERPARTYACTION	DisputeState.REQUIREDOTHERPARTYACTION		483
+nim	UNDERPAYPALREVIEW	paypal/paypal_disputes/src/paypal_disputes/private/types.html#UNDERPAYPALREVIEW	DisputeState.UNDERPAYPALREVIEW		483
+nim	APPEALABLE	paypal/paypal_disputes/src/paypal_disputes/private/types.html#APPEALABLE	DisputeState.APPEALABLE		483
+nim	RESOLVED	paypal/paypal_disputes/src/paypal_disputes/private/types.html#RESOLVED	DisputeState.RESOLVED		483
+nim	DisputeState	paypal/paypal_disputes/src/paypal_disputes/private/types.html#DisputeState	enum DisputeState		483
+nim	Document	paypal/paypal_disputes/src/paypal_disputes/private/types.html#Document	type Document		493
+nim	DocumentList	paypal/paypal_disputes/src/paypal_disputes/private/types.html#DocumentList	type DocumentList		504
+nim	DuplicateTransaction	paypal/paypal_disputes/src/paypal_disputes/private/types.html#DuplicateTransaction	type DuplicateTransaction		506
+nim	EmailAddress	paypal/paypal_disputes/src/paypal_disputes/private/types.html#EmailAddress	type EmailAddress		512
+nim	Error	paypal/paypal_disputes/src/paypal_disputes/private/types.html#Error	type Error		514
+nim	Error400	paypal/paypal_disputes/src/paypal_disputes/private/types.html#Error400	type Error400		528
+nim	Error401	paypal/paypal_disputes/src/paypal_disputes/private/types.html#Error401	type Error401		539
+nim	Error403	paypal/paypal_disputes/src/paypal_disputes/private/types.html#Error403	type Error403		551
+nim	Error404	paypal/paypal_disputes/src/paypal_disputes/private/types.html#Error404	type Error404		563
+nim	Error409	paypal/paypal_disputes/src/paypal_disputes/private/types.html#Error409	type Error409		575
+nim	Error415	paypal/paypal_disputes/src/paypal_disputes/private/types.html#Error415	type Error415		586
+nim	Error422	paypal/paypal_disputes/src/paypal_disputes/private/types.html#Error422	type Error422		597
+nim	Error500	paypal/paypal_disputes/src/paypal_disputes/private/types.html#Error500	type Error500		611
+nim	Error503	paypal/paypal_disputes/src/paypal_disputes/private/types.html#Error503	type Error503		623
+nim	ErrorDefault	paypal/paypal_disputes/src/paypal_disputes/private/types.html#ErrorDefault	type ErrorDefault		634
+nim	ErrorDetails	paypal/paypal_disputes/src/paypal_disputes/private/types.html#ErrorDetails	type ErrorDetails		637
+nim	ErrorDetails2	paypal/paypal_disputes/src/paypal_disputes/private/types.html#ErrorDetails2	type ErrorDetails2		651
+nim	ErrorDetailsList	paypal/paypal_disputes/src/paypal_disputes/private/types.html#ErrorDetailsList	type ErrorDetailsList		667
+nim	ErrorLinkDescription	paypal/paypal_disputes/src/paypal_disputes/private/types.html#ErrorLinkDescription	type ErrorLinkDescription		669
+nim	body	paypal/paypal_disputes/src/paypal_disputes/private/types.html#body	ErrorLocation.body		685
+nim	path	paypal/paypal_disputes/src/paypal_disputes/private/types.html#path	ErrorLocation.path		685
+nim	query	paypal/paypal_disputes/src/paypal_disputes/private/types.html#query	ErrorLocation.query		685
+nim	ErrorLocation	paypal/paypal_disputes/src/paypal_disputes/private/types.html#ErrorLocation	enum ErrorLocation		685
+nim	Escalate	paypal/paypal_disputes/src/paypal_disputes/private/types.html#Escalate	type Escalate		692
+nim	EscalateResponse	paypal/paypal_disputes/src/paypal_disputes/private/types.html#EscalateResponse	type EscalateResponse		698
+nim	Evidence	paypal/paypal_disputes/src/paypal_disputes/private/types.html#Evidence	type Evidence		702
+nim	EvidenceInfo	paypal/paypal_disputes/src/paypal_disputes/private/types.html#EvidenceInfo	type EvidenceInfo		723
+nim	EvidenceList	paypal/paypal_disputes/src/paypal_disputes/private/types.html#EvidenceList	type EvidenceList		728
+nim	Extensions	paypal/paypal_disputes/src/paypal_disputes/private/types.html#Extensions	type Extensions		730
+nim	FeePolicy	paypal/paypal_disputes/src/paypal_disputes/private/types.html#FeePolicy	type FeePolicy		748
+nim	FundMovement	paypal/paypal_disputes/src/paypal_disputes/private/types.html#FundMovement	type FundMovement		752
+nim	FundMovementList	paypal/paypal_disputes/src/paypal_disputes/private/types.html#FundMovementList	type FundMovementList		764
+nim	REVERSEDTRANSACTIONFEE	paypal/paypal_disputes/src/paypal_disputes/private/types.html#REVERSEDTRANSACTIONFEE	FundMovementReason.REVERSEDTRANSACTIONFEE		766
+nim	DISPUTESETTLEMENT	paypal/paypal_disputes/src/paypal_disputes/private/types.html#DISPUTESETTLEMENT	FundMovementReason.DISPUTESETTLEMENT		766
+nim	DISPUTEFEE	paypal/paypal_disputes/src/paypal_disputes/private/types.html#DISPUTEFEE	FundMovementReason.DISPUTEFEE		766
+nim	CHARGEBACKFEE	paypal/paypal_disputes/src/paypal_disputes/private/types.html#CHARGEBACKFEE	FundMovementReason.CHARGEBACKFEE		766
+nim	FundMovementReason	paypal/paypal_disputes/src/paypal_disputes/private/types.html#FundMovementReason	enum FundMovementReason		766
+nim	IncorrectTransactionAmount	paypal/paypal_disputes/src/paypal_disputes/private/types.html#IncorrectTransactionAmount	type IncorrectTransactionAmount		773
+nim	ItemAgreedRefundDetails	paypal/paypal_disputes/src/paypal_disputes/private/types.html#ItemAgreedRefundDetails	type ItemAgreedRefundDetails		779
+nim	ItemBookingDetails	paypal/paypal_disputes/src/paypal_disputes/private/types.html#ItemBookingDetails	type ItemBookingDetails		781
+nim	ItemCancellationDetails	paypal/paypal_disputes/src/paypal_disputes/private/types.html#ItemCancellationDetails	type ItemCancellationDetails		783
+nim	ItemDigitalDownloadDetails	paypal/paypal_disputes/src/paypal_disputes/private/types.html#ItemDigitalDownloadDetails	type ItemDigitalDownloadDetails		785
+nim	ItemInfo	paypal/paypal_disputes/src/paypal_disputes/private/types.html#ItemInfo	type ItemInfo		787
+nim	ItemInfoList	paypal/paypal_disputes/src/paypal_disputes/private/types.html#ItemInfoList	type ItemInfoList		815
+nim	ItemProductDetails	paypal/paypal_disputes/src/paypal_disputes/private/types.html#ItemProductDetails	type ItemProductDetails		817
+nim	ItemServiceDetails	paypal/paypal_disputes/src/paypal_disputes/private/types.html#ItemServiceDetails	type ItemServiceDetails		819
+nim	PRODUCT	paypal/paypal_disputes/src/paypal_disputes/private/types.html#PRODUCT	ItemType.PRODUCT		821
+nim	SERVICE	paypal/paypal_disputes/src/paypal_disputes/private/types.html#SERVICE	ItemType.SERVICE		821
+nim	BOOKING	paypal/paypal_disputes/src/paypal_disputes/private/types.html#BOOKING	ItemType.BOOKING		821
+nim	DIGITALDOWNLOAD	paypal/paypal_disputes/src/paypal_disputes/private/types.html#DIGITALDOWNLOAD	ItemType.DIGITALDOWNLOAD		821
+nim	ItemType	paypal/paypal_disputes/src/paypal_disputes/private/types.html#ItemType	enum ItemType		821
+nim	LinkDescription	paypal/paypal_disputes/src/paypal_disputes/private/types.html#LinkDescription	type LinkDescription		828
+nim	LinkDescriptionList	paypal/paypal_disputes/src/paypal_disputes/private/types.html#LinkDescriptionList	type LinkDescriptionList		844
+nim	MakeOffer	paypal/paypal_disputes/src/paypal_disputes/private/types.html#MakeOffer	type MakeOffer		846
+nim	MakeOfferResponseOptions	paypal/paypal_disputes/src/paypal_disputes/private/types.html#MakeOfferResponseOptions	type MakeOfferResponseOptions		857
+nim	MerchandizeDisputeProperties	paypal/paypal_disputes/src/paypal_disputes/private/types.html#MerchandizeDisputeProperties	type MerchandizeDisputeProperties		861
+nim	WEBSITE	paypal/paypal_disputes/src/paypal_disputes/private/types.html#WEBSITE	MerchantContactedMode.WEBSITE		870
+nim	PHONE2	paypal/paypal_disputes/src/paypal_disputes/private/types.html#PHONE2	MerchantContactedMode.PHONE2		870
+nim	EMAIL2	paypal/paypal_disputes/src/paypal_disputes/private/types.html#EMAIL2	MerchantContactedMode.EMAIL2		870
+nim	WRITTEN	paypal/paypal_disputes/src/paypal_disputes/private/types.html#WRITTEN	MerchantContactedMode.WRITTEN		870
+nim	INPERSON	paypal/paypal_disputes/src/paypal_disputes/private/types.html#INPERSON	MerchantContactedMode.INPERSON		870
+nim	MerchantContactedMode	paypal/paypal_disputes/src/paypal_disputes/private/types.html#MerchantContactedMode	enum MerchantContactedMode		870
+nim	NORESPONSE	paypal/paypal_disputes/src/paypal_disputes/private/types.html#NORESPONSE	MerchantContactedOutcome.NORESPONSE		878
+nim	FIXED	paypal/paypal_disputes/src/paypal_disputes/private/types.html#FIXED	MerchantContactedOutcome.FIXED		878
+nim	NOTFIXED	paypal/paypal_disputes/src/paypal_disputes/private/types.html#NOTFIXED	MerchantContactedOutcome.NOTFIXED		878
+nim	MerchantContactedOutcome	paypal/paypal_disputes/src/paypal_disputes/private/types.html#MerchantContactedOutcome	enum MerchantContactedOutcome		878
+nim	Message	paypal/paypal_disputes/src/paypal_disputes/private/types.html#Message	type Message		884
+nim	MessageList	paypal/paypal_disputes/src/paypal_disputes/private/types.html#MessageList	type MessageList		893
+nim	Money	paypal/paypal_disputes/src/paypal_disputes/private/types.html#Money	type Money		895
+nim	MoneyMovement	paypal/paypal_disputes/src/paypal_disputes/private/types.html#MoneyMovement	type MoneyMovement		906
+nim	MoneyMovementList	paypal/paypal_disputes/src/paypal_disputes/private/types.html#MoneyMovementList	type MoneyMovementList		917
+nim	DISPUTESETTLEMENTFEE	paypal/paypal_disputes/src/paypal_disputes/private/types.html#DISPUTESETTLEMENTFEE	MoneyMovementReason.DISPUTESETTLEMENTFEE		919
+nim	DISPUTESETTLEMENT2	paypal/paypal_disputes/src/paypal_disputes/private/types.html#DISPUTESETTLEMENT2	MoneyMovementReason.DISPUTESETTLEMENT2		919
+nim	DISPUTEFEE2	paypal/paypal_disputes/src/paypal_disputes/private/types.html#DISPUTEFEE2	MoneyMovementReason.DISPUTEFEE2		919
+nim	CHARGEBACKFEE2	paypal/paypal_disputes/src/paypal_disputes/private/types.html#CHARGEBACKFEE2	MoneyMovementReason.CHARGEBACKFEE2		919
+nim	MoneyMovementReason	paypal/paypal_disputes/src/paypal_disputes/private/types.html#MoneyMovementReason	enum MoneyMovementReason		919
+nim	Offer	paypal/paypal_disputes/src/paypal_disputes/private/types.html#Offer	type Offer		926
+nim	OfferHistory	paypal/paypal_disputes/src/paypal_disputes/private/types.html#OfferHistory	type OfferHistory		933
+nim	OfferHistoryList	paypal/paypal_disputes/src/paypal_disputes/private/types.html#OfferHistoryList	type OfferHistoryList		946
+nim	REFUND2	paypal/paypal_disputes/src/paypal_disputes/private/types.html#REFUND2	OfferType.REFUND2		948
+nim	REFUNDWITHRETURN2	paypal/paypal_disputes/src/paypal_disputes/private/types.html#REFUNDWITHRETURN2	OfferType.REFUNDWITHRETURN2		948
+nim	REFUNDWITHREPLACEMENT	paypal/paypal_disputes/src/paypal_disputes/private/types.html#REFUNDWITHREPLACEMENT	OfferType.REFUNDWITHREPLACEMENT		948
+nim	REPLACEMENTWITHOUTREFUND	paypal/paypal_disputes/src/paypal_disputes/private/types.html#REPLACEMENTWITHOUTREFUND	OfferType.REPLACEMENTWITHOUTREFUND		948
+nim	OfferType	paypal/paypal_disputes/src/paypal_disputes/private/types.html#OfferType	enum OfferType		948
+nim	OfferTypeList	paypal/paypal_disputes/src/paypal_disputes/private/types.html#OfferTypeList	type OfferTypeList		955
+nim	Patch	paypal/paypal_disputes/src/paypal_disputes/private/types.html#Patch	type Patch		957
+nim	PatchRequest	paypal/paypal_disputes/src/paypal_disputes/private/types.html#PatchRequest	type PatchRequest		974
+nim	PaymentByOtherMeans	paypal/paypal_disputes/src/paypal_disputes/private/types.html#PaymentByOtherMeans	type PaymentByOtherMeans		976
+nim	PaymentProcessor	paypal/paypal_disputes/src/paypal_disputes/private/types.html#PaymentProcessor	type PaymentProcessor		991
+nim	ProductDetails	paypal/paypal_disputes/src/paypal_disputes/private/types.html#ProductDetails	type ProductDetails		993
+nim	RefundDetails	paypal/paypal_disputes/src/paypal_disputes/private/types.html#RefundDetails	type RefundDetails		1006
+nim	RefundIds	paypal/paypal_disputes/src/paypal_disputes/private/types.html#RefundIds	type RefundIds		1010
+nim	RefundIdsList	paypal/paypal_disputes/src/paypal_disputes/private/types.html#RefundIdsList	type RefundIdsList		1012
+nim	RequireEvidence	paypal/paypal_disputes/src/paypal_disputes/private/types.html#RequireEvidence	type RequireEvidence		1014
+nim	ReturnDetails	paypal/paypal_disputes/src/paypal_disputes/private/types.html#ReturnDetails	type ReturnDetails		1025
+nim	Seller	paypal/paypal_disputes/src/paypal_disputes/private/types.html#Seller	type Seller		1038
+nim	ServiceDetails	paypal/paypal_disputes/src/paypal_disputes/private/types.html#ServiceDetails	type ServiceDetails		1047
+nim	OPEN	paypal/paypal_disputes/src/paypal_disputes/private/types.html#OPEN	Status.OPEN		1060
+nim	WAITINGFORBUYERRESPONSE	paypal/paypal_disputes/src/paypal_disputes/private/types.html#WAITINGFORBUYERRESPONSE	Status.WAITINGFORBUYERRESPONSE		1060
+nim	WAITINGFORSELLERRESPONSE	paypal/paypal_disputes/src/paypal_disputes/private/types.html#WAITINGFORSELLERRESPONSE	Status.WAITINGFORSELLERRESPONSE		1060
+nim	UNDERREVIEW	paypal/paypal_disputes/src/paypal_disputes/private/types.html#UNDERREVIEW	Status.UNDERREVIEW		1060
+nim	RESOLVED2	paypal/paypal_disputes/src/paypal_disputes/private/types.html#RESOLVED2	Status.RESOLVED2		1060
+nim	OTHER3	paypal/paypal_disputes/src/paypal_disputes/private/types.html#OTHER3	Status.OTHER3		1060
+nim	Status	paypal/paypal_disputes/src/paypal_disputes/private/types.html#Status	enum Status		1060
+nim	DAMAGED3	paypal/paypal_disputes/src/paypal_disputes/private/types.html#DAMAGED3	SubReasons.DAMAGED3		1070
+nim	DIFFERENT2	paypal/paypal_disputes/src/paypal_disputes/private/types.html#DIFFERENT2	SubReasons.DIFFERENT2		1070
+nim	MISSINGPARTS	paypal/paypal_disputes/src/paypal_disputes/private/types.html#MISSINGPARTS	SubReasons.MISSINGPARTS		1070
+nim	OTHER4	paypal/paypal_disputes/src/paypal_disputes/private/types.html#OTHER4	SubReasons.OTHER4		1070
+nim	SubReasons	paypal/paypal_disputes/src/paypal_disputes/private/types.html#SubReasons	enum SubReasons		1070
+nim	SubReasonsList	paypal/paypal_disputes/src/paypal_disputes/private/types.html#SubReasonsList	type SubReasonsList		1077
+nim	SubsequentAction	paypal/paypal_disputes/src/paypal_disputes/private/types.html#SubsequentAction	type SubsequentAction		1079
+nim	SupportingInfo	paypal/paypal_disputes/src/paypal_disputes/private/types.html#SupportingInfo	type SupportingInfo		1083
+nim	SupportingInfoDefinitionsDocumentList	paypal/paypal_disputes/src/paypal_disputes/private/types.html#SupportingInfoDefinitionsDocumentList	type SupportingInfoDefinitionsDocumentList		1093
+nim	SupportingInfoList	paypal/paypal_disputes/src/paypal_disputes/private/types.html#SupportingInfoList	type SupportingInfoList		1095
+nim	TrackingInfo	paypal/paypal_disputes/src/paypal_disputes/private/types.html#TrackingInfo	type TrackingInfo		1097
+nim	TrackingInfoList	paypal/paypal_disputes/src/paypal_disputes/private/types.html#TrackingInfoList	type TrackingInfoList		1109
+nim	TransactionInfo	paypal/paypal_disputes/src/paypal_disputes/private/types.html#TransactionInfo	type TransactionInfo		1111
+nim	TransactionInfoList	paypal/paypal_disputes/src/paypal_disputes/private/types.html#TransactionInfoList	type TransactionInfoList		1133

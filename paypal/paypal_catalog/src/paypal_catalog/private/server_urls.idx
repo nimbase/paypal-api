@@ -1,0 +1,3 @@
+nimTitle	server_urls	paypal/paypal_catalog/src/paypal_catalog/private/server_urls.html	module paypal/paypal_catalog/src/paypal_catalog/private/server_urls		0
+nim	serverPayPalSandboxEnvironment	paypal/paypal_catalog/src/paypal_catalog/private/server_urls.html#serverPayPalSandboxEnvironment	const serverPayPalSandboxEnvironment		2
+nim	serverPayPalLiveEnvironment	paypal/paypal_catalog/src/paypal_catalog/private/server_urls.html#serverPayPalLiveEnvironment	const serverPayPalLiveEnvironment		3
