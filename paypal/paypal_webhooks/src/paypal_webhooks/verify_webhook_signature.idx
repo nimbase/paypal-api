@@ -1,0 +1,2 @@
+nimTitle	verify_webhook_signature	paypal/paypal_webhooks/src/paypal_webhooks/verify_webhook_signature.html	module paypal/paypal_webhooks/src/paypal_webhooks/verify_webhook_signature		0
+nim	postV1NotificationsVerifyWebhookSignature	paypal/paypal_webhooks/src/paypal_webhooks/verify_webhook_signature.html#postV1NotificationsVerifyWebhookSignature,WebhooksClient,	proc postV1NotificationsVerifyWebhookSignature(client: WebhooksClient;\n    body: types.VerifyWebhookSignature): Future[VerifyWebhookSignatureResponse]		14

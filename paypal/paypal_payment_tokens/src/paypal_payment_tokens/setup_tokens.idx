@@ -1,0 +1,3 @@
+nimTitle	setup_tokens	paypal/paypal_payment_tokens/src/paypal_payment_tokens/setup_tokens.html	module paypal/paypal_payment_tokens/src/paypal_payment_tokens/setup_tokens		0
+nim	postV3VaultSetupTokens	paypal/paypal_payment_tokens/src/paypal_payment_tokens/setup_tokens.html#postV3VaultSetupTokens,PaymentTokensClient,	proc postV3VaultSetupTokens(client: PaymentTokensClient;\n                       body: types.SetupTokenRequest): Future[SetupTokenResponse]		14
+nim	getV3VaultSetupTokensId	paypal/paypal_payment_tokens/src/paypal_payment_tokens/setup_tokens.html#getV3VaultSetupTokensId,PaymentTokensClient,string	proc getV3VaultSetupTokensId(client: PaymentTokensClient; id: string): Future[\n    SetupTokenResponse]		26

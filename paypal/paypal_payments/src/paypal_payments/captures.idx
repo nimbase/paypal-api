@@ -1,0 +1,3 @@
+nimTitle	captures	paypal/paypal_payments/src/paypal_payments/captures.html	module paypal/paypal_payments/src/paypal_payments/captures		0
+nim	getV2PaymentsCapturesCaptureId	paypal/paypal_payments/src/paypal_payments/captures.html#getV2PaymentsCapturesCaptureId,PaymentsClient,string	proc getV2PaymentsCapturesCaptureId(client: PaymentsClient; captureId: string): Future[\n    Capture2]		15
+nim	postV2PaymentsCapturesCaptureIdRefund	paypal/paypal_payments/src/paypal_payments/captures.html#postV2PaymentsCapturesCaptureIdRefund,PaymentsClient,string,	proc postV2PaymentsCapturesCaptureIdRefund(client: PaymentsClient; captureId: string;\n                                      body: types.RefundRequest): Future[Refund]		28

@@ -1,0 +1,31 @@
+nimTitle	metaclient	paypal/paypal_tracking/src/paypal_tracking/metaclient.html	module paypal/paypal_tracking/src/paypal_tracking/metaclient		0
+nim	TrackingClient	paypal/paypal_tracking/src/paypal_tracking/metaclient.html#TrackingClient	type TrackingClient		19
+nim	QueryTable	paypal/paypal_tracking/src/paypal_tracking/metaclient.html#QueryTable	type QueryTable		28
+nim	TrackingClientError	paypal/paypal_tracking/src/paypal_tracking/metaclient.html#TrackingClientError	object TrackingClientError		30
+nim	oauthTokenUrl	paypal/paypal_tracking/src/paypal_tracking/metaclient.html#oauthTokenUrl	const oauthTokenUrl		33
+nim	oauthAuthUrl	paypal/paypal_tracking/src/paypal_tracking/metaclient.html#oauthAuthUrl	const oauthAuthUrl		34
+nim	`$`	paypal/paypal_tracking/src/paypal_tracking/metaclient.html#$,QueryTable	proc `$`(query: QueryTable): string		36
+nim	initTrackingClient	paypal/paypal_tracking/src/paypal_tracking/metaclient.html#initTrackingClient	proc initTrackingClient(): TrackingClient		41
+nim	configureOAuth	paypal/paypal_tracking/src/paypal_tracking/metaclient.html#configureOAuth,TrackingClient,string,string	proc configureOAuth(client: TrackingClient; clientId, clientSecret: string)		49
+nim	setTokens	paypal/paypal_tracking/src/paypal_tracking/metaclient.html#setTokens,TrackingClient,string,string,Option[int]	proc setTokens(client: TrackingClient; accessToken, refreshToken: string;\n          expiresIn: Option[int] = none(int))		53
+nim	canAutoRefresh	paypal/paypal_tracking/src/paypal_tracking/metaclient.html#canAutoRefresh,TrackingClient	proc canAutoRefresh(client: TrackingClient): bool		60
+nim	tryRefreshToken	paypal/paypal_tracking/src/paypal_tracking/metaclient.html#tryRefreshToken,TrackingClient	proc tryRefreshToken(client: TrackingClient): Future[bool]		66
+nim	getAuthorizationUrl	paypal/paypal_tracking/src/paypal_tracking/metaclient.html#getAuthorizationUrl,string,string,openArray[string],string	proc getAuthorizationUrl(clientId, redirectUri: string;\n                    scopes: openArray[string] = []; state = ""): string		87
+nim	exchangeCodeForToken	paypal/paypal_tracking/src/paypal_tracking/metaclient.html#exchangeCodeForToken,string,string,string,string	proc exchangeCodeForToken(clientId, clientSecret, code, redirectUri: string): Future[\n    JsonNode]		99
+nim	httpGet	paypal/paypal_tracking/src/paypal_tracking/metaclient.html#httpGet,TrackingClient,string	proc httpGet(client: TrackingClient; endpoint: string): Future[AsyncResponse]		119
+nim	httpGet	paypal/paypal_tracking/src/paypal_tracking/metaclient.html#httpGet,TrackingClient,string,QueryTable	proc httpGet(client: TrackingClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		128
+nim	httpPost	paypal/paypal_tracking/src/paypal_tracking/metaclient.html#httpPost,TrackingClient,string,T	proc httpPost[T](client: TrackingClient; endpoint: string; body: T): Future[\n    AsyncResponse]		137
+nim	httpPost	paypal/paypal_tracking/src/paypal_tracking/metaclient.html#httpPost,TrackingClient,string	proc httpPost(client: TrackingClient; endpoint: string): Future[AsyncResponse]		146
+nim	httpPost	paypal/paypal_tracking/src/paypal_tracking/metaclient.html#httpPost,TrackingClient,string,QueryTable	proc httpPost(client: TrackingClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		155
+nim	httpPut	paypal/paypal_tracking/src/paypal_tracking/metaclient.html#httpPut,TrackingClient,string,T	proc httpPut[T](client: TrackingClient; endpoint: string; body: T): Future[\n    AsyncResponse]		164
+nim	httpPut	paypal/paypal_tracking/src/paypal_tracking/metaclient.html#httpPut,TrackingClient,string	proc httpPut(client: TrackingClient; endpoint: string): Future[AsyncResponse]		175
+nim	httpPut	paypal/paypal_tracking/src/paypal_tracking/metaclient.html#httpPut,TrackingClient,string,QueryTable	proc httpPut(client: TrackingClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		184
+nim	httpDelete	paypal/paypal_tracking/src/paypal_tracking/metaclient.html#httpDelete,TrackingClient,string	proc httpDelete(client: TrackingClient; endpoint: string): Future[AsyncResponse]		193
+nim	httpDelete	paypal/paypal_tracking/src/paypal_tracking/metaclient.html#httpDelete,TrackingClient,string,QueryTable	proc httpDelete(client: TrackingClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		202
+nim	httpPatch	paypal/paypal_tracking/src/paypal_tracking/metaclient.html#httpPatch,TrackingClient,string,T	proc httpPatch[T](client: TrackingClient; endpoint: string; body: T): Future[\n    AsyncResponse]		211
+nim	httpPatch	paypal/paypal_tracking/src/paypal_tracking/metaclient.html#httpPatch,TrackingClient,string	proc httpPatch(client: TrackingClient; endpoint: string): Future[AsyncResponse]		222
+nimgrp	httpput	paypal/paypal_tracking/src/paypal_tracking/metaclient.html#httpPut-procs-all	proc		163
+nimgrp	httppost	paypal/paypal_tracking/src/paypal_tracking/metaclient.html#httpPost-procs-all	proc		136
+nimgrp	httpdelete	paypal/paypal_tracking/src/paypal_tracking/metaclient.html#httpDelete-procs-all	proc		192
+nimgrp	httpget	paypal/paypal_tracking/src/paypal_tracking/metaclient.html#httpGet-procs-all	proc		118
+nimgrp	httppatch	paypal/paypal_tracking/src/paypal_tracking/metaclient.html#httpPatch-procs-all	proc		210

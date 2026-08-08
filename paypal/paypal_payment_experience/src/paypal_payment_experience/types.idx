@@ -1,0 +1,27 @@
+nimTitle	types	paypal/paypal_payment_experience/src/paypal_payment_experience/types.html	module paypal/paypal_payment_experience/src/paypal_payment_experience/types		0
+nim	Error	paypal/paypal_payment_experience/src/paypal_payment_experience/types.html#Error	type Error		4
+nim	Error400	paypal/paypal_payment_experience/src/paypal_payment_experience/types.html#Error400	type Error400		16
+nim	Error401	paypal/paypal_payment_experience/src/paypal_payment_experience/types.html#Error401	type Error401		27
+nim	Error403	paypal/paypal_payment_experience/src/paypal_payment_experience/types.html#Error403	type Error403		39
+nim	Error404	paypal/paypal_payment_experience/src/paypal_payment_experience/types.html#Error404	type Error404		51
+nim	Error409	paypal/paypal_payment_experience/src/paypal_payment_experience/types.html#Error409	type Error409		63
+nim	Error415	paypal/paypal_payment_experience/src/paypal_payment_experience/types.html#Error415	type Error415		74
+nim	Error422	paypal/paypal_payment_experience/src/paypal_payment_experience/types.html#Error422	type Error422		85
+nim	Error500	paypal/paypal_payment_experience/src/paypal_payment_experience/types.html#Error500	type Error500		99
+nim	Error503	paypal/paypal_payment_experience/src/paypal_payment_experience/types.html#Error503	type Error503		111
+nim	ErrorDefault	paypal/paypal_payment_experience/src/paypal_payment_experience/types.html#ErrorDefault	type ErrorDefault		122
+nim	ErrorDetails	paypal/paypal_payment_experience/src/paypal_payment_experience/types.html#ErrorDetails	type ErrorDetails		125
+nim	ErrorDetails2	paypal/paypal_payment_experience/src/paypal_payment_experience/types.html#ErrorDetails2	type ErrorDetails2		139
+nim	ErrorDetailsList	paypal/paypal_payment_experience/src/paypal_payment_experience/types.html#ErrorDetailsList	type ErrorDetailsList		146
+nim	ErrorLinkDescription	paypal/paypal_payment_experience/src/paypal_payment_experience/types.html#ErrorLinkDescription	type ErrorLinkDescription		148
+nim	body	paypal/paypal_payment_experience/src/paypal_payment_experience/types.html#body	ErrorLocation.body		164
+nim	path	paypal/paypal_payment_experience/src/paypal_payment_experience/types.html#path	ErrorLocation.path		164
+nim	query	paypal/paypal_payment_experience/src/paypal_payment_experience/types.html#query	ErrorLocation.query		164
+nim	ErrorLocation	paypal/paypal_payment_experience/src/paypal_payment_experience/types.html#ErrorLocation	enum ErrorLocation		164
+nim	FlowConfig	paypal/paypal_payment_experience/src/paypal_payment_experience/types.html#FlowConfig	type FlowConfig		171
+nim	InputFields	paypal/paypal_payment_experience/src/paypal_payment_experience/types.html#InputFields	type InputFields		194
+nim	Patch	paypal/paypal_payment_experience/src/paypal_payment_experience/types.html#Patch	type Patch		210
+nim	PatchRequest	paypal/paypal_payment_experience/src/paypal_payment_experience/types.html#PatchRequest	type PatchRequest		224
+nim	Presentation	paypal/paypal_payment_experience/src/paypal_payment_experience/types.html#Presentation	type Presentation		226
+nim	WebProfile	paypal/paypal_payment_experience/src/paypal_payment_experience/types.html#WebProfile	type WebProfile		247
+nim	WebProfileList	paypal/paypal_payment_experience/src/paypal_payment_experience/types.html#WebProfileList	type WebProfileList		262
