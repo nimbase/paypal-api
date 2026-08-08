@@ -1,0 +1,41 @@
+# payouts API client for Nim
+#
+# Auto-generated from OpenAPI 3.x specification
+# Clue CLI Assistant https://github.com/openpeeps/clue
+#
+# Generated at: 2026-08-08T18:16:14+03:00
+# License: MIT
+import std/[asyncdispatch, options, json]
+import unittest
+import pkg/openparser/json as openjson
+import payouts
+import ./common
+
+suite "payouts serialization":
+  test "round-trips Payout":
+    let obj = newPayout()
+    check openjson.toJson(openjson.fromJson(openjson.toJson(obj), payouts.Payout)) == openjson.toJson(obj)
+
+  test "round-trips PayoutBatch":
+    let obj = newPayoutBatch()
+    check openjson.toJson(openjson.fromJson(openjson.toJson(obj), payouts.PayoutBatch)) == openjson.toJson(obj)
+
+  test "round-trips CreatePayoutRequest":
+    let obj = newCreatePayoutRequest()
+    check openjson.toJson(openjson.fromJson(openjson.toJson(obj), payouts.CreatePayoutRequest)) == openjson.toJson(obj)
+
+  test "round-trips Error":
+    let obj = newError()
+    check openjson.toJson(openjson.fromJson(openjson.toJson(obj), payouts.Error)) == openjson.toJson(obj)
+
+suite "payouts endpoints":
+  test "POST /v1/payments/payouts":
+    let client = initPayoutsClient()
+    client.baseUri = "http://127.0.0.1:" & $int(startMock())
+    discard waitFor client.postV1PaymentsPayouts(newCreatePayoutRequest())
+
+  test "GET /v1/payments/payouts/{id}":
+    let client = initPayoutsClient()
+    client.baseUri = "http://127.0.0.1:" & $int(startMock())
+    discard waitFor client.getV1PaymentsPayoutsId("test", "test", 1, 1, true)
+

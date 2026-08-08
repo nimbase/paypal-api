@@ -1,0 +1,3 @@
+import partner_referrals
+
+export partner_referrals
