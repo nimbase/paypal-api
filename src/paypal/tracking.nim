@@ -1,3 +1,3 @@
-import tracking
+import paypal_tracking
 
-export tracking
+export paypal_tracking

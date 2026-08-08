@@ -1,3 +1,3 @@
-import webhooks
+import paypal_webhooks
 
-export webhooks
+export paypal_webhooks

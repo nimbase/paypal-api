@@ -1,3 +1,3 @@
-import payments
+import paypal_payments
 
-export payments
+export paypal_payments

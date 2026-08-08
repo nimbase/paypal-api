@@ -1,3 +1,3 @@
-import payouts
+import paypal_payouts
 
-export payouts
+export paypal_payouts

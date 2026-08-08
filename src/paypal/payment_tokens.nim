@@ -1,3 +1,3 @@
-import payment_tokens
+import paypal_payment_tokens
 
-export payment_tokens
+export paypal_payment_tokens

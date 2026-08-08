@@ -1,3 +1,3 @@
-import disputes
+import paypal_disputes
 
-export disputes
+export paypal_disputes

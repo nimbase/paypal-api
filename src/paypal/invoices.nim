@@ -1,3 +1,3 @@
-import invoices
+import paypal_invoices
 
-export invoices
+export paypal_invoices

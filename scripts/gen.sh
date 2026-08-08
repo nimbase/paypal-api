@@ -2,16 +2,16 @@
 #
 # Generate the PayPal REST API clients as a set of nested nimble packages.
 #
-# For each OpenAPI 3.x spec in specs/, runs `nimbase openapi.gen` into deps/<lib>
-# WITHOUT moving or stripping anything from the generated package (src/, tests/,
-# README and .nimble are kept). Package identity is renamed where the generated
-# name differs from the desired lib name (names only, no content moved).
+# For each OpenAPI 3.x spec in specs/, runs `nimbase openapi.gen` into
+# deps/paypal_<lib> WITHOUT moving or stripping anything from the generated
+# package (src/, tests/, README and .nimble are kept). Package identity is
+# renamed to `paypal_<lib>` (names only, no content moved).
 #
 # Then it wires the main `paypal` package so the inner packages can be imported:
-#   - src/paypal/<lib>.nim   a shim module: `import <lib>` / `export <lib>`
+#   - src/paypal/<lib>.nim   a shim module: `import paypal_<lib>` / `export ...`
 #   - src/paypal.nim         imports + exports every shim
-#   - config.nims            autoloaded: adds `--path` to each inner package
-#   - tests/test1.nim        imports every inner package's generated test suite
+#   - config.nims (root)     autoloaded: adds `--path` to each inner package
+#   - paypal.nimble          appends a `task test` running every inner test suite
 #
 # Usage:
 #   scripts/gen.sh                # specs/ -> deps/
@@ -63,7 +63,7 @@ echo "deps dir: $DEPS_DIR"
 # clean previous output
 rm -rf "$DEPS_DIR"
 rm -rf "$SHIMS_DIR"
-rm -f "$ROOT/src/paypal.nim" "$ROOT/config.nims" "$ROOT/tests/test1.nim"
+rm -f "$ROOT/src/paypal.nim" "$ROOT/config.nims" "$ROOT/src/config.nims" "$ROOT/tests/test1.nim"
 mkdir -p "$DEPS_DIR" "$SHIMS_DIR"
 
 libs=()
@@ -82,25 +82,24 @@ for spec in "$SPECS_DIR"/*.json; do
   pkg="$(basename "$tmp"/src/*.nim)"
   pkg="${pkg%.nim}"
   lib="$(libName "$spec" "$pkg")"
-  echo "   pkg=$pkg -> lib=$lib"
+  full="paypal_$lib"
+  echo "   pkg=$pkg -> lib=$lib (package $full)"
 
-  mv "$tmp" "$DEPS_DIR/$lib"
+  mv "$tmp" "$DEPS_DIR/$full"
   libs+=("$lib")
 
-  if [ "$pkg" != "$lib" ]; then
-    # rename package identity (names only, nothing moved/stripped):
-    # .nimble + main module + its src dir + import references
-    mv "$DEPS_DIR/$lib/$pkg.nimble" "$DEPS_DIR/$lib/$lib.nimble"
-    mv "$DEPS_DIR/$lib/src/$pkg.nim" "$DEPS_DIR/$lib/src/$lib.nim"
-    mv "$DEPS_DIR/$lib/src/$pkg" "$DEPS_DIR/$lib/src/$lib"
-    sed -i '' "s#\./$pkg/\[#./$lib/\[#" "$DEPS_DIR/$lib/src/$lib.nim"
-    # patch the generated tests/common: `import $pkg` and pkg-qualified refs
-    find "$DEPS_DIR/$lib" -name '*.nim' -exec \
-      sed -i '' -e "s/^import $pkg\$/import $lib/" -e "s/$pkg\./$lib./g" {} +
-  fi
+  # rename package identity (names only, nothing moved/stripped):
+  # .nimble + main module + its src dir + import references
+  mv "$DEPS_DIR/$full/$pkg.nimble" "$DEPS_DIR/$full/$full.nimble"
+  mv "$DEPS_DIR/$full/src/$pkg.nim" "$DEPS_DIR/$full/src/$full.nim"
+  mv "$DEPS_DIR/$full/src/$pkg" "$DEPS_DIR/$full/src/$full"
+  sed -i '' "s#\./$pkg/\[#./$full/\[#" "$DEPS_DIR/$full/src/$full.nim"
+  # patch the generated tests/common: `import $pkg` and pkg-qualified refs
+  find "$DEPS_DIR/$full" -name '*.nim' -exec \
+    sed -i '' -e "s/^import $pkg\$/import $full/" -e "s/$pkg\./$full./g" {} +
 
   # afterscript engine: enum collisions, digit-leading type names, client ident
-  nimbase afterscripts.run "$DEPS_DIR/$lib" --dir:"$AFTERSCRIPTS_DIR" || true
+  nimbase afterscripts.run "$DEPS_DIR/$full" --dir:"$AFTERSCRIPTS_DIR" || true
 done
 
 if [ "${#libs[@]}" -eq 0 ]; then
@@ -108,9 +107,9 @@ if [ "${#libs[@]}" -eq 0 ]; then
   exit 1
 fi
 
-# --- shim modules: src/paypal/<lib>.nim = import <lib> / export <lib> ---
+# --- shim modules: src/paypal/<lib>.nim = import paypal_<lib> / export paypal_<lib> ---
 for lib in "${libs[@]}"; do
-  printf 'import %s\n\nexport %s\n' "$lib" "$lib" > "$SHIMS_DIR/$lib.nim"
+  printf 'import paypal_%s\n\nexport paypal_%s\n' "$lib" "$lib" > "$SHIMS_DIR/$lib.nim"
 done
 
 # --- root link module: src/paypal.nim ---
@@ -148,11 +147,13 @@ exportBlock="$(wrapList)"
   echo "export $exportBlock"
 } > "$ROOT/src/paypal.nim"
 
-# --- config.nims: autoloaded, adds each inner package's src to the path ---
+# --- config.nims (root): autoloaded, adds each inner package's src to the path ---
 {
   for lib in "${libs[@]}"; do
-    echo "switch(\"path\", \"deps/$lib/src\")"
+    echo "switch(\"path\", \"deps/paypal_$lib/src\")"
   done
+  # openparser dev checkout (JSON parser fixes); drop once published
+  echo "switch(\"path\", \"/Users/georgelemon/Development/packages/openparser/src\")"
 } > "$ROOT/config.nims"
 
 # --- paypal.nimble: append a `task test` that runs every inner package's
@@ -165,7 +166,7 @@ fi
   [ "$(tail -c 1 "$ROOT/paypal.nimble" 2>/dev/null | wc -l | tr -d ' ')" -eq 0 ] && echo
   echo 'task test, "Run all tests":'
   for lib in "${libs[@]}"; do
-    for t in "$DEPS_DIR/$lib/tests"/test_*.nim; do
+    for t in "$DEPS_DIR/paypal_$lib/tests"/test_*.nim; do
       [ -f "$t" ] || continue
       echo "  exec \"nim r ${t#"$ROOT"/}\""
     done
@@ -174,4 +175,4 @@ fi
 
 echo
 echo "done. generated packages:"
-printf '  deps/%s\n' "${libs[@]}"
+printf '  deps/paypal_%s\n' "${libs[@]}"

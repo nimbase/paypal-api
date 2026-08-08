@@ -1,3 +1,3 @@
-import subscriptions
+import paypal_subscriptions
 
-export subscriptions
+export paypal_subscriptions

@@ -1,3 +1,3 @@
-import orders
+import paypal_orders
 
-export orders
+export paypal_orders

@@ -1,3 +1,3 @@
-import catalog
+import paypal_catalog
 
-export catalog
+export paypal_catalog

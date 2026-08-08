@@ -1,3 +1,3 @@
-import partner_referrals
+import paypal_partner_referrals
 
-export partner_referrals
+export paypal_partner_referrals

@@ -209,7 +209,12 @@ proc renameClientIdent(dir: string): int =
   if not fileExists(metaclient):
     return
   let current = clientIdentOf(metaclient)
-  let desired = pascalCase(dir.splitFile.name)
+  # child package dirs are prefixed `paypal_` (e.g. deps/paypal_catalog);
+  # the client ident should match the bare lib name (CatalogClient)
+  var base = dir.splitFile.name
+  if base.startsWith("paypal_"):
+    base = base["paypal_".len .. ^1]
+  let desired = pascalCase(base)
   if current.len == 0 or normIdent(current) == normIdent(desired):
     return
   var changed = 0

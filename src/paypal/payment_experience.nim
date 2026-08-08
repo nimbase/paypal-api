@@ -1,3 +1,3 @@
-import payment_experience
+import paypal_payment_experience
 
-export payment_experience
+export paypal_payment_experience

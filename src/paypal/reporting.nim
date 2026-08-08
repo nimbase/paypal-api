@@ -1,3 +1,3 @@
-import reporting
+import paypal_reporting
 
-export reporting
+export paypal_reporting
