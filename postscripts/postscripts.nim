@@ -291,6 +291,11 @@ proc writeShim(pkgRoot, lib: string) =
   let shimDir = pkgRoot / "src/paypal"
   createDir(shimDir)
   writeFile(shimDir / lib & ".nim",
+    "# PayPal " & pascalCase(lib) & " API client for Nim.\n" &
+    "#\n" &
+    "# Auto-generated from the PayPal REST API specifications using\n" &
+    "# Nimbase CLI https://github.com/nimbase/nimbase\n" &
+    "\n" &
     "import paypal_" & lib & "\n\nexport paypal_" & lib & "\n")
 
 proc writePaypalNim(pkgRoot: string) =

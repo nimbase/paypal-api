@@ -3,7 +3,7 @@
 # Auto-generated from OpenAPI 3.x specification
 # using the awesome [Nimbase CLI](https://github.com/nimbase/nimbase)
 #
-# Generated at: 2026-08-08T22:36:56+03:00
+# Generated at: 2026-08-08T23:06:08+03:00
 # License: MIT
 
 import std/[asyncdispatch, httpclient, tables,
@@ -189,6 +189,17 @@ proc httpPut*(client: PaymentsClient,
   if result.code == Http401 and await client.tryRefreshToken:
     client.authRequest
     result = await client.httpClient.request(url, httpMethod = HttpPut)
+
+proc httpDelete*[T](client: PaymentsClient,
+  endpoint: string, body: T): Future[AsyncResponse] {.async.} =
+  client.authRequest
+  let url = client.baseUri & endpoint
+  result = await client.httpClient.request(url, httpMethod = HttpDelete,
+    body = toJson(body))
+  if result.code == Http401 and await client.tryRefreshToken:
+    client.authRequest
+    result = await client.httpClient.request(url, httpMethod = HttpDelete,
+      body = toJson(body))
 
 proc httpDelete*(client: PaymentsClient,
   endpoint: string): Future[AsyncResponse] {.async.} =
