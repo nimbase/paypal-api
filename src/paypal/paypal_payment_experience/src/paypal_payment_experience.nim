@@ -1,11 +1,11 @@
 # paypal_payment_experience API client for Nim
 #
 # Auto-generated from OpenAPI 3.x specification
-# Clue CLI Assistant https://github.com/openpeeps/clue
+# Nimbase CLI https://github.com/nimbase/nimbase
 #
-# Generated at: 2026-08-08T22:10:21+03:00
+# Generated at: 2026-08-08T22:36:56+03:00
 # License: MIT
-import ./paypal_payment_experience/[web_profiles, types, metaclient, server_urls]
-
+import ./paypal_payment_experience/[web_profiles]
+import ./paypal_payment_experience/private/[types, metaclient, server_urls]
 
 export web_profiles, types, metaclient, server_urls

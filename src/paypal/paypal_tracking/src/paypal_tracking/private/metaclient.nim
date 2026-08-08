@@ -1,9 +1,9 @@
-# paypal_reporting API client for Nim
+# paypal_tracking API client for Nim
 #
 # Auto-generated from OpenAPI 3.x specification
-# using the awesome [Clue CLI Assistant](https://github.com/openpeeps/clue)
+# using the awesome [Nimbase CLI](https://github.com/nimbase/nimbase)
 #
-# Generated at: 2026-08-08T22:10:22+03:00
+# Generated at: 2026-08-08T22:36:56+03:00
 # License: MIT
 
 import std/[asyncdispatch, httpclient, tables,
@@ -16,7 +16,7 @@ import pkg/openparser/json
 export asyncdispatch, httpclient, json, options, times, oauth2, tables, sequtils
 
 type
-  ReportingClient* = ref object of RootObj
+  TrackingClient* = ref object of RootObj
     baseUri*: string
     httpClient*: AsyncHttpClient
     accessToken*: Option[string]
@@ -27,7 +27,7 @@ type
 
   QueryTable* = OrderedTable[string, string]
 
-  ReportingClientError* = object of CatchableError
+  TrackingClientError* = object of CatchableError
 
 const
   oauthTokenUrl* = "/v1/oauth2/token"
@@ -38,7 +38,7 @@ proc `$`*(query: QueryTable): string =
     add result, "?"
     add result, join(query.keys.toSeq.mapIt(it & "=" & query[it]), "&")
 
-proc initReportingClient*: ReportingClient =
+proc initTrackingClient*: TrackingClient =
   new(result)
   result.baseUri = "https://api-m.sandbox.paypal.com/"
   result.httpClient = newAsyncHttpClient()
@@ -46,24 +46,24 @@ proc initReportingClient*: ReportingClient =
     "Accept": "application/json"
   })
 
-proc configureOAuth*(client: ReportingClient, clientId, clientSecret: string) =
+proc configureOAuth*(client: TrackingClient, clientId, clientSecret: string) =
   client.oauthClientId = some(clientId)
   client.oauthClientSecret = some(clientSecret)
 
-proc setTokens*(client: ReportingClient, accessToken, refreshToken: string,
+proc setTokens*(client: TrackingClient, accessToken, refreshToken: string,
                 expiresIn: Option[int] = none(int)) =
   client.accessToken = some(accessToken)
   if refreshToken.len > 0:
     client.refreshToken = some(refreshToken)
   client.tokenExpiry = expiresIn
 
-proc canAutoRefresh*(client: ReportingClient): bool =
+proc canAutoRefresh*(client: TrackingClient): bool =
   client.refreshToken.isSome and
     client.oauthClientId.isSome and
     client.oauthClientSecret.isSome and
     oauthTokenUrl.len > 0
 
-proc tryRefreshToken*(client: ReportingClient): Future[bool] {.async.} =
+proc tryRefreshToken*(client: TrackingClient): Future[bool] {.async.} =
   if not client.canAutoRefresh:
     return false
   let resp = await refreshToken(
@@ -111,11 +111,11 @@ proc exchangeCodeForToken*(clientId, clientSecret, code, redirectUri: string): F
   let resp = await http.post(oauthTokenUrl, body)
   result = parseJson(await resp.body)
 
-proc authRequest(client: ReportingClient) =
+proc authRequest(client: TrackingClient) =
   if client.accessToken.isSome:
     client.httpClient.headers["Authorization"] = "Bearer " & client.accessToken.get
 
-proc httpGet*(client: ReportingClient,
+proc httpGet*(client: TrackingClient,
   endpoint: string): Future[AsyncResponse] {.async.} =
   client.authRequest
   let url = client.baseUri & endpoint
@@ -124,7 +124,7 @@ proc httpGet*(client: ReportingClient,
     client.authRequest
     result = await client.httpClient.get(url)
 
-proc httpGet*(client: ReportingClient,
+proc httpGet*(client: TrackingClient,
   endpoint: string, query: QueryTable): Future[AsyncResponse] {.async.} =
   client.authRequest
   let url = client.baseUri & endpoint & $query
@@ -133,7 +133,7 @@ proc httpGet*(client: ReportingClient,
     client.authRequest
     result = await client.httpClient.get(url)
 
-proc httpPost*[T](client: ReportingClient,
+proc httpPost*[T](client: TrackingClient,
   endpoint: string, body: T): Future[AsyncResponse] {.async.} =
   client.authRequest
   let url = client.baseUri & endpoint
@@ -142,7 +142,7 @@ proc httpPost*[T](client: ReportingClient,
     client.authRequest
     result = await client.httpClient.post(url, toJson(body))
 
-proc httpPost*(client: ReportingClient,
+proc httpPost*(client: TrackingClient,
   endpoint: string): Future[AsyncResponse] {.async.} =
   client.authRequest
   let url = client.baseUri & endpoint
@@ -151,7 +151,7 @@ proc httpPost*(client: ReportingClient,
     client.authRequest
     result = await client.httpClient.post(url)
 
-proc httpPost*(client: ReportingClient,
+proc httpPost*(client: TrackingClient,
   endpoint: string, query: QueryTable): Future[AsyncResponse] {.async.} =
   client.authRequest
   let url = client.baseUri & endpoint & $query
@@ -160,7 +160,7 @@ proc httpPost*(client: ReportingClient,
     client.authRequest
     result = await client.httpClient.post(url)
 
-proc httpPut*[T](client: ReportingClient,
+proc httpPut*[T](client: TrackingClient,
   endpoint: string, body: T): Future[AsyncResponse] {.async.} =
   client.authRequest
   let url = client.baseUri & endpoint
@@ -171,7 +171,7 @@ proc httpPut*[T](client: ReportingClient,
     result = await client.httpClient.request(url, httpMethod = HttpPut,
       body = toJson(body))
 
-proc httpPut*(client: ReportingClient,
+proc httpPut*(client: TrackingClient,
   endpoint: string): Future[AsyncResponse] {.async.} =
   client.authRequest
   let url = client.baseUri & endpoint
@@ -180,7 +180,7 @@ proc httpPut*(client: ReportingClient,
     client.authRequest
     result = await client.httpClient.request(url, httpMethod = HttpPut)
 
-proc httpPut*(client: ReportingClient,
+proc httpPut*(client: TrackingClient,
   endpoint: string, query: QueryTable): Future[AsyncResponse] {.async.} =
   client.authRequest
   let url = client.baseUri & endpoint & $query
@@ -189,7 +189,7 @@ proc httpPut*(client: ReportingClient,
     client.authRequest
     result = await client.httpClient.request(url, httpMethod = HttpPut)
 
-proc httpDelete*(client: ReportingClient,
+proc httpDelete*(client: TrackingClient,
   endpoint: string): Future[AsyncResponse] {.async.} =
   client.authRequest
   let url = client.baseUri & endpoint
@@ -198,7 +198,7 @@ proc httpDelete*(client: ReportingClient,
     client.authRequest
     result = await client.httpClient.request(url, httpMethod = HttpDelete)
 
-proc httpDelete*(client: ReportingClient,
+proc httpDelete*(client: TrackingClient,
   endpoint: string, query: QueryTable): Future[AsyncResponse] {.async.} =
   client.authRequest
   let url = client.baseUri & endpoint & $query
@@ -207,7 +207,7 @@ proc httpDelete*(client: ReportingClient,
     client.authRequest
     result = await client.httpClient.request(url, httpMethod = HttpDelete)
 
-proc httpPatch*[T](client: ReportingClient,
+proc httpPatch*[T](client: TrackingClient,
   endpoint: string, body: T): Future[AsyncResponse] {.async.} =
   client.authRequest
   let url = client.baseUri & endpoint
@@ -218,7 +218,7 @@ proc httpPatch*[T](client: ReportingClient,
     result = await client.httpClient.request(url, httpMethod = HttpPatch,
       body = toJson(body))
 
-proc httpPatch*(client: ReportingClient,
+proc httpPatch*(client: TrackingClient,
   endpoint: string): Future[AsyncResponse] {.async.} =
   client.authRequest
   let url = client.baseUri & endpoint

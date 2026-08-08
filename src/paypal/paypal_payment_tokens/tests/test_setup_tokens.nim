@@ -1,9 +1,9 @@
 # paypal_payment_tokens API client for Nim
 #
 # Auto-generated from OpenAPI 3.x specification
-# Clue CLI Assistant https://github.com/openpeeps/clue
+# Nimbase CLI https://github.com/nimbase/nimbase
 #
-# Generated at: 2026-08-08T22:10:22+03:00
+# Generated at: 2026-08-08T22:36:56+03:00
 # License: MIT
 import std/[asyncdispatch, options, json]
 import unittest

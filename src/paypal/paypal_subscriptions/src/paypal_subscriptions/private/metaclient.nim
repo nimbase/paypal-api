@@ -1,9 +1,9 @@
-# paypal_disputes API client for Nim
+# paypal_subscriptions API client for Nim
 #
 # Auto-generated from OpenAPI 3.x specification
-# using the awesome [Clue CLI Assistant](https://github.com/openpeeps/clue)
+# using the awesome [Nimbase CLI](https://github.com/nimbase/nimbase)
 #
-# Generated at: 2026-08-08T22:10:21+03:00
+# Generated at: 2026-08-08T22:36:55+03:00
 # License: MIT
 
 import std/[asyncdispatch, httpclient, tables,
@@ -16,7 +16,7 @@ import pkg/openparser/json
 export asyncdispatch, httpclient, json, options, times, oauth2, tables, sequtils
 
 type
-  DisputesClient* = ref object of RootObj
+  SubscriptionsClient* = ref object of RootObj
     baseUri*: string
     httpClient*: AsyncHttpClient
     accessToken*: Option[string]
@@ -27,7 +27,7 @@ type
 
   QueryTable* = OrderedTable[string, string]
 
-  DisputesClientError* = object of CatchableError
+  SubscriptionsClientError* = object of CatchableError
 
 const
   oauthTokenUrl* = "/v1/oauth2/token"
@@ -38,7 +38,7 @@ proc `$`*(query: QueryTable): string =
     add result, "?"
     add result, join(query.keys.toSeq.mapIt(it & "=" & query[it]), "&")
 
-proc initDisputesClient*: DisputesClient =
+proc initSubscriptionsClient*: SubscriptionsClient =
   new(result)
   result.baseUri = "https://api-m.sandbox.paypal.com/"
   result.httpClient = newAsyncHttpClient()
@@ -46,24 +46,24 @@ proc initDisputesClient*: DisputesClient =
     "Accept": "application/json"
   })
 
-proc configureOAuth*(client: DisputesClient, clientId, clientSecret: string) =
+proc configureOAuth*(client: SubscriptionsClient, clientId, clientSecret: string) =
   client.oauthClientId = some(clientId)
   client.oauthClientSecret = some(clientSecret)
 
-proc setTokens*(client: DisputesClient, accessToken, refreshToken: string,
+proc setTokens*(client: SubscriptionsClient, accessToken, refreshToken: string,
                 expiresIn: Option[int] = none(int)) =
   client.accessToken = some(accessToken)
   if refreshToken.len > 0:
     client.refreshToken = some(refreshToken)
   client.tokenExpiry = expiresIn
 
-proc canAutoRefresh*(client: DisputesClient): bool =
+proc canAutoRefresh*(client: SubscriptionsClient): bool =
   client.refreshToken.isSome and
     client.oauthClientId.isSome and
     client.oauthClientSecret.isSome and
     oauthTokenUrl.len > 0
 
-proc tryRefreshToken*(client: DisputesClient): Future[bool] {.async.} =
+proc tryRefreshToken*(client: SubscriptionsClient): Future[bool] {.async.} =
   if not client.canAutoRefresh:
     return false
   let resp = await refreshToken(
@@ -111,11 +111,11 @@ proc exchangeCodeForToken*(clientId, clientSecret, code, redirectUri: string): F
   let resp = await http.post(oauthTokenUrl, body)
   result = parseJson(await resp.body)
 
-proc authRequest(client: DisputesClient) =
+proc authRequest(client: SubscriptionsClient) =
   if client.accessToken.isSome:
     client.httpClient.headers["Authorization"] = "Bearer " & client.accessToken.get
 
-proc httpGet*(client: DisputesClient,
+proc httpGet*(client: SubscriptionsClient,
   endpoint: string): Future[AsyncResponse] {.async.} =
   client.authRequest
   let url = client.baseUri & endpoint
@@ -124,7 +124,7 @@ proc httpGet*(client: DisputesClient,
     client.authRequest
     result = await client.httpClient.get(url)
 
-proc httpGet*(client: DisputesClient,
+proc httpGet*(client: SubscriptionsClient,
   endpoint: string, query: QueryTable): Future[AsyncResponse] {.async.} =
   client.authRequest
   let url = client.baseUri & endpoint & $query
@@ -133,7 +133,7 @@ proc httpGet*(client: DisputesClient,
     client.authRequest
     result = await client.httpClient.get(url)
 
-proc httpPost*[T](client: DisputesClient,
+proc httpPost*[T](client: SubscriptionsClient,
   endpoint: string, body: T): Future[AsyncResponse] {.async.} =
   client.authRequest
   let url = client.baseUri & endpoint
@@ -142,7 +142,7 @@ proc httpPost*[T](client: DisputesClient,
     client.authRequest
     result = await client.httpClient.post(url, toJson(body))
 
-proc httpPost*(client: DisputesClient,
+proc httpPost*(client: SubscriptionsClient,
   endpoint: string): Future[AsyncResponse] {.async.} =
   client.authRequest
   let url = client.baseUri & endpoint
@@ -151,7 +151,7 @@ proc httpPost*(client: DisputesClient,
     client.authRequest
     result = await client.httpClient.post(url)
 
-proc httpPost*(client: DisputesClient,
+proc httpPost*(client: SubscriptionsClient,
   endpoint: string, query: QueryTable): Future[AsyncResponse] {.async.} =
   client.authRequest
   let url = client.baseUri & endpoint & $query
@@ -160,7 +160,7 @@ proc httpPost*(client: DisputesClient,
     client.authRequest
     result = await client.httpClient.post(url)
 
-proc httpPut*[T](client: DisputesClient,
+proc httpPut*[T](client: SubscriptionsClient,
   endpoint: string, body: T): Future[AsyncResponse] {.async.} =
   client.authRequest
   let url = client.baseUri & endpoint
@@ -171,7 +171,7 @@ proc httpPut*[T](client: DisputesClient,
     result = await client.httpClient.request(url, httpMethod = HttpPut,
       body = toJson(body))
 
-proc httpPut*(client: DisputesClient,
+proc httpPut*(client: SubscriptionsClient,
   endpoint: string): Future[AsyncResponse] {.async.} =
   client.authRequest
   let url = client.baseUri & endpoint
@@ -180,7 +180,7 @@ proc httpPut*(client: DisputesClient,
     client.authRequest
     result = await client.httpClient.request(url, httpMethod = HttpPut)
 
-proc httpPut*(client: DisputesClient,
+proc httpPut*(client: SubscriptionsClient,
   endpoint: string, query: QueryTable): Future[AsyncResponse] {.async.} =
   client.authRequest
   let url = client.baseUri & endpoint & $query
@@ -189,7 +189,7 @@ proc httpPut*(client: DisputesClient,
     client.authRequest
     result = await client.httpClient.request(url, httpMethod = HttpPut)
 
-proc httpDelete*(client: DisputesClient,
+proc httpDelete*(client: SubscriptionsClient,
   endpoint: string): Future[AsyncResponse] {.async.} =
   client.authRequest
   let url = client.baseUri & endpoint
@@ -198,7 +198,7 @@ proc httpDelete*(client: DisputesClient,
     client.authRequest
     result = await client.httpClient.request(url, httpMethod = HttpDelete)
 
-proc httpDelete*(client: DisputesClient,
+proc httpDelete*(client: SubscriptionsClient,
   endpoint: string, query: QueryTable): Future[AsyncResponse] {.async.} =
   client.authRequest
   let url = client.baseUri & endpoint & $query
@@ -207,7 +207,7 @@ proc httpDelete*(client: DisputesClient,
     client.authRequest
     result = await client.httpClient.request(url, httpMethod = HttpDelete)
 
-proc httpPatch*[T](client: DisputesClient,
+proc httpPatch*[T](client: SubscriptionsClient,
   endpoint: string, body: T): Future[AsyncResponse] {.async.} =
   client.authRequest
   let url = client.baseUri & endpoint
@@ -218,7 +218,7 @@ proc httpPatch*[T](client: DisputesClient,
     result = await client.httpClient.request(url, httpMethod = HttpPatch,
       body = toJson(body))
 
-proc httpPatch*(client: DisputesClient,
+proc httpPatch*(client: SubscriptionsClient,
   endpoint: string): Future[AsyncResponse] {.async.} =
   client.authRequest
   let url = client.baseUri & endpoint

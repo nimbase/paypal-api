@@ -1,14 +1,14 @@
 # paypal_payments API client for Nim
 #
 # Auto-generated from OpenAPI 3.x specification
-# Clue CLI Assistant https://github.com/openpeeps/clue
+# Nimbase CLI https://github.com/nimbase/nimbase
 #
-# Generated at: 2026-08-08T22:10:21+03:00
+# Generated at: 2026-08-08T22:36:56+03:00
 # License: MIT
 import std/[strformat, options, json]
-import ./metaclient
-import ./types
-import ./renames
+import ./private/metaclient
+import ./private/types
+import ./private/renames
 
 
 proc postV2PaymentsFindEligibleMethods*(client: PaymentsClient,

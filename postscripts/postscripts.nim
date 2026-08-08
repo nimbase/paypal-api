@@ -243,7 +243,7 @@ proc renameClientIdent(dir: string): int =
   changed
 
 proc patchPackageImports(dir, old, new: string) =
-  ## Rewrite `import <old>` lines, `./<old>/[` module refs and `<old>.`
+  ## Rewrite `import <old>` lines, `./<old>/...` module path refs and `<old>.`
   ## qualified refs across a package after its identity rename.
   for path in walkDirRec(dir):
     if path.splitFile.ext != ".nim":
@@ -254,7 +254,7 @@ proc patchPackageImports(dir, old, new: string) =
       if l == "import " & old:
         l = "import " & new
       else:
-        l = l.replace("./" & old & "/[", "./" & new & "/[")
+        l = l.replace("./" & old & "/", "./" & new & "/")
         l = l.replace(old & ".", new & ".")
       outLines.add(l)
     writeFile(path, outLines.join("\n"))
