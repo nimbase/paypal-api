@@ -20,12 +20,13 @@ nim	httpPost	paypal/paypal_reporting/src/paypal_reporting/private/metaclient.htm
 nim	httpPut	paypal/paypal_reporting/src/paypal_reporting/private/metaclient.html#httpPut,ReportingClient,string,T	proc httpPut[T](client: ReportingClient; endpoint: string; body: T): Future[\n    AsyncResponse]		164
 nim	httpPut	paypal/paypal_reporting/src/paypal_reporting/private/metaclient.html#httpPut,ReportingClient,string	proc httpPut(client: ReportingClient; endpoint: string): Future[AsyncResponse]		175
 nim	httpPut	paypal/paypal_reporting/src/paypal_reporting/private/metaclient.html#httpPut,ReportingClient,string,QueryTable	proc httpPut(client: ReportingClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		184
-nim	httpDelete	paypal/paypal_reporting/src/paypal_reporting/private/metaclient.html#httpDelete,ReportingClient,string	proc httpDelete(client: ReportingClient; endpoint: string): Future[AsyncResponse]		193
-nim	httpDelete	paypal/paypal_reporting/src/paypal_reporting/private/metaclient.html#httpDelete,ReportingClient,string,QueryTable	proc httpDelete(client: ReportingClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		202
-nim	httpPatch	paypal/paypal_reporting/src/paypal_reporting/private/metaclient.html#httpPatch,ReportingClient,string,T	proc httpPatch[T](client: ReportingClient; endpoint: string; body: T): Future[\n    AsyncResponse]		211
-nim	httpPatch	paypal/paypal_reporting/src/paypal_reporting/private/metaclient.html#httpPatch,ReportingClient,string	proc httpPatch(client: ReportingClient; endpoint: string): Future[AsyncResponse]		222
+nim	httpDelete	paypal/paypal_reporting/src/paypal_reporting/private/metaclient.html#httpDelete,ReportingClient,string,T	proc httpDelete[T](client: ReportingClient; endpoint: string; body: T): Future[\n    AsyncResponse]		193
+nim	httpDelete	paypal/paypal_reporting/src/paypal_reporting/private/metaclient.html#httpDelete,ReportingClient,string	proc httpDelete(client: ReportingClient; endpoint: string): Future[AsyncResponse]		204
+nim	httpDelete	paypal/paypal_reporting/src/paypal_reporting/private/metaclient.html#httpDelete,ReportingClient,string,QueryTable	proc httpDelete(client: ReportingClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		213
+nim	httpPatch	paypal/paypal_reporting/src/paypal_reporting/private/metaclient.html#httpPatch,ReportingClient,string,T	proc httpPatch[T](client: ReportingClient; endpoint: string; body: T): Future[\n    AsyncResponse]		222
+nim	httpPatch	paypal/paypal_reporting/src/paypal_reporting/private/metaclient.html#httpPatch,ReportingClient,string	proc httpPatch(client: ReportingClient; endpoint: string): Future[AsyncResponse]		233
 nimgrp	httpput	paypal/paypal_reporting/src/paypal_reporting/private/metaclient.html#httpPut-procs-all	proc		163
 nimgrp	httppost	paypal/paypal_reporting/src/paypal_reporting/private/metaclient.html#httpPost-procs-all	proc		136
 nimgrp	httpdelete	paypal/paypal_reporting/src/paypal_reporting/private/metaclient.html#httpDelete-procs-all	proc		192
 nimgrp	httpget	paypal/paypal_reporting/src/paypal_reporting/private/metaclient.html#httpGet-procs-all	proc		118
-nimgrp	httppatch	paypal/paypal_reporting/src/paypal_reporting/private/metaclient.html#httpPatch-procs-all	proc		210
+nimgrp	httppatch	paypal/paypal_reporting/src/paypal_reporting/private/metaclient.html#httpPatch-procs-all	proc		221

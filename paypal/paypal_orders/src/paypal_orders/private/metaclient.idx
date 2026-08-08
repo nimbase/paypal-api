@@ -20,12 +20,13 @@ nim	httpPost	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#http
 nim	httpPut	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpPut,OrdersClient,string,T	proc httpPut[T](client: OrdersClient; endpoint: string; body: T): Future[\n    AsyncResponse]		165
 nim	httpPut	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpPut,OrdersClient,string	proc httpPut(client: OrdersClient; endpoint: string): Future[AsyncResponse]		176
 nim	httpPut	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpPut,OrdersClient,string,QueryTable	proc httpPut(client: OrdersClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		185
-nim	httpDelete	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpDelete,OrdersClient,string	proc httpDelete(client: OrdersClient; endpoint: string): Future[AsyncResponse]		194
-nim	httpDelete	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpDelete,OrdersClient,string,QueryTable	proc httpDelete(client: OrdersClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		203
-nim	httpPatch	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpPatch,OrdersClient,string,T	proc httpPatch[T](client: OrdersClient; endpoint: string; body: T): Future[\n    AsyncResponse]		212
-nim	httpPatch	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpPatch,OrdersClient,string	proc httpPatch(client: OrdersClient; endpoint: string): Future[AsyncResponse]		223
+nim	httpDelete	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpDelete,OrdersClient,string,T	proc httpDelete[T](client: OrdersClient; endpoint: string; body: T): Future[\n    AsyncResponse]		194
+nim	httpDelete	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpDelete,OrdersClient,string	proc httpDelete(client: OrdersClient; endpoint: string): Future[AsyncResponse]		205
+nim	httpDelete	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpDelete,OrdersClient,string,QueryTable	proc httpDelete(client: OrdersClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		214
+nim	httpPatch	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpPatch,OrdersClient,string,T	proc httpPatch[T](client: OrdersClient; endpoint: string; body: T): Future[\n    AsyncResponse]		223
+nim	httpPatch	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpPatch,OrdersClient,string	proc httpPatch(client: OrdersClient; endpoint: string): Future[AsyncResponse]		234
 nimgrp	httpput	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpPut-procs-all	proc		164
 nimgrp	httppost	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpPost-procs-all	proc		137
 nimgrp	httpdelete	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpDelete-procs-all	proc		193
 nimgrp	httpget	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpGet-procs-all	proc		119
-nimgrp	httppatch	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpPatch-procs-all	proc		211
+nimgrp	httppatch	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpPatch-procs-all	proc		222

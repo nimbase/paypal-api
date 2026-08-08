@@ -20,12 +20,13 @@ nim	httpPost	paypal/paypal_payment_tokens/src/paypal_payment_tokens/private/meta
 nim	httpPut	paypal/paypal_payment_tokens/src/paypal_payment_tokens/private/metaclient.html#httpPut,PaymentTokensClient,string,T	proc httpPut[T](client: PaymentTokensClient; endpoint: string; body: T): Future[\n    AsyncResponse]		164
 nim	httpPut	paypal/paypal_payment_tokens/src/paypal_payment_tokens/private/metaclient.html#httpPut,PaymentTokensClient,string	proc httpPut(client: PaymentTokensClient; endpoint: string): Future[AsyncResponse]		175
 nim	httpPut	paypal/paypal_payment_tokens/src/paypal_payment_tokens/private/metaclient.html#httpPut,PaymentTokensClient,string,QueryTable	proc httpPut(client: PaymentTokensClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		184
-nim	httpDelete	paypal/paypal_payment_tokens/src/paypal_payment_tokens/private/metaclient.html#httpDelete,PaymentTokensClient,string	proc httpDelete(client: PaymentTokensClient; endpoint: string): Future[AsyncResponse]		193
-nim	httpDelete	paypal/paypal_payment_tokens/src/paypal_payment_tokens/private/metaclient.html#httpDelete,PaymentTokensClient,string,QueryTable	proc httpDelete(client: PaymentTokensClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		202
-nim	httpPatch	paypal/paypal_payment_tokens/src/paypal_payment_tokens/private/metaclient.html#httpPatch,PaymentTokensClient,string,T	proc httpPatch[T](client: PaymentTokensClient; endpoint: string; body: T): Future[\n    AsyncResponse]		211
-nim	httpPatch	paypal/paypal_payment_tokens/src/paypal_payment_tokens/private/metaclient.html#httpPatch,PaymentTokensClient,string	proc httpPatch(client: PaymentTokensClient; endpoint: string): Future[AsyncResponse]		222
+nim	httpDelete	paypal/paypal_payment_tokens/src/paypal_payment_tokens/private/metaclient.html#httpDelete,PaymentTokensClient,string,T	proc httpDelete[T](client: PaymentTokensClient; endpoint: string; body: T): Future[\n    AsyncResponse]		193
+nim	httpDelete	paypal/paypal_payment_tokens/src/paypal_payment_tokens/private/metaclient.html#httpDelete,PaymentTokensClient,string	proc httpDelete(client: PaymentTokensClient; endpoint: string): Future[AsyncResponse]		204
+nim	httpDelete	paypal/paypal_payment_tokens/src/paypal_payment_tokens/private/metaclient.html#httpDelete,PaymentTokensClient,string,QueryTable	proc httpDelete(client: PaymentTokensClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		213
+nim	httpPatch	paypal/paypal_payment_tokens/src/paypal_payment_tokens/private/metaclient.html#httpPatch,PaymentTokensClient,string,T	proc httpPatch[T](client: PaymentTokensClient; endpoint: string; body: T): Future[\n    AsyncResponse]		222
+nim	httpPatch	paypal/paypal_payment_tokens/src/paypal_payment_tokens/private/metaclient.html#httpPatch,PaymentTokensClient,string	proc httpPatch(client: PaymentTokensClient; endpoint: string): Future[AsyncResponse]		233
 nimgrp	httpput	paypal/paypal_payment_tokens/src/paypal_payment_tokens/private/metaclient.html#httpPut-procs-all	proc		163
 nimgrp	httppost	paypal/paypal_payment_tokens/src/paypal_payment_tokens/private/metaclient.html#httpPost-procs-all	proc		136
 nimgrp	httpdelete	paypal/paypal_payment_tokens/src/paypal_payment_tokens/private/metaclient.html#httpDelete-procs-all	proc		192
 nimgrp	httpget	paypal/paypal_payment_tokens/src/paypal_payment_tokens/private/metaclient.html#httpGet-procs-all	proc		118
-nimgrp	httppatch	paypal/paypal_payment_tokens/src/paypal_payment_tokens/private/metaclient.html#httpPatch-procs-all	proc		210
+nimgrp	httppatch	paypal/paypal_payment_tokens/src/paypal_payment_tokens/private/metaclient.html#httpPatch-procs-all	proc		221
