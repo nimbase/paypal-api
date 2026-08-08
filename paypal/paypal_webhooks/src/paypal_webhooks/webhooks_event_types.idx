@@ -1,0 +1,2 @@
+nimTitle	webhooks_event_types	paypal/paypal_webhooks/src/paypal_webhooks/webhooks_event_types.html	module paypal/paypal_webhooks/src/paypal_webhooks/webhooks_event_types		0
+nim	getV1NotificationsWebhooksEventTypes	paypal/paypal_webhooks/src/paypal_webhooks/webhooks_event_types.html#getV1NotificationsWebhooksEventTypes,WebhooksClient	proc getV1NotificationsWebhooksEventTypes(client: WebhooksClient): Future[\n    EventTypeList]		13

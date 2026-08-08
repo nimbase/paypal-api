@@ -1,0 +1,31 @@
+nimTitle	metaclient	paypal/paypal_invoices/src/paypal_invoices/metaclient.html	module paypal/paypal_invoices/src/paypal_invoices/metaclient		0
+nim	InvoicesClient	paypal/paypal_invoices/src/paypal_invoices/metaclient.html#InvoicesClient	type InvoicesClient		19
+nim	QueryTable	paypal/paypal_invoices/src/paypal_invoices/metaclient.html#QueryTable	type QueryTable		28
+nim	InvoicesClientError	paypal/paypal_invoices/src/paypal_invoices/metaclient.html#InvoicesClientError	object InvoicesClientError		30
+nim	oauthTokenUrl	paypal/paypal_invoices/src/paypal_invoices/metaclient.html#oauthTokenUrl	const oauthTokenUrl		33
+nim	oauthAuthUrl	paypal/paypal_invoices/src/paypal_invoices/metaclient.html#oauthAuthUrl	const oauthAuthUrl		34
+nim	`$`	paypal/paypal_invoices/src/paypal_invoices/metaclient.html#$,QueryTable	proc `$`(query: QueryTable): string		36
+nim	initInvoicesClient	paypal/paypal_invoices/src/paypal_invoices/metaclient.html#initInvoicesClient	proc initInvoicesClient(): InvoicesClient		41
+nim	configureOAuth	paypal/paypal_invoices/src/paypal_invoices/metaclient.html#configureOAuth,InvoicesClient,string,string	proc configureOAuth(client: InvoicesClient; clientId, clientSecret: string)		49
+nim	setTokens	paypal/paypal_invoices/src/paypal_invoices/metaclient.html#setTokens,InvoicesClient,string,string,Option[int]	proc setTokens(client: InvoicesClient; accessToken, refreshToken: string;\n          expiresIn: Option[int] = none(int))		53
+nim	canAutoRefresh	paypal/paypal_invoices/src/paypal_invoices/metaclient.html#canAutoRefresh,InvoicesClient	proc canAutoRefresh(client: InvoicesClient): bool		60
+nim	tryRefreshToken	paypal/paypal_invoices/src/paypal_invoices/metaclient.html#tryRefreshToken,InvoicesClient	proc tryRefreshToken(client: InvoicesClient): Future[bool]		66
+nim	getAuthorizationUrl	paypal/paypal_invoices/src/paypal_invoices/metaclient.html#getAuthorizationUrl,string,string,openArray[string],string	proc getAuthorizationUrl(clientId, redirectUri: string;\n                    scopes: openArray[string] = []; state = ""): string		87
+nim	exchangeCodeForToken	paypal/paypal_invoices/src/paypal_invoices/metaclient.html#exchangeCodeForToken,string,string,string,string	proc exchangeCodeForToken(clientId, clientSecret, code, redirectUri: string): Future[\n    JsonNode]		99
+nim	httpGet	paypal/paypal_invoices/src/paypal_invoices/metaclient.html#httpGet,InvoicesClient,string	proc httpGet(client: InvoicesClient; endpoint: string): Future[AsyncResponse]		119
+nim	httpGet	paypal/paypal_invoices/src/paypal_invoices/metaclient.html#httpGet,InvoicesClient,string,QueryTable	proc httpGet(client: InvoicesClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		128
+nim	httpPost	paypal/paypal_invoices/src/paypal_invoices/metaclient.html#httpPost,InvoicesClient,string,T	proc httpPost[T](client: InvoicesClient; endpoint: string; body: T): Future[\n    AsyncResponse]		137
+nim	httpPost	paypal/paypal_invoices/src/paypal_invoices/metaclient.html#httpPost,InvoicesClient,string	proc httpPost(client: InvoicesClient; endpoint: string): Future[AsyncResponse]		146
+nim	httpPost	paypal/paypal_invoices/src/paypal_invoices/metaclient.html#httpPost,InvoicesClient,string,QueryTable	proc httpPost(client: InvoicesClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		155
+nim	httpPut	paypal/paypal_invoices/src/paypal_invoices/metaclient.html#httpPut,InvoicesClient,string,T	proc httpPut[T](client: InvoicesClient; endpoint: string; body: T): Future[\n    AsyncResponse]		164
+nim	httpPut	paypal/paypal_invoices/src/paypal_invoices/metaclient.html#httpPut,InvoicesClient,string	proc httpPut(client: InvoicesClient; endpoint: string): Future[AsyncResponse]		175
+nim	httpPut	paypal/paypal_invoices/src/paypal_invoices/metaclient.html#httpPut,InvoicesClient,string,QueryTable	proc httpPut(client: InvoicesClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		184
+nim	httpDelete	paypal/paypal_invoices/src/paypal_invoices/metaclient.html#httpDelete,InvoicesClient,string	proc httpDelete(client: InvoicesClient; endpoint: string): Future[AsyncResponse]		193
+nim	httpDelete	paypal/paypal_invoices/src/paypal_invoices/metaclient.html#httpDelete,InvoicesClient,string,QueryTable	proc httpDelete(client: InvoicesClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		202
+nim	httpPatch	paypal/paypal_invoices/src/paypal_invoices/metaclient.html#httpPatch,InvoicesClient,string,T	proc httpPatch[T](client: InvoicesClient; endpoint: string; body: T): Future[\n    AsyncResponse]		211
+nim	httpPatch	paypal/paypal_invoices/src/paypal_invoices/metaclient.html#httpPatch,InvoicesClient,string	proc httpPatch(client: InvoicesClient; endpoint: string): Future[AsyncResponse]		222
+nimgrp	httpput	paypal/paypal_invoices/src/paypal_invoices/metaclient.html#httpPut-procs-all	proc		163
+nimgrp	httppost	paypal/paypal_invoices/src/paypal_invoices/metaclient.html#httpPost-procs-all	proc		136
+nimgrp	httpdelete	paypal/paypal_invoices/src/paypal_invoices/metaclient.html#httpDelete-procs-all	proc		192
+nimgrp	httpget	paypal/paypal_invoices/src/paypal_invoices/metaclient.html#httpGet-procs-all	proc		118
+nimgrp	httppatch	paypal/paypal_invoices/src/paypal_invoices/metaclient.html#httpPatch-procs-all	proc		210

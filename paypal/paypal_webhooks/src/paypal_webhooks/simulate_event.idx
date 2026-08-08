@@ -1,0 +1,2 @@
+nimTitle	simulate_event	paypal/paypal_webhooks/src/paypal_webhooks/simulate_event.html	module paypal/paypal_webhooks/src/paypal_webhooks/simulate_event		0
+nim	postV1NotificationsSimulateEvent	paypal/paypal_webhooks/src/paypal_webhooks/simulate_event.html#postV1NotificationsSimulateEvent,WebhooksClient,	proc postV1NotificationsSimulateEvent(client: WebhooksClient;\n                                 body: types.SimulateEvent): Future[Event]		14

@@ -1,0 +1,2 @@
+nimTitle	invoice_connection_details	paypal/paypal_invoices/src/paypal_invoices/invoice_connection_details.html	module paypal/paypal_invoices/src/paypal_invoices/invoice_connection_details		0
+nim	getV2InvoicingAccountingSyncInvoicesIdConnections	paypal/paypal_invoices/src/paypal_invoices/invoice_connection_details.html#getV2InvoicingAccountingSyncInvoicesIdConnections,InvoicesClient,string	proc getV2InvoicingAccountingSyncInvoicesIdConnections(client: InvoicesClient;\n    id: string): Future[InvoiceConnectionDetails]		14

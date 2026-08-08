@@ -1,0 +1,6 @@
+nimTitle	renames	paypal/paypal_payments/src/paypal_payments/renames.html	module paypal/paypal_payments/src/paypal_payments/renames		0
+nim	renameHook	paypal/paypal_payments/src/paypal_payments/renames.html#renameHook,LinkSchema,string	proc renameHook(v: LinkSchema; fieldName: var string)		3
+nim	renameHook	paypal/paypal_payments/src/paypal_payments/renames.html#renameHook,LinkDescription,string	proc renameHook(v: LinkDescription; fieldName: var string)		33
+nim	renameHook	paypal/paypal_payments/src/paypal_payments/renames.html#renameHook,LinkSchema2,string	proc renameHook(v: LinkSchema2; fieldName: var string)		47
+nim	renameHook	paypal/paypal_payments/src/paypal_payments/renames.html#renameHook,LinkDescription2,string	proc renameHook(v: LinkDescription2; fieldName: var string)		77
+nimgrp	renamehook	paypal/paypal_payments/src/paypal_payments/renames.html#renameHook-procs-all	proc		3
