@@ -62,24 +62,25 @@ exported from each module for switching environments.
 The clients are generated from the OpenAPI specs in `specs/`:
 
 ```sh
-scripts/gen.sh                 # regenerates deps/paypal_*/ + src/paypal/ shims
+scripts/gen.sh                 # regenerates src/paypal/paypal_*/ + shims
 scripts/gen.sh --specs:<dir>   # use a different specs dir
 ```
 
-Each PayPal API is a real nested nimble package under `deps/paypal_<api>/`
-(e.g. `deps/paypal_orders`, `deps/paypal_catalog`). The main `paypal` package
-re-exports them via thin shim modules in `src/paypal/` (`import paypal/orders`),
-and `config.nims` (root) auto-adds every inner package's `src` to the path.
+Each PayPal API is a module tree nested under `src/paypal/paypal_<api>/`
+(e.g. `src/paypal/paypal_orders`, `src/paypal/paypal_catalog`). The main
+`paypal` package re-exports them via thin shim modules in `src/paypal/`
+(`import paypal/orders`), and `config.nims` (root) auto-adds every inner
+package's `src` to the path. `nimble test` runs every nested test suite.
 
 For each spec, `scripts/gen.sh` invokes `nimbase openapi.gen`, which
 automatically runs the package's **prescripts** (before) and **postscripts**
 (after) — kapsis plugins in `prescripts/` and `postscripts/`:
 
 - **prescripts** — `validate_spec`: pre-generation hook
-- **postscripts** — `rename_package` (renames identity to `paypal_<api>`),
-  `fix_enum_collisions`, `rename_client`, `fix_type_idents`,
-  `fix_query_defaults`, plus the wiring: `write_shims`, `write_paypal_nim`,
-  `write_config`, `write_test_task`
+- **postscripts** — `rename_package` (renames identity to `paypal_<api>` and
+  drops the per-client `.nimble`), `fix_enum_collisions`, `rename_client`,
+  `fix_type_idents`, `fix_query_defaults`, plus the wiring: `write_shims`,
+  `write_paypal_nim`, `write_config`, `write_test_task`
 
 Scripts can also be run manually:
 
@@ -88,7 +89,7 @@ nimbase prescripts.list / postscripts.list
 nimbase postscripts.run <pkg-dir>          # --spec:<path> --dir:<plugins>
 ```
 
-Docs are generated from the main module:
+Docs are generated from the main module (documents every nested module too):
 
 ```sh
 nim doc --index:on --project --path:. --out:.gh-pages src/paypal.nim

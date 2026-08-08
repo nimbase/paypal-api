@@ -10,9 +10,9 @@ testresults/
 /bin/
 build
 
-/postscripts
+/postscripts/*
 !/postscripts/*.nim
 !/postscripts/build.sh
-/prescripts
+/prescripts/*
 !/prescripts/*.nim
 !/prescripts/build.sh

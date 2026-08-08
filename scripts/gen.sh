@@ -1,22 +1,23 @@
 #!/usr/bin/env bash
 #
-# Generate the PayPal REST API clients as a set of nested nimble packages.
+# Generate the PayPal REST API clients as nested module trees inside the main
+# `paypal` package.
 #
 # For each OpenAPI 3.x spec in specs/, runs `nimbase openapi.gen` into
-# deps/paypal_<lib>. `openapi.gen` automatically runs the package's prescripts
-# (before) and postscripts (after); the postscripts rename the generated
-# package identity to paypal_<lib>, apply the Nim-specific fixes and wire the
-# main paypal package (shims, src/paypal.nim, config.nims, nimble task test).
+# src/paypal/paypal_<lib>. `openapi.gen` automatically runs the package's
+# prescripts (before) and postscripts (after); the postscripts rename the
+# generated identity to paypal_<lib> (dropping the per-client .nimble), apply
+# the Nim-specific fixes and wire the main paypal package (shims, src/paypal.nim,
+# config.nims, nimble task test).
 #
 # Usage:
-#   scripts/gen.sh                # specs/ -> deps/
+#   scripts/gen.sh                # specs/ -> src/paypal/paypal_*/
 #   scripts/gen.sh --specs:<dir>  # use a different specs dir
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 SPECS_DIR="$ROOT/specs"
-DEPS_DIR="$ROOT/deps"
-SHIMS_DIR="$ROOT/src/paypal"
+CHILDREN_DIR="$ROOT/src/paypal"
 
 for arg in "$@"; do
   case "$arg" in
@@ -51,13 +52,12 @@ libName() {
 }
 
 echo "specs dir: $SPECS_DIR"
-echo "deps dir: $DEPS_DIR"
+echo "children dir: $CHILDREN_DIR"
 
 cd "$ROOT"
 
 # one-time setup: clean generated output, build the script plugins
-rm -rf "$DEPS_DIR"
-rm -rf "$SHIMS_DIR"
+rm -rf "$CHILDREN_DIR"
 rm -f src/paypal.nim config.nims
 "$ROOT/postscripts/build.sh" >/dev/null
 "$ROOT/prescripts/build.sh" >/dev/null
@@ -72,7 +72,7 @@ for spec in "$SPECS_DIR"/*.json; do
   full="paypal_$lib"
   echo "   -> $full"
 
-  if ! nimbase openapi.gen "$spec" "$DEPS_DIR/$full" -y >/dev/null 2>&1; then
+  if ! nimbase openapi.gen "$spec" "$CHILDREN_DIR/$full" -y >/dev/null 2>&1; then
     echo "!! FAILED: $name" >&2
     continue
   fi
@@ -85,5 +85,5 @@ if [ "${#libs[@]}" -eq 0 ]; then
 fi
 
 echo
-echo "done. generated packages:"
-printf '  deps/paypal_%s\n' "${libs[@]}"
+echo "done. generated children:"
+printf '  src/paypal/paypal_%s\n' "${libs[@]}"

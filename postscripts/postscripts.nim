@@ -261,7 +261,8 @@ proc patchPackageImports(dir, old, new: string) =
 
 proc renamePackage(dir: string): int =
   ## Rename the generated package identity from the nimbase-derived name to
-  ## the `paypal_<lib>` package name (nimble + main module + src dir + imports).
+  ## the `paypal_<lib>` package name (main module + src dir + imports). The
+  ## per-client `.nimble` is an `openapi.gen` artifact and is dropped.
   let src = dir / "src"
   if not dirExists(src):
     return
@@ -275,7 +276,7 @@ proc renamePackage(dir: string): int =
   if derived == target:
     return  # idempotent
   if fileExists(dir / derived & ".nimble"):
-    moveFile(dir / derived & ".nimble", dir / target & ".nimble")
+    removeFile(dir / derived & ".nimble")
   moveFile(src / derived & ".nim", src / target & ".nim")
   if dirExists(src / derived):
     moveDir(src / derived, src / target)
@@ -314,9 +315,11 @@ proc writePaypalNim(pkgRoot: string) =
 
 proc writeConfig(pkgRoot: string) =
   var lines: seq[string]
-  if dirExists(pkgRoot / "deps"):
-    for d in walkDirs(pkgRoot / "deps/paypal_*"):
-      lines.add("switch(\"path\", \"deps/" & splitFile(d).name & "/src\")")
+  let children = pkgRoot / "src/paypal"
+  if dirExists(children):
+    for d in walkDirs(children / "paypal_*"):
+      let lib = splitFile(d).name
+      lines.add("switch(\"path\", \"src/paypal/" & lib & "/src\")")
   sort(lines)
   lines.add("switch(\"path\", \"/Users/georgelemon/Development/packages/openparser/src\")")
   writeFile(pkgRoot / "config.nims", lines.join("\n") & "\n")
@@ -333,11 +336,12 @@ proc writeTestTask(pkgRoot: string) =
     content.add("\n")
   content.add("\ntask test, \"Run all tests\":\n")
   var execLines: seq[string]
-  if dirExists(pkgRoot / "deps"):
-    for d in walkDirs(pkgRoot / "deps/paypal_*"):
+  let children = pkgRoot / "src/paypal"
+  if dirExists(children):
+    for d in walkDirs(children / "paypal_*"):
       let lib = splitFile(d).name
       for t in walkFiles(d / "tests/test_*.nim"):
-        execLines.add("  exec \"nim r deps/" & lib & "/tests/" & splitFile(t).name & ".nim\"")
+        execLines.add("  exec \"nim r src/paypal/" & lib & "/tests/" & splitFile(t).name & ".nim\"")
   sort(execLines)
   for e in execLines:
     content.add(e & "\n")
