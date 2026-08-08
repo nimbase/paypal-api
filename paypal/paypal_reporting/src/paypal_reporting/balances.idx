@@ -1,2 +1,0 @@
-nimTitle	balances	paypal/paypal_reporting/src/paypal_reporting/balances.html	module paypal/paypal_reporting/src/paypal_reporting/balances		0
-nim	getV1ReportingBalances	paypal/paypal_reporting/src/paypal_reporting/balances.html#getV1ReportingBalances,ReportingClient,string,string	proc getV1ReportingBalances(client: ReportingClient;\n                       asOfTime: string = default(string);\n                       currencyCode: string = default(string)): Future[\n    BalancesResponse]		15

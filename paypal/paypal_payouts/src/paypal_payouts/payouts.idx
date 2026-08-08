@@ -1,3 +1,0 @@
-nimTitle	payouts	paypal/paypal_payouts/src/paypal_payouts/payouts.html	module paypal/paypal_payouts/src/paypal_payouts/payouts		0
-nim	postV1PaymentsPayouts	paypal/paypal_payouts/src/paypal_payouts/payouts.html#postV1PaymentsPayouts,PayoutsClient,	proc postV1PaymentsPayouts(client: PayoutsClient; body: types.CreatePayoutRequest): Future[\n    Payout]		14
-nim	getV1PaymentsPayoutsId	paypal/paypal_payouts/src/paypal_payouts/payouts.html#getV1PaymentsPayoutsId,PayoutsClient,string,string,int64,int64,bool	proc getV1PaymentsPayoutsId(client: PayoutsClient; id: string;\n                       fields: string = default(string); page: int64 = 1;\n                       pageSize: int64 = default(int64);\n                       totalRequired: bool = false): Future[PayoutBatch]		46

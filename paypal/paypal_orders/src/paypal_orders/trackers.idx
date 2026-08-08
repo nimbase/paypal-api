@@ -1,2 +1,0 @@
-nimTitle	trackers	paypal/paypal_orders/src/paypal_orders/trackers.html	module paypal/paypal_orders/src/paypal_orders/trackers		0
-nim	patchV2CheckoutOrdersIdTrackersTrackerId	paypal/paypal_orders/src/paypal_orders/trackers.html#patchV2CheckoutOrdersIdTrackersTrackerId,OrdersClient,string,string,	proc patchV2CheckoutOrdersIdTrackersTrackerId(client: OrdersClient; id: string;\n    trackerId: string; body: types.PatchRequest): Future[AsyncResponse]		16

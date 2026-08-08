@@ -1,2 +1,0 @@
-nimTitle	find_eligible_methods	paypal/paypal_payments/src/paypal_payments/find_eligible_methods.html	module paypal/paypal_payments/src/paypal_payments/find_eligible_methods		0
-nim	postV2PaymentsFindEligibleMethods	paypal/paypal_payments/src/paypal_payments/find_eligible_methods.html#postV2PaymentsFindEligibleMethods,PaymentsClient,	proc postV2PaymentsFindEligibleMethods(client: PaymentsClient;\n                                  body: types.FindEligibleMethodsRequest): Future[\n    FindEligibleMethodsResponse]		15

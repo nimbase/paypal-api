@@ -1,2 +1,0 @@
-nimTitle	refunds	paypal/paypal_payments/src/paypal_payments/refunds.html	module paypal/paypal_payments/src/paypal_payments/refunds		0
-nim	getV2PaymentsRefundsRefundId	paypal/paypal_payments/src/paypal_payments/refunds.html#getV2PaymentsRefundsRefundId,PaymentsClient,string	proc getV2PaymentsRefundsRefundId(client: PaymentsClient; refundId: string): Future[\n    Refund]		14

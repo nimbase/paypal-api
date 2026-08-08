@@ -1,2 +1,0 @@
-nimTitle	connections	paypal/paypal_invoices/src/paypal_invoices/connections.html	module paypal/paypal_invoices/src/paypal_invoices/connections		0
-nim	getV2InvoicingAccountingSyncMerchantConnections	paypal/paypal_invoices/src/paypal_invoices/connections.html#getV2InvoicingAccountingSyncMerchantConnections,InvoicesClient	proc getV2InvoicingAccountingSyncMerchantConnections(client: InvoicesClient): Future[\n    Connections]		13

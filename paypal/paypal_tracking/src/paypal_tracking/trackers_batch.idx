@@ -1,2 +1,0 @@
-nimTitle	trackers_batch	paypal/paypal_tracking/src/paypal_tracking/trackers_batch.html	module paypal/paypal_tracking/src/paypal_tracking/trackers_batch		0
-nim	postV1ShippingTrackersBatch	paypal/paypal_tracking/src/paypal_tracking/trackers_batch.html#postV1ShippingTrackersBatch,TrackingClient,	proc postV1ShippingTrackersBatch(client: TrackingClient;\n                            body: types.TrackerCollection): Future[\n    BatchTrackerCollection]		14

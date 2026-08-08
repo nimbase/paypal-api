@@ -1,3 +1,0 @@
-nimTitle	payouts_item	paypal/paypal_payouts/src/paypal_payouts/payouts_item.html	module paypal/paypal_payouts/src/paypal_payouts/payouts_item		0
-nim	getV1PaymentsPayoutsItemPayoutItemId	paypal/paypal_payouts/src/paypal_payouts/payouts_item.html#getV1PaymentsPayoutsItemPayoutItemId,PayoutsClient,string	proc getV1PaymentsPayoutsItemPayoutItemId(client: PayoutsClient; payoutItemId: string): Future[\n    PayoutItem]		14
-nim	postV1PaymentsPayoutsItemPayoutItemIdCancel	paypal/paypal_payouts/src/paypal_payouts/payouts_item.html#postV1PaymentsPayoutsItemPayoutItemIdCancel,PayoutsClient,string	proc postV1PaymentsPayoutsItemPayoutItemIdCancel(client: PayoutsClient;\n    payoutItemId: string): Future[PayoutItem]		29
