@@ -261,11 +261,17 @@ proc patchPackageImports(dir, old, new: string) =
 
 proc renamePackage(dir: string): int =
   ## Rename the generated package identity from the nimbase-derived name to
-  ## the `paypal_<lib>` package name (main module + src dir + imports). The
-  ## per-client `.nimble` is an `oapi.gen` artifact and is dropped.
+  ## the `paypal_<lib>` package name (main module + src dir + imports). Always
+  ## drops the `oapi.gen` artifacts: the per-client `.nimble` and the template
+  ## `README.md` (the nested packages are modules of the root `paypal` package,
+  ## not standalone nimble packages).
   let src = dir / "src"
   if not dirExists(src):
     return
+  for f in walkFiles(dir / "*.nimble"):
+    removeFile(f)
+  if fileExists(dir / "README.md"):
+    removeFile(dir / "README.md")
   var derived = ""
   for f in walkFiles(src / "*.nim"):
     derived = splitFile(f).name
@@ -275,8 +281,6 @@ proc renamePackage(dir: string): int =
   let target = dir.splitFile.name  # e.g. paypal_catalog
   if derived == target:
     return  # idempotent
-  if fileExists(dir / derived & ".nimble"):
-    removeFile(dir / derived & ".nimble")
   moveFile(src / derived & ".nim", src / target & ".nim")
   if dirExists(src / derived):
     moveDir(src / derived, src / target)

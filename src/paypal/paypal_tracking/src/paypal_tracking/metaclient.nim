@@ -3,7 +3,7 @@
 # Auto-generated from OpenAPI 3.x specification
 # using the awesome [Clue CLI Assistant](https://github.com/openpeeps/clue)
 #
-# Generated at: 2026-08-08T21:40:17+03:00
+# Generated at: 2026-08-08T22:10:22+03:00
 # License: MIT
 
 import std/[asyncdispatch, httpclient, tables,

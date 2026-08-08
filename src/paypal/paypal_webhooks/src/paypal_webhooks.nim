@@ -3,7 +3,7 @@
 # Auto-generated from OpenAPI 3.x specification
 # Clue CLI Assistant https://github.com/openpeeps/clue
 #
-# Generated at: 2026-08-08T21:40:16+03:00
+# Generated at: 2026-08-08T22:10:21+03:00
 # License: MIT
 import ./paypal_webhooks/[webhooks, webhooks_lookup, verify_webhook_signature, webhooks_event_types, webhooks_events,
                           simulate_event, types, metaclient, server_urls]
