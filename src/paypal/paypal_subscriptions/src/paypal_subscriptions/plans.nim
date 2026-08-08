@@ -1,9 +1,9 @@
-# subscriptions API client for Nim
+# paypal_subscriptions API client for Nim
 #
 # Auto-generated from OpenAPI 3.x specification
 # Clue CLI Assistant https://github.com/openpeeps/clue
 #
-# Generated at: 2026-08-08T20:42:34+03:00
+# Generated at: 2026-08-08T21:40:15+03:00
 # License: MIT
 import std/[strformat, options, json]
 import ./metaclient
@@ -31,7 +31,7 @@ proc getV1BillingPlans*(client: SubscriptionsClient,
 
 proc postV1BillingPlans*(client: SubscriptionsClient,
                          body: types.PlanRequestPOST): Future[types.Plan] {.async.} =
-  ## Creates a plan that defines pricing and billing cycle details for paypal_subscriptions.
+  ## Creates a plan that defines pricing and billing cycle details for subscriptions.
 
   let res = await client.httpPOST("/v1/billing/plans", body)
   let body = await res.body
@@ -74,7 +74,8 @@ proc postV1BillingPlansIdActivate*(client: SubscriptionsClient, id: string): Fut
   let res = await client.httpPOST(fmt"/v1/billing/plans/{id}/activate")
   return res
 
-proc postV1BillingPlansIdDeactivate*(client: SubscriptionsClient, id: string): Future[AsyncResponse] {.async.} =
+proc postV1BillingPlansIdDeactivate*(client: SubscriptionsClient,
+                                     id: string): Future[AsyncResponse] {.async.} =
   ## Deactivates a plan, by ID.
 
   let res = await client.httpPOST(fmt"/v1/billing/plans/{id}/deactivate")

@@ -72,7 +72,7 @@ Each PayPal API is a module tree nested under `src/paypal/paypal_<api>/`
 (`import paypal/orders`), and `config.nims` (root) auto-adds every inner
 package's `src` to the path. `nimble test` runs every nested test suite.
 
-For each spec, `scripts/gen.sh` invokes `nimbase openapi.gen`, which
+For each spec, `scripts/gen.sh` invokes `nimbase oapi.gen`, which
 automatically runs the package's **prescripts** (before) and **postscripts**
 (after) — kapsis plugins in `prescripts/` and `postscripts/`:
 

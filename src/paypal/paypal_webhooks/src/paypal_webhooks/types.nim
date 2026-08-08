@@ -14,7 +14,7 @@ type
     event_types*: Option[EventTypeList2]
 
   WebhookList* = ref object of RootObj
-    ## A list of paypal_webhooks.
+    ## A list of webhooks.
     webhooks*: Option[WebhookList2]
 
   WebhookLookupList* = ref object of RootObj

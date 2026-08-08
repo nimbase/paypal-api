@@ -3,8 +3,8 @@
 # Generate the PayPal REST API clients as nested module trees inside the main
 # `paypal` package.
 #
-# For each OpenAPI 3.x spec in specs/, runs `nimbase openapi.gen` into
-# src/paypal/paypal_<lib>. `openapi.gen` automatically runs the package's
+# For each OpenAPI 3.x spec in specs/, runs `nimbase oapi.gen` into
+# src/paypal/paypal_<lib>. `oapi.gen` automatically runs the package's
 # prescripts (before) and postscripts (after); the postscripts rename the
 # generated identity to paypal_<lib> (dropping the per-client .nimble), apply
 # the Nim-specific fixes and wire the main paypal package (shims, src/paypal.nim,
@@ -72,7 +72,7 @@ for spec in "$SPECS_DIR"/*.json; do
   full="paypal_$lib"
   echo "   -> $full"
 
-  if ! nimbase openapi.gen "$spec" "$CHILDREN_DIR/$full" -y >/dev/null 2>&1; then
+  if ! nimbase oapi.gen "$spec" "$CHILDREN_DIR/$full" -y >/dev/null 2>&1; then
     echo "!! FAILED: $name" >&2
     continue
   fi

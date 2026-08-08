@@ -1,20 +1,20 @@
-# payouts
+# paypal_payouts
 
 Awesome Nim client
 
 ## Installation
 
 ```bash
-nimble install payouts
+nimble install paypal_payouts
 ```
 
 ## Usage
 
 ```nim
-import payouts
+import paypal_payouts
 
 proc main() {.async.} =
-  var client = initPayoutsClient("your-api-key")
+  var client = initPaypalPayoutsClient("your-api-key")
   let servers = await client.getServers()
   echo servers
 

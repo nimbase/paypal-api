@@ -1,17 +1,17 @@
-# invoices API client for Nim
+# paypal_invoices API client for Nim
 #
 # Auto-generated from OpenAPI 3.x specification
 # Clue CLI Assistant https://github.com/openpeeps/clue
 #
-# Generated at: 2026-08-08T20:42:34+03:00
+# Generated at: 2026-08-08T21:40:16+03:00
 # License: MIT
 import std/[strformat, options, json]
 import ./metaclient
 import ./types
 
 
-proc postV2InvoicingSearchInvoices*(client: InvoicesClient, page: int64 = 1,
-                                    pageSize: int64 = 20,
+proc postV2InvoicingSearchInvoices*(client: InvoicesClient,
+                                    page: int64 = 1, pageSize: int64 = 20,
                                     totalRequired: bool = false,
                                     body: types.SearchData): Future[types.Invoices] {.async.} =
   ## Searches for and lists invoices that match search criteria. If you pass multiple

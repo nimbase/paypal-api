@@ -1,9 +1,9 @@
-# payment API client for Nim
+# paypal_payment_experience API client for Nim
 #
 # Auto-generated from OpenAPI 3.x specification
 # Clue CLI Assistant https://github.com/openpeeps/clue
 #
-# Generated at: 2026-08-08T20:42:35+03:00
+# Generated at: 2026-08-08T21:40:16+03:00
 # License: MIT
 import std/[strformat, options, json]
 import ./metaclient
@@ -36,7 +36,8 @@ proc postV1PaymentExperienceWebProfiles*(client: PaymentExperienceClient,
   else:
     raise newException(PaymentExperienceClientError, body)
 
-proc getV1PaymentExperienceWebProfilesId*(client: PaymentExperienceClient, id: string): Future[types.WebProfile] {.async.} =
+proc getV1PaymentExperienceWebProfilesId*(client: PaymentExperienceClient,
+                                          id: string): Future[types.WebProfile] {.async.} =
   ## Shows details for a web experience profile, by ID.
 
   let res = await client.httpGET(fmt"/v1/payment-experience/web-profiles/{id}")
@@ -47,8 +48,8 @@ proc getV1PaymentExperienceWebProfilesId*(client: PaymentExperienceClient, id: s
   else:
     raise newException(PaymentExperienceClientError, body)
 
-proc putV1PaymentExperienceWebProfilesId*(client: PaymentExperienceClient, id: string,
-                                          body: types.WebProfile): Future[AsyncResponse] {.async.} =
+proc putV1PaymentExperienceWebProfilesId*(client: PaymentExperienceClient,
+                                          id: string, body: types.WebProfile): Future[AsyncResponse] {.async.} =
   ## Updates a web experience profile, by ID. In the JSON request body, specify the
   ## profile details. If your request omits any profile parameters, any previously
   ## set values for those parameters are removed.
@@ -56,14 +57,15 @@ proc putV1PaymentExperienceWebProfilesId*(client: PaymentExperienceClient, id: s
   let res = await client.httpPUT(fmt"/v1/payment-experience/web-profiles/{id}", body)
   return res
 
-proc deleteV1PaymentExperienceWebProfilesId*(client: PaymentExperienceClient, id: string): Future[AsyncResponse] {.async.} =
+proc deleteV1PaymentExperienceWebProfilesId*(client: PaymentExperienceClient,
+                                             id: string): Future[AsyncResponse] {.async.} =
   ## Deletes a web experience profile, by ID.
 
   let res = await client.httpDELETE(fmt"/v1/payment-experience/web-profiles/{id}")
   return res
 
-proc patchV1PaymentExperienceWebProfilesId*(client: PaymentExperienceClient, id: string,
-                                            body: types.PatchRequest): Future[AsyncResponse] {.async.} =
+proc patchV1PaymentExperienceWebProfilesId*(client: PaymentExperienceClient,
+                                            id: string, body: types.PatchRequest): Future[AsyncResponse] {.async.} =
   ## Partially-updates a web experience profile, by ID. In the JSON request body,
   ## specify a patch object, the path of the profile location to update, and a new
   ## value.

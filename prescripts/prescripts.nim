@@ -3,7 +3,7 @@
 # A kapsis plugin (shared library). Build with:
 #   nim c --app:lib -o:libpaypal_prescripts.dylib prescripts.nim
 #
-# `nimbase openapi.gen` runs these automatically before generating a package.
+# `nimbase oapi.gen` runs these automatically before generating a package.
 # Each command receives the output dir as `path` and, when declared, the
 # OpenAPI spec as `spec`.
 #

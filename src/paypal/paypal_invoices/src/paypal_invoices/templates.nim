@@ -1,17 +1,18 @@
-# invoices API client for Nim
+# paypal_invoices API client for Nim
 #
 # Auto-generated from OpenAPI 3.x specification
 # Clue CLI Assistant https://github.com/openpeeps/clue
 #
-# Generated at: 2026-08-08T20:42:34+03:00
+# Generated at: 2026-08-08T21:40:16+03:00
 # License: MIT
 import std/[strformat, options, json]
 import ./metaclient
 import ./types
 
 
-proc getV2InvoicingTemplates*(client: InvoicesClient, fields: string = "all",
-                              page: int64 = 1, pageSize: int64 = 20): Future[types.Templates] {.async.} =
+proc getV2InvoicingTemplates*(client: InvoicesClient,
+                              fields: string = "all", page: int64 = 1,
+                              pageSize: int64 = 20): Future[types.Templates] {.async.} =
   ## Lists merchant-created templates with associated details. The associated details
   ## include the emails, addresses, and phone numbers from the user's PayPal
   ## profile.<br/>The user can select which values to show in the business
@@ -29,7 +30,8 @@ proc getV2InvoicingTemplates*(client: InvoicesClient, fields: string = "all",
   else:
     raise newException(InvoicesClientError, body)
 
-proc postV2InvoicingTemplates*(client: InvoicesClient, body: types.Template): Future[types.Template] {.async.} =
+proc postV2InvoicingTemplates*(client: InvoicesClient,
+                               body: types.Template): Future[types.Template] {.async.} =
   ## Creates an invoice template. You can use details from this template to create an
   ## invoice. You can create up to 50 templates.<blockquote><strong>Note:</strong>
   ## Every merchant starts with three PayPal system templates that are optimized for

@@ -1,20 +1,20 @@
-# transaction
+# paypal_reporting
 
 Awesome Nim client
 
 ## Installation
 
 ```bash
-nimble install transaction
+nimble install paypal_reporting
 ```
 
 ## Usage
 
 ```nim
-import transaction
+import paypal_reporting
 
 proc main() {.async.} =
-  var client = initTransactionClient("your-api-key")
+  var client = initPaypalReportingClient("your-api-key")
   let servers = await client.getServers()
   echo servers
 

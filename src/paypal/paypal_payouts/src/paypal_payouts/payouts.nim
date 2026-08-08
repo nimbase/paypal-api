@@ -1,9 +1,9 @@
-# payouts API client for Nim
+# paypal_payouts API client for Nim
 #
 # Auto-generated from OpenAPI 3.x specification
 # Clue CLI Assistant https://github.com/openpeeps/clue
 #
-# Generated at: 2026-08-08T20:42:35+03:00
+# Generated at: 2026-08-08T21:40:16+03:00
 # License: MIT
 import std/[strformat, options, json]
 import ./metaclient
@@ -16,7 +16,7 @@ proc postV1PaymentsPayouts*(client: PayoutsClient,
   ## and an `items` array. The `sender_batch_header` defines how to handle the
   ## payout. The `items` array defines the payout items.<br/>You can make payouts to
   ## one or more recipients.<blockquote><strong>Notes:</strong> <ul><li><p>PayPal
-  ## does not process duplicate paypal_payouts. If you specify a
+  ## does not process duplicate payouts. If you specify a
   ## <code>sender_batch_id</code> that was used in the last 30 days, the API rejects
   ## the request with an error message that shows the duplicate
   ## <code>sender_batch_id</code> and includes a HATEOAS link to the original payout

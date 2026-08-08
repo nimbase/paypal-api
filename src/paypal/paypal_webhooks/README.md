@@ -1,20 +1,20 @@
-# webhooks
+# paypal_webhooks
 
 Awesome Nim client
 
 ## Installation
 
 ```bash
-nimble install webhooks
+nimble install paypal_webhooks
 ```
 
 ## Usage
 
 ```nim
-import webhooks
+import paypal_webhooks
 
 proc main() {.async.} =
-  var client = initWebhooksClient("your-api-key")
+  var client = initPaypalWebhooksClient("your-api-key")
   let servers = await client.getServers()
   echo servers
 

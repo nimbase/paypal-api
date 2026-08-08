@@ -1,20 +1,20 @@
-# shipment
+# paypal_tracking
 
 Awesome Nim client
 
 ## Installation
 
 ```bash
-nimble install shipment
+nimble install paypal_tracking
 ```
 
 ## Usage
 
 ```nim
-import shipment
+import paypal_tracking
 
 proc main() {.async.} =
-  var client = initShipmentClient("your-api-key")
+  var client = initPaypalTrackingClient("your-api-key")
   let servers = await client.getServers()
   echo servers
 

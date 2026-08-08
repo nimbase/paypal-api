@@ -1,18 +1,18 @@
-# payment API client for Nim
+# paypal_payment_tokens API client for Nim
 #
 # Auto-generated from OpenAPI 3.x specification
 # Clue CLI Assistant https://github.com/openpeeps/clue
 #
-# Generated at: 2026-08-08T20:42:35+03:00
+# Generated at: 2026-08-08T21:40:17+03:00
 # License: MIT
 import std/[strformat, options, json]
 import ./metaclient
 import ./types
 
 
-proc getV3VaultPaymentTokens*(client: PaymentTokensClient, customerId: string,
-                              pageSize: int64 = 5, page: int64 = 1,
-                              totalRequired: bool = false): Future[types.CustomerVaultPaymentTokensResponse] {.async.} =
+proc getV3VaultPaymentTokens*(client: PaymentTokensClient,
+                              customerId: string, pageSize: int64 = 5,
+                              page: int64 = 1, totalRequired: bool = false): Future[types.CustomerVaultPaymentTokensResponse] {.async.} =
   ## Returns all payment tokens for a customer.
 
   var q = initOrderedTable[string, string]()

@@ -522,7 +522,7 @@ type
       ## 250 pixels wide by 90 pixels high.
 
   Invoices* = ref object of RootObj
-    ## An array of merchant paypal_invoices. Includes the total invoices count and [HATEOAS
+    ## An array of merchant invoices. Includes the total invoices count and [HATEOAS
     ## links](/docs/api/reference/api-responses/#hateoas-links) for navigation.
     total_pages*: Option[int64]
       ## The total number of pages that are available for the search criteria.
@@ -877,8 +877,8 @@ type
     archived*: Option[bool]
       ## Indicates whether to list merchant-archived invoices in the response. Value
       ## is:<ul><li><code>true</code>. Response lists only merchant-archived
-      ## paypal_invoices.</li><li><code>false</code>. Response lists only unarchived
-      ## paypal_invoices.</li><li><code>null</code>. Response lists all paypal_invoices.</li></ul>
+      ## invoices.</li><li><code>false</code>. Response lists only unarchived
+      ## invoices.</li><li><code>null</code>. Response lists all invoices.</li></ul>
     fields*: Option[FieldsList]
 
   ShippingCost* = ref object of RootObj

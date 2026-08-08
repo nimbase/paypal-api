@@ -1,9 +1,9 @@
-# catalog API client for Nim
+# paypal_catalog API client for Nim
 #
 # Auto-generated from OpenAPI 3.x specification
 # Clue CLI Assistant https://github.com/openpeeps/clue
 #
-# Generated at: 2026-08-08T20:42:34+03:00
+# Generated at: 2026-08-08T21:40:16+03:00
 # License: MIT
 import std/[strformat, options, json]
 import ./metaclient
@@ -38,7 +38,8 @@ proc postV1CatalogsProducts*(client: CatalogClient,
   else:
     raise newException(CatalogClientError, body)
 
-proc getV1CatalogsProductsProductId*(client: CatalogClient, productId: string): Future[types.Product] {.async.} =
+proc getV1CatalogsProductsProductId*(client: CatalogClient,
+                                     productId: string): Future[types.Product] {.async.} =
   ## Shows details for a product, by ID.
 
   let res = await client.httpGET(fmt"/v1/catalogs/products/{productId}")
@@ -49,7 +50,8 @@ proc getV1CatalogsProductsProductId*(client: CatalogClient, productId: string): 
   else:
     raise newException(CatalogClientError, body)
 
-proc patchV1CatalogsProductsProductId*(client: CatalogClient, productId: string,
+proc patchV1CatalogsProductsProductId*(client: CatalogClient,
+                                       productId: string,
                                        body: types.PatchRequest): Future[AsyncResponse] {.async.} =
   ## Updates a product, by ID. You can patch these attributes and
   ## objects:<table><thead><tr><th>Attribute orobject</th><th>Operations</th></tr></

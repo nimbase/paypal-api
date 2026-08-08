@@ -1,16 +1,17 @@
-# disputes API client for Nim
+# paypal_disputes API client for Nim
 #
 # Auto-generated from OpenAPI 3.x specification
 # Clue CLI Assistant https://github.com/openpeeps/clue
 #
-# Generated at: 2026-08-08T20:42:34+03:00
+# Generated at: 2026-08-08T21:40:16+03:00
 # License: MIT
 import std/[strformat, options, json]
 import ./metaclient
 import ./types
 
 
-proc postV1CustomerDisputesIdProvideEvidence*(client: DisputesClient, id: string): Future[types.SubsequentAction] {.async.} =
+proc postV1CustomerDisputesIdProvideEvidence*(client: DisputesClient,
+                                              id: string): Future[types.SubsequentAction] {.async.} =
   ## Provides evidence for a dispute, by ID. A merchant can provide evidence for
   ## disputes with the <code>WAITING_FOR_SELLER_RESPONSE</code> status while
   ## customers can provide evidence for disputes with the
@@ -62,7 +63,8 @@ proc postV1CustomerDisputesIdAppeal*(client: DisputesClient, id: string): Future
   else:
     raise newException(DisputesClientError, body)
 
-proc postV1CustomerDisputesIdAcceptClaim*(client: DisputesClient, id: string): Future[types.SubsequentAction] {.async.} =
+proc postV1CustomerDisputesIdAcceptClaim*(client: DisputesClient,
+                                          id: string): Future[types.SubsequentAction] {.async.} =
   ## Accepts liability for a claim, by ID. When you accept liability for a claim, the
   ## dispute closes in the customer’s favor and PayPal automatically refunds money to
   ## the customer from the merchant's account. Allowed accept_claim_type values for
@@ -77,8 +79,8 @@ proc postV1CustomerDisputesIdAcceptClaim*(client: DisputesClient, id: string): F
   else:
     raise newException(DisputesClientError, body)
 
-proc postV1CustomerDisputesIdAdjudicate*(client: DisputesClient, id: string,
-                                         body: types.Adjudicate): Future[types.SubsequentAction] {.async.} =
+proc postV1CustomerDisputesIdAdjudicate*(client: DisputesClient,
+                                         id: string, body: types.Adjudicate): Future[types.SubsequentAction] {.async.} =
   ## <blockquote><strong>Important:</strong> This method is for sandbox use
   ## only.</blockquote> Settles a dispute in either the customer's or merchant's
   ## favor. Merchants can make this call in the sandbox to complete end-to-end
@@ -98,7 +100,8 @@ proc postV1CustomerDisputesIdAdjudicate*(client: DisputesClient, id: string,
   else:
     raise newException(DisputesClientError, body)
 
-proc postV1CustomerDisputesIdRequireEvidence*(client: DisputesClient, id: string,
+proc postV1CustomerDisputesIdRequireEvidence*(client: DisputesClient,
+                                              id: string,
                                               body: types.RequireEvidence): Future[types.SubsequentAction] {.async.} =
   ## <blockquote><strong>Important:</strong> This method is for sandbox use
   ## only.</blockquote> Updates the status of a dispute, by ID, from
@@ -139,7 +142,8 @@ proc postV1CustomerDisputesIdEscalate*(client: DisputesClient, id: string,
   else:
     raise newException(DisputesClientError, body)
 
-proc postV1CustomerDisputesIdSendMessage*(client: DisputesClient, id: string): Future[types.SubsequentAction] {.async.} =
+proc postV1CustomerDisputesIdSendMessage*(client: DisputesClient,
+                                          id: string): Future[types.SubsequentAction] {.async.} =
   ## Sends a message about a dispute, by ID, to the other party in the dispute.
   ## Merchants and customers can only send messages if the `dispute_life_cycle_stage`
   ## value is `INQUIRY`. For constraints and rules regarding documents that can be
@@ -176,8 +180,8 @@ proc postV1CustomerDisputesIdMakeOffer*(client: DisputesClient, id: string,
   else:
     raise newException(DisputesClientError, body)
 
-proc postV1CustomerDisputesIdAcceptOffer*(client: DisputesClient, id: string,
-                                          body: types.AcceptOffer): Future[types.SubsequentAction] {.async.} =
+proc postV1CustomerDisputesIdAcceptOffer*(client: DisputesClient,
+                                          id: string, body: types.AcceptOffer): Future[types.SubsequentAction] {.async.} =
   ## The customer accepts the offer from merchant to resolve a dispute, by ID. PayPal
   ## automatically refunds the amount proposed by merchant to the customer.
 

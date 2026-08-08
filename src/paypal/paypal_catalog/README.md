@@ -1,20 +1,20 @@
-# catalog
+# paypal_catalog
 
 Awesome Nim client
 
 ## Installation
 
 ```bash
-nimble install catalog
+nimble install paypal_catalog
 ```
 
 ## Usage
 
 ```nim
-import catalog
+import paypal_catalog
 
 proc main() {.async.} =
-  var client = initCatalogClient("your-api-key")
+  var client = initPaypalCatalogClient("your-api-key")
   let servers = await client.getServers()
   echo servers
 

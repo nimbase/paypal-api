@@ -1,20 +1,20 @@
-# subscriptions
+# paypal_subscriptions
 
 Awesome Nim client
 
 ## Installation
 
 ```bash
-nimble install subscriptions
+nimble install paypal_subscriptions
 ```
 
 ## Usage
 
 ```nim
-import subscriptions
+import paypal_subscriptions
 
 proc main() {.async.} =
-  var client = initSubscriptionsClient("your-api-key")
+  var client = initPaypalSubscriptionsClient("your-api-key")
   let servers = await client.getServers()
   echo servers
 

@@ -6,7 +6,7 @@ type
   ApplePayPaymentTokenResponse* = ref object of RootObj
     ## A resource representing a response for Apple Pay.
     card*: Option[JsonNode]
-      ## The payment card to be used to fund a paypal_payment_tokens. Can be a credit or debit card.
+      ## The payment card to be used to fund a payment. Can be a credit or debit card.
 
   BillingCycle* = ref object of RootObj
     ## The billing cycle providing details of the billing frequency, amount, duration
@@ -34,7 +34,7 @@ type
   BillingCycleList* = seq[BillingCycle]
 
   BinDetails* = ref object of RootObj
-    ## Bank Identification Number (BIN) details used to fund a paypal_payment_tokens.
+    ## Bank Identification Number (BIN) details used to fund a payment.
     bin*: Option[string]
       ## The Bank Identification Number (BIN) signifies the number that is being used to
       ## identify the granular level details (except the PII information) of the card.

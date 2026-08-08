@@ -442,7 +442,7 @@ type
     sender_batch_id*: Option[string]
       ## The sender-specified ID number. Tracks the payout in an accounting
       ## system.<blockquote><strong>Note:</strong> <p>PayPal does not process duplicate
-      ## paypal_payouts. If you specify a <code>sender_batch_id</code> that was used in the last
+      ## payouts. If you specify a <code>sender_batch_id</code> that was used in the last
       ## 30 days, the API rejects the request with an error message that shows the
       ## duplicate <code>sender_batch_id</code> and includes a HATEOAS link to the
       ## original payout with the same <code>sender_batch_id</code>.</p><p>If you receive
@@ -505,7 +505,7 @@ type
     sender_batch_id*: Option[string]
       ## A sender-specified ID number. Tracks the payout in an accounting
       ## system.<blockquote><strong>Note:</strong> <p>PayPal does not process duplicate
-      ## paypal_payouts. If you specify a <code>sender_batch_id</code> that was used in the last
+      ## payouts. If you specify a <code>sender_batch_id</code> that was used in the last
       ## 30 days, the API rejects the request with an error message that shows the
       ## duplicate <code>sender_batch_id</code> and includes a HATEOAS link to the
       ## original payout with the same <code>sender_batch_id</code>.</p><p>If you receive

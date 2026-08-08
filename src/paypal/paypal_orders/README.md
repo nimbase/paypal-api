@@ -1,20 +1,20 @@
-# orders
+# paypal_orders
 
 Awesome Nim client
 
 ## Installation
 
 ```bash
-nimble install orders
+nimble install paypal_orders
 ```
 
 ## Usage
 
 ```nim
-import orders
+import paypal_orders
 
 proc main() {.async.} =
-  var client = initOrdersClient("your-api-key")
+  var client = initPaypalOrdersClient("your-api-key")
   let servers = await client.getServers()
   echo servers
 

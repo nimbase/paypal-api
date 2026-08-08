@@ -464,7 +464,7 @@ type
     OTHER2 = "OTHER"
 
   DisputeSearch* = ref object of RootObj
-    ## An array of paypal_disputes. Includes links that enable you to navigate through the
+    ## An array of disputes. Includes links that enable you to navigate through the
     ## response.
     items*: Option[DisputeInfoList]
     links*: Option[DefinitionsLinkDescriptionList]

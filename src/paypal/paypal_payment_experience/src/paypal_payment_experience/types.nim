@@ -175,7 +175,7 @@ type
       ## the non-PayPal account landing page, set to `Billing`. To use the PayPal account
       ## login landing page, set to `Login`.
     bank_txn_pending_url*: Option[string]
-      ## The merchant site URL to display after a bank transfer paypal_payment_experience. In Germany,
+      ## The merchant site URL to display after a bank transfer payment. In Germany,
       ## valid only for the Giropay payment method or bank transfer payment method.
     user_action*: Option[string]
       ## Presents either the **Continue** or **Pay Now** checkout flow to the

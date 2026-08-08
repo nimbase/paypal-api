@@ -1,20 +1,20 @@
-# invoices
+# paypal_invoices
 
 Awesome Nim client
 
 ## Installation
 
 ```bash
-nimble install invoices
+nimble install paypal_invoices
 ```
 
 ## Usage
 
 ```nim
-import invoices
+import paypal_invoices
 
 proc main() {.async.} =
-  var client = initInvoicesClient("your-api-key")
+  var client = initPaypalInvoicesClient("your-api-key")
   let servers = await client.getServers()
   echo servers
 

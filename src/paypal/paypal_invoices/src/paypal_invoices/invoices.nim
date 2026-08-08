@@ -1,9 +1,9 @@
-# invoices API client for Nim
+# paypal_invoices API client for Nim
 #
 # Auto-generated from OpenAPI 3.x specification
 # Clue CLI Assistant https://github.com/openpeeps/clue
 #
-# Generated at: 2026-08-08T20:42:34+03:00
+# Generated at: 2026-08-08T21:40:16+03:00
 # License: MIT
 import std/[strformat, options, json]
 import ./metaclient
@@ -13,7 +13,7 @@ import ./types
 proc getV2InvoicingInvoices*(client: InvoicesClient, page: int64 = 1,
                              pageSize: int64 = 20, totalRequired: bool = false,
                              fields: string = "all"): Future[types.Invoices] {.async.} =
-  ## Lists paypal_invoices. To filter the invoices that appear in the response, you can
+  ## Lists invoices. To filter the invoices that appear in the response, you can
   ## specify one or more optional query parameters.
 
   var q = initOrderedTable[string, string]()
@@ -168,7 +168,8 @@ proc postV2InvoicingGenerateNextInvoiceNumber*(client: InvoicesClient,
   else:
     raise newException(InvoicesClientError, body)
 
-proc getV2InvoicingInvoicesInvoiceId*(client: InvoicesClient, invoiceId: string): Future[types.Invoice] {.async.} =
+proc getV2InvoicingInvoicesInvoiceId*(client: InvoicesClient,
+                                      invoiceId: string): Future[types.Invoice] {.async.} =
   ## Shows details for an invoice, by ID.
 
   let res = await client.httpGET(fmt"/v2/invoicing/invoices/{invoiceId}")
@@ -179,7 +180,8 @@ proc getV2InvoicingInvoicesInvoiceId*(client: InvoicesClient, invoiceId: string)
   else:
     raise newException(InvoicesClientError, body)
 
-proc putV2InvoicingInvoicesInvoiceId*(client: InvoicesClient, invoiceId: string,
+proc putV2InvoicingInvoicesInvoiceId*(client: InvoicesClient,
+                                      invoiceId: string,
                                       sendToRecipient: bool = true,
                                       sendToInvoicer: bool = true,
                                       body: types.Invoice): Future[types.Invoice] {.async.} =

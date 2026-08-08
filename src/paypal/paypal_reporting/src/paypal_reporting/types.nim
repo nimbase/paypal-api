@@ -453,7 +453,7 @@ type
       ## A code that indicates the transaction status. Valueis:<table><thead><tr><th>Sta
       ## tus&nbsp;code</th><th>Description</th></tr></thead><tbody><tr><td><code>D</code>
       ## </td><td>PayPal or merchant rules denied the
-      ## paypal_reporting.</td></tr><tr><td><code>P</code></td><td>The transaction is pending.
+      ## transaction.</td></tr><tr><td><code>P</code></td><td>The transaction is pending.
       ## The transaction was created but waits for another payment process to complete,
       ## such as an ACH transaction, before the status changes to
       ## <code>S</code>.</td></tr><tr><td><code>S</code></td><td>The transaction
@@ -471,18 +471,18 @@ type
       ## The payment tracking ID, which is a unique ID that partners specify to either
       ## get information about a payment or request a refund.
     bank_reference_id*: Option[string]
-      ## The bank reference ID. The bank provides this value for an ACH paypal_reporting.
+      ## The bank reference ID. The bank provides this value for an ACH transaction.
     ending_balance*: Option[Money]
     available_balance*: Option[Money]
     invoice_id*: Option[string]
       ## The invoice ID that is sent by the merchant with the
-      ## paypal_reporting.<blockquote><strong>Note:</strong> If an invoice ID was sent with
+      ## transaction.<blockquote><strong>Note:</strong> If an invoice ID was sent with
       ## the capture request, the value is reported. Otherwise, the invoice ID of the
       ## authorizing transaction is reported.</blockquote>
     custom_field*: Option[string]
       ## The merchant-provided custom text.<blockquote><strong>Note:</strong> Usually,
       ## this field includes the unique ID for payments made with MassPay type
-      ## paypal_reporting.</blockquote>
+      ## transaction.</blockquote>
     protection_eligibility*: Option[string]
       ## Indicates whether the transaction is eligible for protection. Value
       ## is:<ul><li><code>01</code>. Eligible.</li><li><code>02</code>. Not
@@ -494,7 +494,7 @@ type
     credit_promotional_fee*: Option[Money]
     annual_percentage_rate*: Option[Percentage]
     payment_method_type*: Option[string]
-      ## The payment method that was used for a paypal_reporting. Value is <code>PUI</code>,
+      ## The payment method that was used for a transaction. Value is <code>PUI</code>,
       ## <code>installment</code>, or
       ## <code>mEFT</code>.<blockquote><strong>Note:</strong> Appears only for pay upon
       ## invoice (PUI), installment, and mEFT transactions. Merchants and partners in the

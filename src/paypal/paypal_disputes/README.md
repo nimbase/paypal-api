@@ -1,20 +1,20 @@
-# disputes
+# paypal_disputes
 
 Awesome Nim client
 
 ## Installation
 
 ```bash
-nimble install disputes
+nimble install paypal_disputes
 ```
 
 ## Usage
 
 ```nim
-import disputes
+import paypal_disputes
 
 proc main() {.async.} =
-  var client = initDisputesClient("your-api-key")
+  var client = initPaypalDisputesClient("your-api-key")
   let servers = await client.getServers()
   echo servers
 

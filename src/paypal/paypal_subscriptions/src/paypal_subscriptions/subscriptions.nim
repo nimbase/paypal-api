@@ -1,9 +1,9 @@
-# subscriptions API client for Nim
+# paypal_subscriptions API client for Nim
 #
 # Auto-generated from OpenAPI 3.x specification
 # Clue CLI Assistant https://github.com/openpeeps/clue
 #
-# Generated at: 2026-08-08T20:42:34+03:00
+# Generated at: 2026-08-08T21:40:15+03:00
 # License: MIT
 import std/[strformat, options, json]
 import ./metaclient
@@ -36,8 +36,8 @@ proc getV1BillingSubscriptionsId*(client: SubscriptionsClient, id: string,
   else:
     raise newException(SubscriptionsClientError, body)
 
-proc patchV1BillingSubscriptionsId*(client: SubscriptionsClient, id: string,
-                                    body: types.PatchRequest): Future[AsyncResponse] {.async.} =
+proc patchV1BillingSubscriptionsId*(client: SubscriptionsClient,
+                                    id: string, body: types.PatchRequest): Future[AsyncResponse] {.async.} =
   ## Updates a subscription which could be in <code>ACTIVE</code> or
   ## <code>SUSPENDED</code> status. You can override plan level default attributes by
   ## providing customised values for plan path in the patch request.<br /> <ul>
@@ -66,7 +66,8 @@ proc patchV1BillingSubscriptionsId*(client: SubscriptionsClient, id: string,
   let res = await client.httpPATCH(fmt"/v1/billing/subscriptions/{id}", body)
   return res
 
-proc postV1BillingSubscriptionsIdRevise*(client: SubscriptionsClient, id: string,
+proc postV1BillingSubscriptionsIdRevise*(client: SubscriptionsClient,
+                                         id: string,
                                          body: types.SubscriptionReviseRequest): Future[types.SubscriptionReviseResponse] {.async.} =
   ## Updates the quantity of the product or service in a subscription. You can also
   ## use this method to switch the plan and update the `shipping_amount`,
@@ -89,7 +90,8 @@ proc postV1BillingSubscriptionsIdSuspend*(client: SubscriptionsClient,
   let res = await client.httpPOST(fmt"/v1/billing/subscriptions/{id}/suspend", body)
   return res
 
-proc postV1BillingSubscriptionsIdCancel*(client: SubscriptionsClient, id: string,
+proc postV1BillingSubscriptionsIdCancel*(client: SubscriptionsClient,
+                                         id: string,
                                          body: types.SubscriptionCancelRequest): Future[AsyncResponse] {.async.} =
   ## Cancels the subscription.
 

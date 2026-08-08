@@ -1,9 +1,9 @@
-# webhooks API client for Nim
+# paypal_webhooks API client for Nim
 #
 # Auto-generated from OpenAPI 3.x specification
 # Clue CLI Assistant https://github.com/openpeeps/clue
 #
-# Generated at: 2026-08-08T20:42:35+03:00
+# Generated at: 2026-08-08T21:40:16+03:00
 # License: MIT
 import std/[strformat, options, json]
 import ./metaclient
@@ -29,7 +29,8 @@ proc getV1NotificationsWebhooks*(client: WebhooksClient,
   else:
     raise newException(WebhooksClientError, body)
 
-proc postV1NotificationsWebhooks*(client: WebhooksClient, body: types.Webhook): Future[types.Webhook] {.async.} =
+proc postV1NotificationsWebhooks*(client: WebhooksClient,
+                                  body: types.Webhook): Future[types.Webhook] {.async.} =
   ## Subscribes your webhook listener to events.
 
   let res = await client.httpPOST("/v1/notifications/webhooks", body)

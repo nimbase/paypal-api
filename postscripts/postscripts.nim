@@ -3,7 +3,7 @@
 # A kapsis plugin (shared library). Build with:
 #   nim c --app:lib -o:libpaypal_postscripts.dylib postscripts.nim
 #
-# `nimbase openapi.gen` runs these automatically after generating a package
+# `nimbase oapi.gen` runs these automatically after generating a package
 # (each command receives the generated package dir as `path`). Commands run in
 # registration order: package identity rename, code fixes, then wiring.
 #
@@ -262,7 +262,7 @@ proc patchPackageImports(dir, old, new: string) =
 proc renamePackage(dir: string): int =
   ## Rename the generated package identity from the nimbase-derived name to
   ## the `paypal_<lib>` package name (main module + src dir + imports). The
-  ## per-client `.nimble` is an `openapi.gen` artifact and is dropped.
+  ## per-client `.nimble` is an `oapi.gen` artifact and is dropped.
   let src = dir / "src"
   if not dirExists(src):
     return

@@ -10,7 +10,7 @@ type
   BatchTrackerCollectionDefinitionsLinkDescriptionList* = seq[LinkDescription]
 
   Carrier* = enum
-    ## The carrier for the paypal_tracking. Carrier information is required when
+    ## The carrier for the shipment. Carrier information is required when
     ## tracking_number is provided. Some carriers have a global version as well as
     ## local subsidiaries. The subsidiaries are repeated over many countries and might
     ## also have an entry in the global list. Choose the carrier for your country. If
@@ -1051,18 +1051,18 @@ type
   LinkDescriptionList* = seq[LinkDescription]
 
   Tracker* = ref object of RootObj
-    ## The tracking information for a paypal_tracking.
+    ## The tracking information for a shipment.
     transaction_id*: string
       ## The PayPal transaction ID.
     tracking_number*: Option[string]
-      ## The tracking number for the paypal_tracking. Carrier information, `carrier` is required
+      ## The tracking number for the shipment. Carrier information, `carrier` is required
       ## if tracking_number is provided.
     tracking_number_type*: Option[TrackingNumberType]
     status*: TrackingStatus
     shipment_date*: Option[DateNoTime]
     carrier*: Option[Carrier]
     carrier_name_other*: Option[string]
-      ## The name of the carrier for the paypal_tracking. Provide this value only if the carrier
+      ## The name of the carrier for the shipment. Provide this value only if the carrier
       ## parameter is OTHER.
     postage_payment_id*: Option[string]
       ## The postage payment ID.
@@ -1081,7 +1081,7 @@ type
     account_id*: Option[string]
       ## Encrypted PayPal Account ID of the buyer or seller.
     tracking_url*: Option[string]
-      ## Tracking Link of the paypal_tracking.
+      ## Tracking Link of the shipment.
     links*: Option[LinkDescriptionList]
 
   TrackerCollection* = ref object of RootObj
@@ -1090,11 +1090,11 @@ type
     links*: Option[LinkDescriptionList]
 
   TrackerIdentifier* = ref object of RootObj
-    ## The tracking identifiers for a paypal_tracking.
+    ## The tracking identifiers for a shipment.
     transaction_id*: string
       ## The PayPal transaction ID.
     tracking_number*: Option[string]
-      ## The tracking number for the paypal_tracking.
+      ## The tracking number for the shipment.
     links*: Option[LinkDescriptionList]
 
   TrackerIdentifierCollection* = ref object of RootObj
@@ -1114,7 +1114,7 @@ type
     E2EPARTNERPROVIDED = "E2E_PARTNER_PROVIDED"
 
   TrackingStatus* = enum
-    ## The status of the item paypal_tracking. For allowed values, see <a
+    ## The status of the item shipment. For allowed values, see <a
     ## href="/docs/tracking/reference/shipping-status/">Shipping Statuses</a>.
     CANCELLED = "CANCELLED"
     DELIVERED = "DELIVERED"

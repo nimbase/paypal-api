@@ -1,20 +1,20 @@
-# payment
+# paypal_payment_tokens
 
 Awesome Nim client
 
 ## Installation
 
 ```bash
-nimble install payment
+nimble install paypal_payment_tokens
 ```
 
 ## Usage
 
 ```nim
-import payment
+import paypal_payment_tokens
 
 proc main() {.async.} =
-  var client = initPaymentClient("your-api-key")
+  var client = initPaypalPaymentTokensClient("your-api-key")
   let servers = await client.getServers()
   echo servers
 
