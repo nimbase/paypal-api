@@ -1,32 +1,32 @@
 nimTitle	metaclient	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html	module paypal/paypal_catalog/src/paypal_catalog/private/metaclient		0
-nim	CatalogClient	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#CatalogClient	type CatalogClient		19
-nim	QueryTable	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#QueryTable	type QueryTable		28
-nim	CatalogClientError	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#CatalogClientError	object CatalogClientError		30
-nim	oauthTokenUrl	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#oauthTokenUrl	const oauthTokenUrl		33
-nim	oauthAuthUrl	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#oauthAuthUrl	const oauthAuthUrl		34
-nim	`$`	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#$,QueryTable	proc `$`(query: QueryTable): string		36
-nim	initCatalogClient	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#initCatalogClient	proc initCatalogClient(): CatalogClient		41
-nim	configureOAuth	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#configureOAuth,CatalogClient,string,string	proc configureOAuth(client: CatalogClient; clientId, clientSecret: string)		49
-nim	setTokens	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#setTokens,CatalogClient,string,string,Option[int]	proc setTokens(client: CatalogClient; accessToken, refreshToken: string;\n          expiresIn: Option[int] = none(int))		53
-nim	canAutoRefresh	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#canAutoRefresh,CatalogClient	proc canAutoRefresh(client: CatalogClient): bool		60
-nim	tryRefreshToken	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#tryRefreshToken,CatalogClient	proc tryRefreshToken(client: CatalogClient): Future[bool]		66
-nim	getAuthorizationUrl	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#getAuthorizationUrl,string,string,openArray[string],string	proc getAuthorizationUrl(clientId, redirectUri: string;\n                    scopes: openArray[string] = []; state = ""): string		87
-nim	exchangeCodeForToken	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#exchangeCodeForToken,string,string,string,string	proc exchangeCodeForToken(clientId, clientSecret, code, redirectUri: string): Future[\n    JsonNode]		99
-nim	httpGet	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#httpGet,CatalogClient,string	proc httpGet(client: CatalogClient; endpoint: string): Future[AsyncResponse]		119
-nim	httpGet	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#httpGet,CatalogClient,string,QueryTable	proc httpGet(client: CatalogClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		128
-nim	httpPost	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#httpPost,CatalogClient,string,T	proc httpPost[T](client: CatalogClient; endpoint: string; body: T): Future[\n    AsyncResponse]		137
-nim	httpPost	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#httpPost,CatalogClient,string	proc httpPost(client: CatalogClient; endpoint: string): Future[AsyncResponse]		146
-nim	httpPost	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#httpPost,CatalogClient,string,QueryTable	proc httpPost(client: CatalogClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		155
-nim	httpPut	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#httpPut,CatalogClient,string,T	proc httpPut[T](client: CatalogClient; endpoint: string; body: T): Future[\n    AsyncResponse]		164
-nim	httpPut	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#httpPut,CatalogClient,string	proc httpPut(client: CatalogClient; endpoint: string): Future[AsyncResponse]		175
-nim	httpPut	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#httpPut,CatalogClient,string,QueryTable	proc httpPut(client: CatalogClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		184
-nim	httpDelete	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#httpDelete,CatalogClient,string,T	proc httpDelete[T](client: CatalogClient; endpoint: string; body: T): Future[\n    AsyncResponse]		193
-nim	httpDelete	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#httpDelete,CatalogClient,string	proc httpDelete(client: CatalogClient; endpoint: string): Future[AsyncResponse]		204
-nim	httpDelete	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#httpDelete,CatalogClient,string,QueryTable	proc httpDelete(client: CatalogClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		213
-nim	httpPatch	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#httpPatch,CatalogClient,string,T	proc httpPatch[T](client: CatalogClient; endpoint: string; body: T): Future[\n    AsyncResponse]		222
-nim	httpPatch	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#httpPatch,CatalogClient,string	proc httpPatch(client: CatalogClient; endpoint: string): Future[AsyncResponse]		233
-nimgrp	httpput	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#httpPut-procs-all	proc		163
-nimgrp	httppost	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#httpPost-procs-all	proc		136
-nimgrp	httpdelete	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#httpDelete-procs-all	proc		192
-nimgrp	httpget	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#httpGet-procs-all	proc		118
-nimgrp	httppatch	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#httpPatch-procs-all	proc		221
+nim	CatalogClient	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#CatalogClient	type CatalogClient		20
+nim	QueryTable	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#QueryTable	type QueryTable		29
+nim	CatalogClientError	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#CatalogClientError	object CatalogClientError		31
+nim	oauthTokenUrl	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#oauthTokenUrl	const oauthTokenUrl		34
+nim	oauthAuthUrl	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#oauthAuthUrl	const oauthAuthUrl		35
+nim	`$`	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#$,QueryTable	proc `$`(query: QueryTable): string		37
+nim	initCatalogClient	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#initCatalogClient	proc initCatalogClient(): CatalogClient		42
+nim	configureOAuth	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#configureOAuth,CatalogClient,string,string	proc configureOAuth(client: CatalogClient; clientId, clientSecret: string)		50
+nim	setTokens	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#setTokens,CatalogClient,string,string,Option[int]	proc setTokens(client: CatalogClient; accessToken, refreshToken: string;\n          expiresIn: Option[int] = none(int))		54
+nim	canAutoRefresh	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#canAutoRefresh,CatalogClient	proc canAutoRefresh(client: CatalogClient): bool		61
+nim	tryRefreshToken	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#tryRefreshToken,CatalogClient	proc tryRefreshToken(client: CatalogClient): Future[bool]		67
+nim	getAuthorizationUrl	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#getAuthorizationUrl,string,string,openArray[string],string	proc getAuthorizationUrl(clientId, redirectUri: string;\n                    scopes: openArray[string] = []; state = ""): string		88
+nim	exchangeCodeForToken	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#exchangeCodeForToken,string,string,string,string	proc exchangeCodeForToken(clientId, clientSecret, code, redirectUri: string): Future[\n    JsonNode]		100
+nim	httpGet	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#httpGet,CatalogClient,string	proc httpGet(client: CatalogClient; endpoint: string): Future[AsyncResponse]		120
+nim	httpGet	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#httpGet,CatalogClient,string,QueryTable	proc httpGet(client: CatalogClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		129
+nim	httpPost	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#httpPost,CatalogClient,string,T	proc httpPost[T](client: CatalogClient; endpoint: string; body: T): Future[\n    AsyncResponse]		138
+nim	httpPost	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#httpPost,CatalogClient,string	proc httpPost(client: CatalogClient; endpoint: string): Future[AsyncResponse]		147
+nim	httpPost	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#httpPost,CatalogClient,string,QueryTable	proc httpPost(client: CatalogClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		156
+nim	httpPut	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#httpPut,CatalogClient,string,T	proc httpPut[T](client: CatalogClient; endpoint: string; body: T): Future[\n    AsyncResponse]		165
+nim	httpPut	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#httpPut,CatalogClient,string	proc httpPut(client: CatalogClient; endpoint: string): Future[AsyncResponse]		176
+nim	httpPut	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#httpPut,CatalogClient,string,QueryTable	proc httpPut(client: CatalogClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		185
+nim	httpDelete	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#httpDelete,CatalogClient,string,T	proc httpDelete[T](client: CatalogClient; endpoint: string; body: T): Future[\n    AsyncResponse]		194
+nim	httpDelete	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#httpDelete,CatalogClient,string	proc httpDelete(client: CatalogClient; endpoint: string): Future[AsyncResponse]		205
+nim	httpDelete	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#httpDelete,CatalogClient,string,QueryTable	proc httpDelete(client: CatalogClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		214
+nim	httpPatch	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#httpPatch,CatalogClient,string,T	proc httpPatch[T](client: CatalogClient; endpoint: string; body: T): Future[\n    AsyncResponse]		223
+nim	httpPatch	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#httpPatch,CatalogClient,string	proc httpPatch(client: CatalogClient; endpoint: string): Future[AsyncResponse]		234
+nimgrp	httpput	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#httpPut-procs-all	proc		164
+nimgrp	httppost	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#httpPost-procs-all	proc		137
+nimgrp	httpdelete	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#httpDelete-procs-all	proc		193
+nimgrp	httpget	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#httpGet-procs-all	proc		119
+nimgrp	httppatch	paypal/paypal_catalog/src/paypal_catalog/private/metaclient.html#httpPatch-procs-all	proc		222

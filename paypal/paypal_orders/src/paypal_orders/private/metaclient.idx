@@ -1,32 +1,32 @@
 nimTitle	metaclient	paypal/paypal_orders/src/paypal_orders/private/metaclient.html	module paypal/paypal_orders/src/paypal_orders/private/metaclient		0
-nim	OrdersClient	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#OrdersClient	type OrdersClient		20
-nim	QueryTable	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#QueryTable	type QueryTable		29
-nim	OrdersClientError	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#OrdersClientError	object OrdersClientError		31
-nim	oauthTokenUrl	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#oauthTokenUrl	const oauthTokenUrl		34
-nim	oauthAuthUrl	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#oauthAuthUrl	const oauthAuthUrl		35
-nim	`$`	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#$,QueryTable	proc `$`(query: QueryTable): string		37
-nim	initOrdersClient	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#initOrdersClient	proc initOrdersClient(): OrdersClient		42
-nim	configureOAuth	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#configureOAuth,OrdersClient,string,string	proc configureOAuth(client: OrdersClient; clientId, clientSecret: string)		50
-nim	setTokens	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#setTokens,OrdersClient,string,string,Option[int]	proc setTokens(client: OrdersClient; accessToken, refreshToken: string;\n          expiresIn: Option[int] = none(int))		54
-nim	canAutoRefresh	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#canAutoRefresh,OrdersClient	proc canAutoRefresh(client: OrdersClient): bool		61
-nim	tryRefreshToken	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#tryRefreshToken,OrdersClient	proc tryRefreshToken(client: OrdersClient): Future[bool]		67
-nim	getAuthorizationUrl	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#getAuthorizationUrl,string,string,openArray[string],string	proc getAuthorizationUrl(clientId, redirectUri: string;\n                    scopes: openArray[string] = []; state = ""): string		88
-nim	exchangeCodeForToken	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#exchangeCodeForToken,string,string,string,string	proc exchangeCodeForToken(clientId, clientSecret, code, redirectUri: string): Future[\n    JsonNode]		100
-nim	httpGet	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpGet,OrdersClient,string	proc httpGet(client: OrdersClient; endpoint: string): Future[AsyncResponse]		120
-nim	httpGet	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpGet,OrdersClient,string,QueryTable	proc httpGet(client: OrdersClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		129
-nim	httpPost	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpPost,OrdersClient,string,T	proc httpPost[T](client: OrdersClient; endpoint: string; body: T): Future[\n    AsyncResponse]		138
-nim	httpPost	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpPost,OrdersClient,string	proc httpPost(client: OrdersClient; endpoint: string): Future[AsyncResponse]		147
-nim	httpPost	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpPost,OrdersClient,string,QueryTable	proc httpPost(client: OrdersClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		156
-nim	httpPut	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpPut,OrdersClient,string,T	proc httpPut[T](client: OrdersClient; endpoint: string; body: T): Future[\n    AsyncResponse]		165
-nim	httpPut	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpPut,OrdersClient,string	proc httpPut(client: OrdersClient; endpoint: string): Future[AsyncResponse]		176
-nim	httpPut	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpPut,OrdersClient,string,QueryTable	proc httpPut(client: OrdersClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		185
-nim	httpDelete	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpDelete,OrdersClient,string,T	proc httpDelete[T](client: OrdersClient; endpoint: string; body: T): Future[\n    AsyncResponse]		194
-nim	httpDelete	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpDelete,OrdersClient,string	proc httpDelete(client: OrdersClient; endpoint: string): Future[AsyncResponse]		205
-nim	httpDelete	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpDelete,OrdersClient,string,QueryTable	proc httpDelete(client: OrdersClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		214
-nim	httpPatch	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpPatch,OrdersClient,string,T	proc httpPatch[T](client: OrdersClient; endpoint: string; body: T): Future[\n    AsyncResponse]		223
-nim	httpPatch	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpPatch,OrdersClient,string	proc httpPatch(client: OrdersClient; endpoint: string): Future[AsyncResponse]		234
-nimgrp	httpput	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpPut-procs-all	proc		164
-nimgrp	httppost	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpPost-procs-all	proc		137
-nimgrp	httpdelete	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpDelete-procs-all	proc		193
-nimgrp	httpget	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpGet-procs-all	proc		119
-nimgrp	httppatch	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpPatch-procs-all	proc		222
+nim	OrdersClient	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#OrdersClient	type OrdersClient		22
+nim	QueryTable	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#QueryTable	type QueryTable		31
+nim	OrdersClientError	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#OrdersClientError	object OrdersClientError		33
+nim	oauthTokenUrl	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#oauthTokenUrl	const oauthTokenUrl		36
+nim	oauthAuthUrl	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#oauthAuthUrl	const oauthAuthUrl		37
+nim	`$`	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#$,QueryTable	proc `$`(query: QueryTable): string		39
+nim	initOrdersClient	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#initOrdersClient	proc initOrdersClient(): OrdersClient		44
+nim	configureOAuth	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#configureOAuth,OrdersClient,string,string	proc configureOAuth(client: OrdersClient; clientId, clientSecret: string)		52
+nim	setTokens	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#setTokens,OrdersClient,string,string,Option[int]	proc setTokens(client: OrdersClient; accessToken, refreshToken: string;\n          expiresIn: Option[int] = none(int))		56
+nim	canAutoRefresh	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#canAutoRefresh,OrdersClient	proc canAutoRefresh(client: OrdersClient): bool		63
+nim	tryRefreshToken	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#tryRefreshToken,OrdersClient	proc tryRefreshToken(client: OrdersClient): Future[bool]		69
+nim	getAuthorizationUrl	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#getAuthorizationUrl,string,string,openArray[string],string	proc getAuthorizationUrl(clientId, redirectUri: string;\n                    scopes: openArray[string] = []; state = ""): string		90
+nim	exchangeCodeForToken	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#exchangeCodeForToken,string,string,string,string	proc exchangeCodeForToken(clientId, clientSecret, code, redirectUri: string): Future[\n    JsonNode]		102
+nim	httpGet	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpGet,OrdersClient,string	proc httpGet(client: OrdersClient; endpoint: string): Future[AsyncResponse]		122
+nim	httpGet	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpGet,OrdersClient,string,QueryTable	proc httpGet(client: OrdersClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		131
+nim	httpPost	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpPost,OrdersClient,string,T	proc httpPost[T](client: OrdersClient; endpoint: string; body: T): Future[\n    AsyncResponse]		140
+nim	httpPost	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpPost,OrdersClient,string	proc httpPost(client: OrdersClient; endpoint: string): Future[AsyncResponse]		149
+nim	httpPost	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpPost,OrdersClient,string,QueryTable	proc httpPost(client: OrdersClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		158
+nim	httpPut	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpPut,OrdersClient,string,T	proc httpPut[T](client: OrdersClient; endpoint: string; body: T): Future[\n    AsyncResponse]		167
+nim	httpPut	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpPut,OrdersClient,string	proc httpPut(client: OrdersClient; endpoint: string): Future[AsyncResponse]		178
+nim	httpPut	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpPut,OrdersClient,string,QueryTable	proc httpPut(client: OrdersClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		187
+nim	httpDelete	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpDelete,OrdersClient,string,T	proc httpDelete[T](client: OrdersClient; endpoint: string; body: T): Future[\n    AsyncResponse]		196
+nim	httpDelete	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpDelete,OrdersClient,string	proc httpDelete(client: OrdersClient; endpoint: string): Future[AsyncResponse]		207
+nim	httpDelete	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpDelete,OrdersClient,string,QueryTable	proc httpDelete(client: OrdersClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		216
+nim	httpPatch	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpPatch,OrdersClient,string,T	proc httpPatch[T](client: OrdersClient; endpoint: string; body: T): Future[\n    AsyncResponse]		225
+nim	httpPatch	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpPatch,OrdersClient,string	proc httpPatch(client: OrdersClient; endpoint: string): Future[AsyncResponse]		236
+nimgrp	httpput	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpPut-procs-all	proc		166
+nimgrp	httppost	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpPost-procs-all	proc		139
+nimgrp	httpdelete	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpDelete-procs-all	proc		195
+nimgrp	httpget	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpGet-procs-all	proc		121
+nimgrp	httppatch	paypal/paypal_orders/src/paypal_orders/private/metaclient.html#httpPatch-procs-all	proc		224

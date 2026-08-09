@@ -1,32 +1,32 @@
 nimTitle	metaclient	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html	module paypal/paypal_disputes/src/paypal_disputes/private/metaclient		0
-nim	DisputesClient	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#DisputesClient	type DisputesClient		19
-nim	QueryTable	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#QueryTable	type QueryTable		28
-nim	DisputesClientError	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#DisputesClientError	object DisputesClientError		30
-nim	oauthTokenUrl	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#oauthTokenUrl	const oauthTokenUrl		33
-nim	oauthAuthUrl	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#oauthAuthUrl	const oauthAuthUrl		34
-nim	`$`	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#$,QueryTable	proc `$`(query: QueryTable): string		36
-nim	initDisputesClient	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#initDisputesClient	proc initDisputesClient(): DisputesClient		41
-nim	configureOAuth	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#configureOAuth,DisputesClient,string,string	proc configureOAuth(client: DisputesClient; clientId, clientSecret: string)		49
-nim	setTokens	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#setTokens,DisputesClient,string,string,Option[int]	proc setTokens(client: DisputesClient; accessToken, refreshToken: string;\n          expiresIn: Option[int] = none(int))		53
-nim	canAutoRefresh	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#canAutoRefresh,DisputesClient	proc canAutoRefresh(client: DisputesClient): bool		60
-nim	tryRefreshToken	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#tryRefreshToken,DisputesClient	proc tryRefreshToken(client: DisputesClient): Future[bool]		66
-nim	getAuthorizationUrl	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#getAuthorizationUrl,string,string,openArray[string],string	proc getAuthorizationUrl(clientId, redirectUri: string;\n                    scopes: openArray[string] = []; state = ""): string		87
-nim	exchangeCodeForToken	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#exchangeCodeForToken,string,string,string,string	proc exchangeCodeForToken(clientId, clientSecret, code, redirectUri: string): Future[\n    JsonNode]		99
-nim	httpGet	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#httpGet,DisputesClient,string	proc httpGet(client: DisputesClient; endpoint: string): Future[AsyncResponse]		119
-nim	httpGet	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#httpGet,DisputesClient,string,QueryTable	proc httpGet(client: DisputesClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		128
-nim	httpPost	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#httpPost,DisputesClient,string,T	proc httpPost[T](client: DisputesClient; endpoint: string; body: T): Future[\n    AsyncResponse]		137
-nim	httpPost	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#httpPost,DisputesClient,string	proc httpPost(client: DisputesClient; endpoint: string): Future[AsyncResponse]		146
-nim	httpPost	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#httpPost,DisputesClient,string,QueryTable	proc httpPost(client: DisputesClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		155
-nim	httpPut	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#httpPut,DisputesClient,string,T	proc httpPut[T](client: DisputesClient; endpoint: string; body: T): Future[\n    AsyncResponse]		164
-nim	httpPut	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#httpPut,DisputesClient,string	proc httpPut(client: DisputesClient; endpoint: string): Future[AsyncResponse]		175
-nim	httpPut	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#httpPut,DisputesClient,string,QueryTable	proc httpPut(client: DisputesClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		184
-nim	httpDelete	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#httpDelete,DisputesClient,string,T	proc httpDelete[T](client: DisputesClient; endpoint: string; body: T): Future[\n    AsyncResponse]		193
-nim	httpDelete	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#httpDelete,DisputesClient,string	proc httpDelete(client: DisputesClient; endpoint: string): Future[AsyncResponse]		204
-nim	httpDelete	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#httpDelete,DisputesClient,string,QueryTable	proc httpDelete(client: DisputesClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		213
-nim	httpPatch	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#httpPatch,DisputesClient,string,T	proc httpPatch[T](client: DisputesClient; endpoint: string; body: T): Future[\n    AsyncResponse]		222
-nim	httpPatch	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#httpPatch,DisputesClient,string	proc httpPatch(client: DisputesClient; endpoint: string): Future[AsyncResponse]		233
-nimgrp	httpput	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#httpPut-procs-all	proc		163
-nimgrp	httppost	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#httpPost-procs-all	proc		136
-nimgrp	httpdelete	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#httpDelete-procs-all	proc		192
-nimgrp	httpget	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#httpGet-procs-all	proc		118
-nimgrp	httppatch	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#httpPatch-procs-all	proc		221
+nim	DisputesClient	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#DisputesClient	type DisputesClient		20
+nim	QueryTable	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#QueryTable	type QueryTable		29
+nim	DisputesClientError	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#DisputesClientError	object DisputesClientError		31
+nim	oauthTokenUrl	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#oauthTokenUrl	const oauthTokenUrl		34
+nim	oauthAuthUrl	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#oauthAuthUrl	const oauthAuthUrl		35
+nim	`$`	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#$,QueryTable	proc `$`(query: QueryTable): string		37
+nim	initDisputesClient	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#initDisputesClient	proc initDisputesClient(): DisputesClient		42
+nim	configureOAuth	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#configureOAuth,DisputesClient,string,string	proc configureOAuth(client: DisputesClient; clientId, clientSecret: string)		50
+nim	setTokens	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#setTokens,DisputesClient,string,string,Option[int]	proc setTokens(client: DisputesClient; accessToken, refreshToken: string;\n          expiresIn: Option[int] = none(int))		54
+nim	canAutoRefresh	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#canAutoRefresh,DisputesClient	proc canAutoRefresh(client: DisputesClient): bool		61
+nim	tryRefreshToken	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#tryRefreshToken,DisputesClient	proc tryRefreshToken(client: DisputesClient): Future[bool]		67
+nim	getAuthorizationUrl	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#getAuthorizationUrl,string,string,openArray[string],string	proc getAuthorizationUrl(clientId, redirectUri: string;\n                    scopes: openArray[string] = []; state = ""): string		88
+nim	exchangeCodeForToken	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#exchangeCodeForToken,string,string,string,string	proc exchangeCodeForToken(clientId, clientSecret, code, redirectUri: string): Future[\n    JsonNode]		100
+nim	httpGet	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#httpGet,DisputesClient,string	proc httpGet(client: DisputesClient; endpoint: string): Future[AsyncResponse]		120
+nim	httpGet	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#httpGet,DisputesClient,string,QueryTable	proc httpGet(client: DisputesClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		129
+nim	httpPost	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#httpPost,DisputesClient,string,T	proc httpPost[T](client: DisputesClient; endpoint: string; body: T): Future[\n    AsyncResponse]		138
+nim	httpPost	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#httpPost,DisputesClient,string	proc httpPost(client: DisputesClient; endpoint: string): Future[AsyncResponse]		147
+nim	httpPost	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#httpPost,DisputesClient,string,QueryTable	proc httpPost(client: DisputesClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		156
+nim	httpPut	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#httpPut,DisputesClient,string,T	proc httpPut[T](client: DisputesClient; endpoint: string; body: T): Future[\n    AsyncResponse]		165
+nim	httpPut	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#httpPut,DisputesClient,string	proc httpPut(client: DisputesClient; endpoint: string): Future[AsyncResponse]		176
+nim	httpPut	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#httpPut,DisputesClient,string,QueryTable	proc httpPut(client: DisputesClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		185
+nim	httpDelete	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#httpDelete,DisputesClient,string,T	proc httpDelete[T](client: DisputesClient; endpoint: string; body: T): Future[\n    AsyncResponse]		194
+nim	httpDelete	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#httpDelete,DisputesClient,string	proc httpDelete(client: DisputesClient; endpoint: string): Future[AsyncResponse]		205
+nim	httpDelete	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#httpDelete,DisputesClient,string,QueryTable	proc httpDelete(client: DisputesClient; endpoint: string; query: QueryTable): Future[\n    AsyncResponse]		214
+nim	httpPatch	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#httpPatch,DisputesClient,string,T	proc httpPatch[T](client: DisputesClient; endpoint: string; body: T): Future[\n    AsyncResponse]		223
+nim	httpPatch	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#httpPatch,DisputesClient,string	proc httpPatch(client: DisputesClient; endpoint: string): Future[AsyncResponse]		234
+nimgrp	httpput	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#httpPut-procs-all	proc		164
+nimgrp	httppost	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#httpPost-procs-all	proc		137
+nimgrp	httpdelete	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#httpDelete-procs-all	proc		193
+nimgrp	httpget	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#httpGet-procs-all	proc		119
+nimgrp	httppatch	paypal/paypal_disputes/src/paypal_disputes/private/metaclient.html#httpPatch-procs-all	proc		222
