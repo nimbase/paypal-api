@@ -1,4 +1,4 @@
-import std/[options, json]
+import std/[options]
 
 type
   AlternateNotificationMethod* = ref object of RootObj

@@ -3,9 +3,9 @@
 # Auto-generated from OpenAPI 3.x specification
 # Nimbase CLI https://github.com/nimbase/nimbase
 #
-# Generated at: 2026-08-08T23:21:33+03:00
+# Generated at: 2026-08-09T17:24:06+03:00
 # License: MIT
-import std/[strformat, options, json]
+import std/[strformat]
 import ./private/metaclient
 import ./private/types
 

@@ -1,0 +1,57 @@
+# NimbaseBot workflow
+#
+# Regenerates the PayPal REST API clients (13 nested packages under
+# src/paypal/) via scripts/gen.sh whenever the specs/scripts/plugins change
+# (or on a nightly schedule / manual dispatch), then bumps the root
+# paypal.nimble version (from the latest git tag), commits, tags and creates a
+# GitHub release. Testing happens in the repo's own test.yml workflow, which
+# the bot's commits re-trigger.
+#
+# scripts/gen.sh downloads the specs from
+# paypal/paypal-rest-api-specifications when they are absent, builds the
+# prescript/postscript plugins with `nim c`, and only ever rewrites the
+# generated src/ and tests/ — postscripts/, prescripts/ and scripts/ are
+# never deleted.
+#
+# Setup:
+#   1. Add a bot PAT (`repo` scope) as the `BOT_TOKEN` secret here so the
+#      bot's pushes re-trigger test/docs workflows.
+#   2. Ensure an initial tag exists matching the root paypal.nimble version.
+
+name: nimbase
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'paypal.nimble'
+      - 'nimbase.oapi.config.yaml'
+      - '.github/workflows/nimbase.yml'
+      - 'postscripts/**'
+      - 'prescripts/**'
+      - 'scripts/**'
+  schedule:
+    - cron: '0 3 * * *'   # nightly re-check for upstream spec changes
+  workflow_dispatch:
+
+concurrency:
+  group: nimbase
+  cancel-in-progress: false
+
+jobs:
+  regenerate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: nimbase/nimbase-bot@v1
+        with:
+          token: ${{ secrets.BOT_TOKEN }}
+          # In-place regeneration: rebuilds plugins, downloads specs if needed,
+          # and rewrites only src/ + tests/ (postscripts/prescripts/scripts
+          # survive untouched).
+          gen-command: ./scripts/gen.sh

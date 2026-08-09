@@ -3,7 +3,7 @@
 # Auto-generated from OpenAPI 3.x specification
 # using the awesome [Nimbase CLI](https://github.com/nimbase/nimbase)
 #
-# Generated at: 2026-08-08T23:21:33+03:00
+# Generated at: 2026-08-09T17:24:06+03:00
 # License: MIT
 
 import std/[asyncdispatch, httpclient, tables,
@@ -15,6 +15,8 @@ import ./renames
 
 
 export asyncdispatch, httpclient, json, options, times, oauth2, tables, sequtils
+export renames
+
 
 type
   PaymentsClient* = ref object of RootObj

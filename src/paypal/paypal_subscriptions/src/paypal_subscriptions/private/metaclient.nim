@@ -3,7 +3,7 @@
 # Auto-generated from OpenAPI 3.x specification
 # using the awesome [Nimbase CLI](https://github.com/nimbase/nimbase)
 #
-# Generated at: 2026-08-08T23:21:32+03:00
+# Generated at: 2026-08-09T17:24:05+03:00
 # License: MIT
 
 import std/[asyncdispatch, httpclient, tables,
@@ -14,6 +14,7 @@ import pkg/openparser/json
 
 
 export asyncdispatch, httpclient, json, options, times, oauth2, tables, sequtils
+
 
 type
   SubscriptionsClient* = ref object of RootObj

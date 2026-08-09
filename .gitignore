@@ -12,7 +12,7 @@ build
 
 /postscripts/*
 !/postscripts/*.nim
-!/postscripts/build.sh
+!/postscripts/*.nimble
 /prescripts/*
 !/prescripts/*.nim
-!/prescripts/build.sh
+!/prescripts/*.nimble
