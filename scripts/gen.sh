@@ -101,10 +101,15 @@ for spec in "$SPECS_DIR"/*.json; do
   full="paypal_$lib"
   echo "   -> $full"
 
-  if ! nimbase oapi.gen "$spec" "$CHILDREN_DIR/$full" -y >/dev/null 2>&1; then
+  if ! nimbase oapi.gen "$spec" "$CHILDREN_DIR/$full" -y 2>gen.err; then
     echo "!! FAILED: $name" >&2
+    echo "--- nimbase oapi.gen stderr ---" >&2
+    cat gen.err >&2
+    echo "---" >&2
+    rm -f gen.err
     continue
   fi
+  rm -f gen.err
   libs+=("$lib")
 done
 

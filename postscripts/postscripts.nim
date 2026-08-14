@@ -9,7 +9,7 @@
 #
 # (c) 2026 George Lemon | MIT License
 
-import std/[os, strutils, sets, re, algorithm]
+import std/[os, osproc, strutils, sets, re, algorithm]
 
 import pkg/pluginkit
 import pkg/kapsis/pluginapi
@@ -338,7 +338,14 @@ proc writeConfig(pkgRoot: string) =
       let lib = splitFile(d).name
       lines.add("switch(\"path\", \"src/paypal/" & lib & "/src\")")
   sort(lines)
-  lines.add("switch(\"path\", \"/Users/georgelemon/Development/packages/openparser/src\")")
+  var opParser = ""
+  if dirExists("/Users/georgelemon/Development/packages/openparser/src"):
+    opParser = "/Users/georgelemon/Development/packages/openparser/src"
+  else:
+    let (outp, _) = execCmdEx("nimble path openparser")
+    opParser = outp.strip
+  if opParser.len > 0:
+    lines.add("switch(\"path\", \"" & opParser & "\")")
   writeFile(pkgRoot / "config.nims", lines.join("\n") & "\n")
 
 proc writeTestTask(pkgRoot: string) =
